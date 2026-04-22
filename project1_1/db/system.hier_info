@@ -1,0 +1,23 @@
+|system
+mysw[0] => myLEDR[0].DATAIN
+mysw[1] => myLEDR[1].DATAIN
+mysw[2] => myLEDR[2].DATAIN
+mysw[3] => myLEDR[3].DATAIN
+mysw[4] => myLEDR[4].DATAIN
+mysw[5] => myLEDR[5].DATAIN
+mysw[6] => myLEDR[6].DATAIN
+mysw[7] => myLEDR[7].DATAIN
+mysw[8] => myLEDR[8].DATAIN
+mysw[9] => myLEDR[9].DATAIN
+myLEDR[0] << mysw[0].DB_MAX_OUTPUT_PORT_TYPE
+myLEDR[1] << mysw[1].DB_MAX_OUTPUT_PORT_TYPE
+myLEDR[2] << mysw[2].DB_MAX_OUTPUT_PORT_TYPE
+myLEDR[3] << mysw[3].DB_MAX_OUTPUT_PORT_TYPE
+myLEDR[4] << mysw[4].DB_MAX_OUTPUT_PORT_TYPE
+myLEDR[5] << mysw[5].DB_MAX_OUTPUT_PORT_TYPE
+myLEDR[6] << mysw[6].DB_MAX_OUTPUT_PORT_TYPE
+myLEDR[7] << mysw[7].DB_MAX_OUTPUT_PORT_TYPE
+myLEDR[8] << mysw[8].DB_MAX_OUTPUT_PORT_TYPE
+myLEDR[9] << mysw[9].DB_MAX_OUTPUT_PORT_TYPE
+
+
