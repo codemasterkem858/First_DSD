@@ -1,0 +1,23 @@
+|system
+x[6] => int2[0].IN0
+x[7] => int2[1].IN0
+x[8] => int2[2].IN0
+x[9] => int2[3].IN0
+y[2] => int3[0].IN0
+y[3] => int3[1].IN0
+y[4] => int3[2].IN0
+y[5] => int3[3].IN0
+s => int3[3].IN1
+s => int3[2].IN1
+s => int3[1].IN1
+s => int3[0].IN1
+s => int2[3].IN1
+s => int2[2].IN1
+s => int2[1].IN1
+s => int2[0].IN1
+m[0] << m.DB_MAX_OUTPUT_PORT_TYPE
+m[1] << m.DB_MAX_OUTPUT_PORT_TYPE
+m[2] << m.DB_MAX_OUTPUT_PORT_TYPE
+m[3] << m.DB_MAX_OUTPUT_PORT_TYPE
+
+

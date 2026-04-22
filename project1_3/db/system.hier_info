@@ -1,0 +1,55 @@
+|system
+x[0] => two_to_one:U1.a[0]
+x[1] => two_to_one:U1.a[1]
+y[0] => two_to_one:U1.b[0]
+y[1] => two_to_one:U1.b[1]
+z[0] => two_to_one:U2.a[0]
+z[1] => two_to_one:U2.a[1]
+w[0] => two_to_one:U2.b[0]
+w[1] => two_to_one:U2.b[1]
+s1 => two_to_one:U1.s
+s1 => two_to_one:U2.s
+s2 => two_to_one:U3.s
+mo[0] << two_to_one:U3.m[0]
+mo[1] << two_to_one:U3.m[1]
+
+
+|system|two_to_one:U1
+a[0] => int1[0].IN0
+a[1] => int1[1].IN0
+b[0] => int2[0].IN0
+b[1] => int2[1].IN0
+s => int2[1].IN1
+s => int2[0].IN1
+s => int1[1].IN1
+s => int1[0].IN1
+m[0] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[1] <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|two_to_one:U2
+a[0] => int1[0].IN0
+a[1] => int1[1].IN0
+b[0] => int2[0].IN0
+b[1] => int2[1].IN0
+s => int2[1].IN1
+s => int2[0].IN1
+s => int1[1].IN1
+s => int1[0].IN1
+m[0] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[1] <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|two_to_one:U3
+a[0] => int1[0].IN0
+a[1] => int1[1].IN0
+b[0] => int2[0].IN0
+b[1] => int2[1].IN0
+s => int2[1].IN1
+s => int2[0].IN1
+s => int1[1].IN1
+s => int1[0].IN1
+m[0] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[1] <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
