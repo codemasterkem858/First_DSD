@@ -20,7 +20,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "y[2]",
+					"name" : "y[0]",
 					"strict" : false
 				},
 				{
@@ -28,7 +28,23 @@
 					"strict" : false
 				},
 				{
-					"name" : "x[6]",
+					"name" : "x[0]",
+					"strict" : false
+				},
+				{
+					"name" : "y[1]",
+					"strict" : false
+				},
+				{
+					"name" : "x[1]",
+					"strict" : false
+				},
+				{
+					"name" : "y[2]",
+					"strict" : false
+				},
+				{
+					"name" : "x[2]",
 					"strict" : false
 				},
 				{
@@ -36,23 +52,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "x[7]",
-					"strict" : false
-				},
-				{
-					"name" : "y[4]",
-					"strict" : false
-				},
-				{
-					"name" : "x[8]",
-					"strict" : false
-				},
-				{
-					"name" : "y[5]",
-					"strict" : false
-				},
-				{
-					"name" : "x[9]",
+					"name" : "x[3]",
 					"strict" : false
 				}
 			]

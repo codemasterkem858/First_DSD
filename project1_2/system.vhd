@@ -3,8 +3,8 @@ use ieee.std_logic_1164.all;
 
 entity system is
 port(
-	x : in std_logic_vector(9 downto 6);
-	y : in std_logic_vector(5 downto 2);
+	x : in std_logic_vector(3 downto 0);
+	y : in std_logic_vector(3 downto 0);
 	s : in std_logic;
 	m : out std_logic_vector(3 downto 0)
 );
