@@ -1,0 +1,95 @@
+|system
+sel1 => m_final[0].IN1
+sel1 => m_final.IN1
+sel1 => Mux4x1:U1.s1
+sel2 => m_final.IN1
+sel2 => Mux4x1:U1.s2
+con0[0] => Mux4x1:U1.x[0]
+con0[1] => Mux4x1:U1.x[1]
+con1[0] => Mux4x1:U1.y[0]
+con1[1] => Mux4x1:U1.y[1]
+con2[0] => Mux4x1:U1.z[0]
+con2[1] => Mux4x1:U1.z[1]
+con3[0] => Mux4x1:U1.w[0]
+con3[1] => Mux4x1:U1.w[1]
+HEX0[0] <= seven_segment:U2.H_out[0]
+HEX0[1] <= seven_segment:U2.H_out[1]
+HEX0[2] <= seven_segment:U2.H_out[2]
+HEX0[3] <= seven_segment:U2.H_out[3]
+HEX0[4] <= seven_segment:U2.H_out[4]
+HEX0[5] <= seven_segment:U2.H_out[5]
+HEX0[6] <= seven_segment:U2.H_out[6]
+
+
+|system|Mux4x1:U1
+x[0] => Mux2x1:U1.a[0]
+x[1] => Mux2x1:U1.a[1]
+y[0] => Mux2x1:U1.b[0]
+y[1] => Mux2x1:U1.b[1]
+z[0] => Mux2x1:U2.a[0]
+z[1] => Mux2x1:U2.a[1]
+w[0] => Mux2x1:U2.b[0]
+w[1] => Mux2x1:U2.b[1]
+s1 => Mux2x1:U1.s
+s1 => Mux2x1:U2.s
+s2 => Mux2x1:U3.s
+mo[0] <= Mux2x1:U3.m[0]
+mo[1] <= Mux2x1:U3.m[1]
+
+
+|system|Mux4x1:U1|Mux2x1:U1
+a[0] => int1[0].IN0
+a[1] => int1[1].IN0
+b[0] => int2[0].IN0
+b[1] => int2[1].IN0
+s => int2[1].IN1
+s => int2[0].IN1
+s => int1[1].IN1
+s => int1[0].IN1
+m[0] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[1] <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|Mux4x1:U1|Mux2x1:U2
+a[0] => int1[0].IN0
+a[1] => int1[1].IN0
+b[0] => int2[0].IN0
+b[1] => int2[1].IN0
+s => int2[1].IN1
+s => int2[0].IN1
+s => int1[1].IN1
+s => int1[0].IN1
+m[0] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[1] <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|Mux4x1:U1|Mux2x1:U3
+a[0] => int1[0].IN0
+a[1] => int1[1].IN0
+b[0] => int2[0].IN0
+b[1] => int2[1].IN0
+s => int2[1].IN1
+s => int2[0].IN1
+s => int1[1].IN1
+s => int1[0].IN1
+m[0] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[1] <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|seven_segment:U2
+c0 => H_out[1].DATAIN
+c0 => H_out[2].DATAIN
+c0 => H_out[0].DATAIN
+c0 => H_out[5].DATAIN
+c1 => H_out[6].DATAIN
+c1 => H_out[3].DATAIN
+c1 => H_out[4].DATAIN
+H_out[0] <= c0.DB_MAX_OUTPUT_PORT_TYPE
+H_out[1] <= c0.DB_MAX_OUTPUT_PORT_TYPE
+H_out[2] <= c0.DB_MAX_OUTPUT_PORT_TYPE
+H_out[3] <= c1.DB_MAX_OUTPUT_PORT_TYPE
+H_out[4] <= c1.DB_MAX_OUTPUT_PORT_TYPE
+H_out[5] <= c0.DB_MAX_OUTPUT_PORT_TYPE
+H_out[6] <= c1.DB_MAX_OUTPUT_PORT_TYPE
+
+
