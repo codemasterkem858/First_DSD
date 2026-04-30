@@ -172,7 +172,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "selec[2]",
+					"name" : "selec[0]",
 					"strict" : false
 				},
 				{
@@ -180,7 +180,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "selec[0]",
+					"name" : "selec[2]",
 					"strict" : false
 				}
 			]

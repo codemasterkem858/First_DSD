@@ -18,11 +18,11 @@ architecture behavior of system is
 	);
 	end component;
 	
-	constant d : std_logic_vector(6 downto 0) := "1000010";
-	constant E : std_logic_vector(6 downto 0) := "0110000";
-	constant l : std_logic_vector(6 downto 0) := "1001111";
-	constant o : std_logic_vector(6 downto 0) := "0000001";
-	constant x : std_logic_vector(6 downto 0) := "1111111";
+	constant d : std_logic_vector(0 to 6) := "0100001";
+	constant E : std_logic_vector(0 to 6) := "0000110";
+	constant l : std_logic_vector(0 to 6) := "1111001";
+	constant o : std_logic_vector(0 to 6) := "1000000";
+	constant x : std_logic_vector(0 to 6) := "1111111";
 	
 	signal h1, h2, h3, h4, h5, h6 : std_logic_vector(6 downto 0);
 

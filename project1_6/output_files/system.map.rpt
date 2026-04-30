@@ -1,5 +1,5 @@
 Analysis & Synthesis report for system
-Fri Apr 24 11:36:26 2026
+Thu Apr 30 09:49:10 2026
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -49,7 +49,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Apr 24 11:36:26 2026          ;
+; Analysis & Synthesis Status     ; Successful - Thu Apr 30 09:49:10 2026          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; system                                         ;
 ; Top-level Entity Name           ; system                                         ;
@@ -201,7 +201,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
-; Maximum fan-out node                        ; selec[2]~input ;
+; Maximum fan-out node                        ; selec[1]~input ;
 ; Maximum fan-out                             ; 22             ;
 ; Total fan-out                               ; 152            ;
 ; Average fan-out                             ; 1.33           ;
@@ -216,18 +216,18 @@ https://fpgasoftware.intel.com/eula.
 ; |system                    ; 24 (0)              ; 0 (0)                     ; 0                 ; 0          ; 45   ; 0            ; |system                                              ; system      ; work         ;
 ;    |Mux8x1_7bit:U1|        ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |system|Mux8x1_7bit:U1                               ; Mux8x1_7bit ; work         ;
 ;       |Mux2x1_7bit:U3|     ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |system|Mux8x1_7bit:U1|Mux2x1_7bit:U3                ; Mux2x1_7bit ; work         ;
-;    |Mux8x1_7bit:U2|        ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |system|Mux8x1_7bit:U2                               ; Mux8x1_7bit ; work         ;
-;       |Mux2x1_7bit:U3|     ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |system|Mux8x1_7bit:U2|Mux2x1_7bit:U3                ; Mux2x1_7bit ; work         ;
+;    |Mux8x1_7bit:U2|        ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |system|Mux8x1_7bit:U2                               ; Mux8x1_7bit ; work         ;
+;       |Mux2x1_7bit:U3|     ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |system|Mux8x1_7bit:U2|Mux2x1_7bit:U3                ; Mux2x1_7bit ; work         ;
 ;    |Mux8x1_7bit:U3|        ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |system|Mux8x1_7bit:U3                               ; Mux8x1_7bit ; work         ;
 ;       |Mux2x1_7bit:U3|     ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |system|Mux8x1_7bit:U3|Mux2x1_7bit:U3                ; Mux2x1_7bit ; work         ;
-;    |Mux8x1_7bit:U4|        ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |system|Mux8x1_7bit:U4                               ; Mux8x1_7bit ; work         ;
-;       |Mux2x1_7bit:U3|     ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |system|Mux8x1_7bit:U4|Mux2x1_7bit:U3                ; Mux2x1_7bit ; work         ;
+;    |Mux8x1_7bit:U4|        ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |system|Mux8x1_7bit:U4                               ; Mux8x1_7bit ; work         ;
+;       |Mux2x1_7bit:U3|     ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |system|Mux8x1_7bit:U4|Mux2x1_7bit:U3                ; Mux2x1_7bit ; work         ;
 ;    |Mux8x1_7bit:U5|        ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |system|Mux8x1_7bit:U5                               ; Mux8x1_7bit ; work         ;
 ;       |Mux2x1_7bit:U3|     ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |system|Mux8x1_7bit:U5|Mux2x1_7bit:U3                ; Mux2x1_7bit ; work         ;
 ;    |Mux8x1_7bit:U6|        ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |system|Mux8x1_7bit:U6                               ; Mux8x1_7bit ; work         ;
 ;       |Mux2x1_7bit:U3|     ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |system|Mux8x1_7bit:U6|Mux2x1_7bit:U3                ; Mux2x1_7bit ; work         ;
-;       |Mux4x1_7bit:U2|     ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |system|Mux8x1_7bit:U6|Mux4x1_7bit:U2                ; Mux4x1_7bit ; work         ;
-;          |Mux2x1_7bit:U3|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |system|Mux8x1_7bit:U6|Mux4x1_7bit:U2|Mux2x1_7bit:U3 ; Mux2x1_7bit ; work         ;
+;       |Mux4x1_7bit:U1|     ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |system|Mux8x1_7bit:U6|Mux4x1_7bit:U1                ; Mux4x1_7bit ; work         ;
+;          |Mux2x1_7bit:U3|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |system|Mux8x1_7bit:U6|Mux4x1_7bit:U1|Mux2x1_7bit:U3 ; Mux2x1_7bit ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -252,20 +252,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------+-------+----------+--------------+
 ; Port        ; Type  ; Severity ; Details      ;
 +-------------+-------+----------+--------------+
-; h_in1[6..1] ; Input ; Info     ; Stuck at GND ;
-; h_in1[0]    ; Input ; Info     ; Stuck at VCC ;
+; h_in1[5..0] ; Input ; Info     ; Stuck at GND ;
+; h_in1[6]    ; Input ; Info     ; Stuck at VCC ;
 ; h_in2       ; Input ; Info     ; Stuck at VCC ;
 ; h_in3       ; Input ; Info     ; Stuck at VCC ;
-; h_in4[5..2] ; Input ; Info     ; Stuck at GND ;
-; h_in4[6]    ; Input ; Info     ; Stuck at VCC ;
-; h_in4[1]    ; Input ; Info     ; Stuck at VCC ;
-; h_in4[0]    ; Input ; Info     ; Stuck at GND ;
-; h_in5[5..4] ; Input ; Info     ; Stuck at VCC ;
-; h_in5[3..0] ; Input ; Info     ; Stuck at GND ;
-; h_in5[6]    ; Input ; Info     ; Stuck at GND ;
-; h_in6[3..0] ; Input ; Info     ; Stuck at VCC ;
-; h_in6[5..4] ; Input ; Info     ; Stuck at GND ;
-; h_in6[6]    ; Input ; Info     ; Stuck at VCC ;
+; h_in4[4..1] ; Input ; Info     ; Stuck at GND ;
+; h_in4[6]    ; Input ; Info     ; Stuck at GND ;
+; h_in4[5]    ; Input ; Info     ; Stuck at VCC ;
+; h_in4[0]    ; Input ; Info     ; Stuck at VCC ;
+; h_in5[2..1] ; Input ; Info     ; Stuck at VCC ;
+; h_in5[6..3] ; Input ; Info     ; Stuck at GND ;
+; h_in5[0]    ; Input ; Info     ; Stuck at GND ;
+; h_in6[6..3] ; Input ; Info     ; Stuck at VCC ;
+; h_in6[2..1] ; Input ; Info     ; Stuck at GND ;
+; h_in6[0]    ; Input ; Info     ; Stuck at VCC ;
 ; h_in7       ; Input ; Info     ; Stuck at VCC ;
 ; h_in8       ; Input ; Info     ; Stuck at VCC ;
 +-------------+-------+----------+--------------+
@@ -276,20 +276,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------+-------+----------+--------------+
 ; Port        ; Type  ; Severity ; Details      ;
 +-------------+-------+----------+--------------+
-; h_in1[3..0] ; Input ; Info     ; Stuck at VCC ;
-; h_in1[5..4] ; Input ; Info     ; Stuck at GND ;
-; h_in1[6]    ; Input ; Info     ; Stuck at VCC ;
-; h_in2[6..1] ; Input ; Info     ; Stuck at GND ;
-; h_in2[0]    ; Input ; Info     ; Stuck at VCC ;
+; h_in1[6..3] ; Input ; Info     ; Stuck at VCC ;
+; h_in1[2..1] ; Input ; Info     ; Stuck at GND ;
+; h_in1[0]    ; Input ; Info     ; Stuck at VCC ;
+; h_in2[5..0] ; Input ; Info     ; Stuck at GND ;
+; h_in2[6]    ; Input ; Info     ; Stuck at VCC ;
 ; h_in3       ; Input ; Info     ; Stuck at VCC ;
 ; h_in4       ; Input ; Info     ; Stuck at VCC ;
-; h_in5[5..2] ; Input ; Info     ; Stuck at GND ;
-; h_in5[6]    ; Input ; Info     ; Stuck at VCC ;
-; h_in5[1]    ; Input ; Info     ; Stuck at VCC ;
-; h_in5[0]    ; Input ; Info     ; Stuck at GND ;
-; h_in6[5..4] ; Input ; Info     ; Stuck at VCC ;
-; h_in6[3..0] ; Input ; Info     ; Stuck at GND ;
-; h_in6[6]    ; Input ; Info     ; Stuck at GND ;
+; h_in5[4..1] ; Input ; Info     ; Stuck at GND ;
+; h_in5[6]    ; Input ; Info     ; Stuck at GND ;
+; h_in5[5]    ; Input ; Info     ; Stuck at VCC ;
+; h_in5[0]    ; Input ; Info     ; Stuck at VCC ;
+; h_in6[2..1] ; Input ; Info     ; Stuck at VCC ;
+; h_in6[6..3] ; Input ; Info     ; Stuck at GND ;
+; h_in6[0]    ; Input ; Info     ; Stuck at GND ;
 ; h_in7       ; Input ; Info     ; Stuck at VCC ;
 ; h_in8       ; Input ; Info     ; Stuck at VCC ;
 +-------------+-------+----------+--------------+
@@ -300,20 +300,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------+-------+----------+--------------+
 ; Port        ; Type  ; Severity ; Details      ;
 +-------------+-------+----------+--------------+
-; h_in1[5..4] ; Input ; Info     ; Stuck at VCC ;
-; h_in1[3..0] ; Input ; Info     ; Stuck at GND ;
-; h_in1[6]    ; Input ; Info     ; Stuck at GND ;
-; h_in2[3..0] ; Input ; Info     ; Stuck at VCC ;
-; h_in2[5..4] ; Input ; Info     ; Stuck at GND ;
-; h_in2[6]    ; Input ; Info     ; Stuck at VCC ;
-; h_in3[6..1] ; Input ; Info     ; Stuck at GND ;
-; h_in3[0]    ; Input ; Info     ; Stuck at VCC ;
+; h_in1[2..1] ; Input ; Info     ; Stuck at VCC ;
+; h_in1[6..3] ; Input ; Info     ; Stuck at GND ;
+; h_in1[0]    ; Input ; Info     ; Stuck at GND ;
+; h_in2[6..3] ; Input ; Info     ; Stuck at VCC ;
+; h_in2[2..1] ; Input ; Info     ; Stuck at GND ;
+; h_in2[0]    ; Input ; Info     ; Stuck at VCC ;
+; h_in3[5..0] ; Input ; Info     ; Stuck at GND ;
+; h_in3[6]    ; Input ; Info     ; Stuck at VCC ;
 ; h_in4       ; Input ; Info     ; Stuck at VCC ;
 ; h_in5       ; Input ; Info     ; Stuck at VCC ;
-; h_in6[5..2] ; Input ; Info     ; Stuck at GND ;
-; h_in6[6]    ; Input ; Info     ; Stuck at VCC ;
-; h_in6[1]    ; Input ; Info     ; Stuck at VCC ;
-; h_in6[0]    ; Input ; Info     ; Stuck at GND ;
+; h_in6[4..1] ; Input ; Info     ; Stuck at GND ;
+; h_in6[6]    ; Input ; Info     ; Stuck at GND ;
+; h_in6[5]    ; Input ; Info     ; Stuck at VCC ;
+; h_in6[0]    ; Input ; Info     ; Stuck at VCC ;
 ; h_in7       ; Input ; Info     ; Stuck at VCC ;
 ; h_in8       ; Input ; Info     ; Stuck at VCC ;
 +-------------+-------+----------+--------------+
@@ -324,18 +324,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------+-------+----------+--------------+
 ; Port        ; Type  ; Severity ; Details      ;
 +-------------+-------+----------+--------------+
-; h_in1[5..2] ; Input ; Info     ; Stuck at GND ;
-; h_in1[6]    ; Input ; Info     ; Stuck at VCC ;
-; h_in1[1]    ; Input ; Info     ; Stuck at VCC ;
-; h_in1[0]    ; Input ; Info     ; Stuck at GND ;
-; h_in2[5..4] ; Input ; Info     ; Stuck at VCC ;
-; h_in2[3..0] ; Input ; Info     ; Stuck at GND ;
-; h_in2[6]    ; Input ; Info     ; Stuck at GND ;
-; h_in3[3..0] ; Input ; Info     ; Stuck at VCC ;
-; h_in3[5..4] ; Input ; Info     ; Stuck at GND ;
-; h_in3[6]    ; Input ; Info     ; Stuck at VCC ;
-; h_in4[6..1] ; Input ; Info     ; Stuck at GND ;
-; h_in4[0]    ; Input ; Info     ; Stuck at VCC ;
+; h_in1[4..1] ; Input ; Info     ; Stuck at GND ;
+; h_in1[6]    ; Input ; Info     ; Stuck at GND ;
+; h_in1[5]    ; Input ; Info     ; Stuck at VCC ;
+; h_in1[0]    ; Input ; Info     ; Stuck at VCC ;
+; h_in2[2..1] ; Input ; Info     ; Stuck at VCC ;
+; h_in2[6..3] ; Input ; Info     ; Stuck at GND ;
+; h_in2[0]    ; Input ; Info     ; Stuck at GND ;
+; h_in3[6..3] ; Input ; Info     ; Stuck at VCC ;
+; h_in3[2..1] ; Input ; Info     ; Stuck at GND ;
+; h_in3[0]    ; Input ; Info     ; Stuck at VCC ;
+; h_in4[5..0] ; Input ; Info     ; Stuck at GND ;
+; h_in4[6]    ; Input ; Info     ; Stuck at VCC ;
 ; h_in5       ; Input ; Info     ; Stuck at VCC ;
 ; h_in6       ; Input ; Info     ; Stuck at VCC ;
 ; h_in7       ; Input ; Info     ; Stuck at VCC ;
@@ -349,18 +349,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Port        ; Type  ; Severity ; Details      ;
 +-------------+-------+----------+--------------+
 ; h_in1       ; Input ; Info     ; Stuck at VCC ;
-; h_in2[5..2] ; Input ; Info     ; Stuck at GND ;
-; h_in2[6]    ; Input ; Info     ; Stuck at VCC ;
-; h_in2[1]    ; Input ; Info     ; Stuck at VCC ;
-; h_in2[0]    ; Input ; Info     ; Stuck at GND ;
-; h_in3[5..4] ; Input ; Info     ; Stuck at VCC ;
-; h_in3[3..0] ; Input ; Info     ; Stuck at GND ;
-; h_in3[6]    ; Input ; Info     ; Stuck at GND ;
-; h_in4[3..0] ; Input ; Info     ; Stuck at VCC ;
-; h_in4[5..4] ; Input ; Info     ; Stuck at GND ;
-; h_in4[6]    ; Input ; Info     ; Stuck at VCC ;
-; h_in5[6..1] ; Input ; Info     ; Stuck at GND ;
-; h_in5[0]    ; Input ; Info     ; Stuck at VCC ;
+; h_in2[4..1] ; Input ; Info     ; Stuck at GND ;
+; h_in2[6]    ; Input ; Info     ; Stuck at GND ;
+; h_in2[5]    ; Input ; Info     ; Stuck at VCC ;
+; h_in2[0]    ; Input ; Info     ; Stuck at VCC ;
+; h_in3[2..1] ; Input ; Info     ; Stuck at VCC ;
+; h_in3[6..3] ; Input ; Info     ; Stuck at GND ;
+; h_in3[0]    ; Input ; Info     ; Stuck at GND ;
+; h_in4[6..3] ; Input ; Info     ; Stuck at VCC ;
+; h_in4[2..1] ; Input ; Info     ; Stuck at GND ;
+; h_in4[0]    ; Input ; Info     ; Stuck at VCC ;
+; h_in5[5..0] ; Input ; Info     ; Stuck at GND ;
+; h_in5[6]    ; Input ; Info     ; Stuck at VCC ;
 ; h_in6       ; Input ; Info     ; Stuck at VCC ;
 ; h_in7       ; Input ; Info     ; Stuck at VCC ;
 ; h_in8       ; Input ; Info     ; Stuck at VCC ;
@@ -374,18 +374,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------+-------+----------+--------------+
 ; h_in1       ; Input ; Info     ; Stuck at VCC ;
 ; h_in2       ; Input ; Info     ; Stuck at VCC ;
-; h_in3[5..2] ; Input ; Info     ; Stuck at GND ;
-; h_in3[6]    ; Input ; Info     ; Stuck at VCC ;
-; h_in3[1]    ; Input ; Info     ; Stuck at VCC ;
-; h_in3[0]    ; Input ; Info     ; Stuck at GND ;
-; h_in4[5..4] ; Input ; Info     ; Stuck at VCC ;
-; h_in4[3..0] ; Input ; Info     ; Stuck at GND ;
-; h_in4[6]    ; Input ; Info     ; Stuck at GND ;
-; h_in5[3..0] ; Input ; Info     ; Stuck at VCC ;
-; h_in5[5..4] ; Input ; Info     ; Stuck at GND ;
-; h_in5[6]    ; Input ; Info     ; Stuck at VCC ;
-; h_in6[6..1] ; Input ; Info     ; Stuck at GND ;
-; h_in6[0]    ; Input ; Info     ; Stuck at VCC ;
+; h_in3[4..1] ; Input ; Info     ; Stuck at GND ;
+; h_in3[6]    ; Input ; Info     ; Stuck at GND ;
+; h_in3[5]    ; Input ; Info     ; Stuck at VCC ;
+; h_in3[0]    ; Input ; Info     ; Stuck at VCC ;
+; h_in4[2..1] ; Input ; Info     ; Stuck at VCC ;
+; h_in4[6..3] ; Input ; Info     ; Stuck at GND ;
+; h_in4[0]    ; Input ; Info     ; Stuck at GND ;
+; h_in5[6..3] ; Input ; Info     ; Stuck at VCC ;
+; h_in5[2..1] ; Input ; Info     ; Stuck at GND ;
+; h_in5[0]    ; Input ; Info     ; Stuck at VCC ;
+; h_in6[5..0] ; Input ; Info     ; Stuck at GND ;
+; h_in6[6]    ; Input ; Info     ; Stuck at VCC ;
 ; h_in7       ; Input ; Info     ; Stuck at VCC ;
 ; h_in8       ; Input ; Info     ; Stuck at VCC ;
 +-------------+-------+----------+--------------+
@@ -413,7 +413,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -423,7 +423,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Fri Apr 24 11:36:05 2026
+    Info: Processing started: Thu Apr 30 09:48:44 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off project1_6 -c system
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -448,9 +448,9 @@ Info (21057): Implemented 69 device resources after synthesis - the final resour
     Info (21059): Implemented 42 output pins
     Info (21061): Implemented 24 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4866 megabytes
-    Info: Processing ended: Fri Apr 24 11:36:26 2026
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Peak virtual memory: 4871 megabytes
+    Info: Processing ended: Thu Apr 30 09:49:10 2026
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:00:30
 
 
