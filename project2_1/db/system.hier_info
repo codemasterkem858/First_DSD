@@ -1,0 +1,101 @@
+|system
+num1[0] => HexDisp:U1.a
+num1[1] => HexDisp:U1.b
+num1[2] => HexDisp:U1.c
+num1[3] => HexDisp:U1.d
+num2[0] => HexDisp:U2.a
+num2[1] => HexDisp:U2.b
+num2[2] => HexDisp:U2.c
+num2[3] => HexDisp:U2.d
+HEX0[0] <= HexDisp:U1.HEX0[0]
+HEX0[1] <= HexDisp:U1.HEX0[1]
+HEX0[2] <= HexDisp:U1.HEX0[2]
+HEX0[3] <= HexDisp:U1.HEX0[3]
+HEX0[4] <= HexDisp:U1.HEX0[4]
+HEX0[5] <= HexDisp:U1.HEX0[5]
+HEX0[6] <= HexDisp:U1.HEX0[6]
+HEX1[0] <= HexDisp:U2.HEX0[0]
+HEX1[1] <= HexDisp:U2.HEX0[1]
+HEX1[2] <= HexDisp:U2.HEX0[2]
+HEX1[3] <= HexDisp:U2.HEX0[3]
+HEX1[4] <= HexDisp:U2.HEX0[4]
+HEX1[5] <= HexDisp:U2.HEX0[5]
+HEX1[6] <= HexDisp:U2.HEX0[6]
+
+
+|system|HexDisp:U1
+a => HEX0.IN1
+a => HEX0.IN1
+a => HEX0.IN1
+a => HEX0.IN1
+b => HEX0.IN0
+b => HEX0.IN1
+b => HEX0.IN0
+b => HEX0.IN0
+b => HEX0.IN0
+b => HEX0.IN0
+b => HEX0.IN0
+b => HEX0.IN1
+c => HEX0.IN1
+c => HEX0.IN0
+c => HEX0.IN1
+c => HEX0.IN0
+c => HEX0.IN0
+c => HEX0.IN1
+c => HEX0.IN1
+c => HEX0.IN0
+d => HEX0.IN1
+d => HEX0.IN1
+d => HEX0.IN1
+d => HEX0.IN1
+d => HEX0.IN1
+d => HEX0.IN1
+d => HEX0.IN1
+d => HEX0.IN1
+HEX0[0] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[1] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[2] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[3] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[4] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[5] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|HexDisp:U2
+a => HEX0.IN1
+a => HEX0.IN1
+a => HEX0.IN1
+a => HEX0.IN1
+b => HEX0.IN0
+b => HEX0.IN1
+b => HEX0.IN0
+b => HEX0.IN0
+b => HEX0.IN0
+b => HEX0.IN0
+b => HEX0.IN0
+b => HEX0.IN1
+c => HEX0.IN1
+c => HEX0.IN0
+c => HEX0.IN1
+c => HEX0.IN0
+c => HEX0.IN0
+c => HEX0.IN1
+c => HEX0.IN1
+c => HEX0.IN0
+d => HEX0.IN1
+d => HEX0.IN1
+d => HEX0.IN1
+d => HEX0.IN1
+d => HEX0.IN1
+d => HEX0.IN1
+d => HEX0.IN1
+d => HEX0.IN1
+HEX0[0] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[1] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[2] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[3] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[4] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[5] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+
+
