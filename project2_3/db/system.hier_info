@@ -1,0 +1,61 @@
+|system
+a[0] => FAdder_1bit:U1.a
+a[1] => FAdder_1bit:U2.a
+a[2] => FAdder_1bit:U3.a
+a[3] => FAdder_1bit:U4.a
+b[0] => FAdder_1bit:U1.b
+b[1] => FAdder_1bit:U2.b
+b[2] => FAdder_1bit:U3.b
+b[3] => FAdder_1bit:U4.b
+ci => FAdder_1bit:U1.ci
+s[0] << FAdder_1bit:U1.s
+s[1] << FAdder_1bit:U2.s
+s[2] << FAdder_1bit:U3.s
+s[3] << FAdder_1bit:U4.s
+co << FAdder_1bit:U4.co
+
+
+|system|FAdder_1bit:U1
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|FAdder_1bit:U2
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|FAdder_1bit:U3
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|FAdder_1bit:U4
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
