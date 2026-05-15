@@ -1,0 +1,634 @@
+|system
+a[0] => HexDisp:U8.input[0]
+a[0] => FAdder_5bit:U1.a[0]
+a[0] => comparator_5bit:U10.a[0]
+a[1] => HexDisp:U8.input[1]
+a[1] => FAdder_5bit:U1.a[1]
+a[1] => comparator_5bit:U10.a[1]
+a[2] => HexDisp:U8.input[2]
+a[2] => FAdder_5bit:U1.a[2]
+a[2] => comparator_5bit:U10.a[2]
+a[3] => HexDisp:U8.input[3]
+a[3] => FAdder_5bit:U1.a[3]
+a[3] => comparator_5bit:U10.a[3]
+b[0] => HexDisp:U9.input[0]
+b[0] => FAdder_5bit:U1.b[0]
+b[0] => comparator_5bit:U11.a[0]
+b[1] => HexDisp:U9.input[1]
+b[1] => FAdder_5bit:U1.b[1]
+b[1] => comparator_5bit:U11.a[1]
+b[2] => HexDisp:U9.input[2]
+b[2] => FAdder_5bit:U1.b[2]
+b[2] => comparator_5bit:U11.a[2]
+b[3] => HexDisp:U9.input[3]
+b[3] => FAdder_5bit:U1.b[3]
+b[3] => comparator_5bit:U11.a[3]
+ci => FAdder_5bit:U1.ci
+HEX0[0] << HexDisp:U6.HEX0[0]
+HEX0[1] << HexDisp:U6.HEX0[1]
+HEX0[2] << HexDisp:U6.HEX0[2]
+HEX0[3] << HexDisp:U6.HEX0[3]
+HEX0[4] << HexDisp:U6.HEX0[4]
+HEX0[5] << HexDisp:U6.HEX0[5]
+HEX0[6] << HexDisp:U6.HEX0[6]
+HEX1[0] << HexDisp:U7.HEX0[0]
+HEX1[1] << HexDisp:U7.HEX0[1]
+HEX1[2] << HexDisp:U7.HEX0[2]
+HEX1[3] << HexDisp:U7.HEX0[3]
+HEX1[4] << HexDisp:U7.HEX0[4]
+HEX1[5] << HexDisp:U7.HEX0[5]
+HEX1[6] << HexDisp:U7.HEX0[6]
+HEX3[0] << HexDisp:U9.HEX0[0]
+HEX3[1] << HexDisp:U9.HEX0[1]
+HEX3[2] << HexDisp:U9.HEX0[2]
+HEX3[3] << HexDisp:U9.HEX0[3]
+HEX3[4] << HexDisp:U9.HEX0[4]
+HEX3[5] << HexDisp:U9.HEX0[5]
+HEX3[6] << HexDisp:U9.HEX0[6]
+HEX5[0] << HexDisp:U8.HEX0[0]
+HEX5[1] << HexDisp:U8.HEX0[1]
+HEX5[2] << HexDisp:U8.HEX0[2]
+HEX5[3] << HexDisp:U8.HEX0[3]
+HEX5[4] << HexDisp:U8.HEX0[4]
+HEX5[5] << HexDisp:U8.HEX0[5]
+HEX5[6] << HexDisp:U8.HEX0[6]
+LEDR[0] << FAdder_5bit:U1.s[0]
+LEDR[1] << FAdder_5bit:U1.s[1]
+LEDR[2] << FAdder_5bit:U1.s[2]
+LEDR[3] << FAdder_5bit:U1.s[3]
+LEDR[4] << <GND>
+LEDR[5] << <GND>
+LEDR[6] << <GND>
+LEDR[7] << <GND>
+LEDR[8] << <GND>
+LEDR[9] << LEDR.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|FAdder_5bit:U1
+a[0] => FAdder_1bit:U1.a
+a[1] => FAdder_1bit:U2.a
+a[2] => FAdder_1bit:U3.a
+a[3] => FAdder_1bit:U4.a
+a[4] => FAdder_1bit:U5.a
+b[0] => FAdder_1bit:U1.b
+b[1] => FAdder_1bit:U2.b
+b[2] => FAdder_1bit:U3.b
+b[3] => FAdder_1bit:U4.b
+b[4] => FAdder_1bit:U5.b
+ci => FAdder_1bit:U1.ci
+s[0] <= FAdder_1bit:U1.s
+s[1] <= FAdder_1bit:U2.s
+s[2] <= FAdder_1bit:U3.s
+s[3] <= FAdder_1bit:U4.s
+s[4] <= FAdder_1bit:U5.s
+
+
+|system|FAdder_5bit:U1|FAdder_1bit:U1
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|FAdder_5bit:U1|FAdder_1bit:U2
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|FAdder_5bit:U1|FAdder_1bit:U3
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|FAdder_5bit:U1|FAdder_1bit:U4
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|FAdder_5bit:U1|FAdder_1bit:U5
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|comparator_5bit:U2
+a[0] => comparator_1bit:U1.a
+a[1] => comparator_1bit:U2.a
+a[2] => comparator_1bit:U3.a
+a[3] => comparator_1bit:U4.a
+a[4] => comparator_1bit:U5.a
+b[0] => comparator_1bit:U1.b
+b[1] => comparator_1bit:U2.b
+b[2] => comparator_1bit:U3.b
+b[3] => comparator_1bit:U4.b
+b[4] => comparator_1bit:U5.b
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|comparator_5bit:U2|comparator_1bit:U1
+a => g.IN0
+a => e.IN0
+a => l.IN0
+b => l.IN1
+b => e.IN1
+b => g.IN1
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+l <= l.DB_MAX_OUTPUT_PORT_TYPE
+e <= e.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|comparator_5bit:U2|comparator_1bit:U2
+a => g.IN0
+a => e.IN0
+a => l.IN0
+b => l.IN1
+b => e.IN1
+b => g.IN1
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+l <= l.DB_MAX_OUTPUT_PORT_TYPE
+e <= e.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|comparator_5bit:U2|comparator_1bit:U3
+a => g.IN0
+a => e.IN0
+a => l.IN0
+b => l.IN1
+b => e.IN1
+b => g.IN1
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+l <= l.DB_MAX_OUTPUT_PORT_TYPE
+e <= e.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|comparator_5bit:U2|comparator_1bit:U4
+a => g.IN0
+a => e.IN0
+a => l.IN0
+b => l.IN1
+b => e.IN1
+b => g.IN1
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+l <= l.DB_MAX_OUTPUT_PORT_TYPE
+e <= e.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|comparator_5bit:U2|comparator_1bit:U5
+a => g.IN0
+a => e.IN0
+a => l.IN0
+b => l.IN1
+b => e.IN1
+b => g.IN1
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+l <= l.DB_MAX_OUTPUT_PORT_TYPE
+e <= e.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|FAdder_5bit:U3
+a[0] => FAdder_1bit:U1.a
+a[1] => FAdder_1bit:U2.a
+a[2] => FAdder_1bit:U3.a
+a[3] => FAdder_1bit:U4.a
+a[4] => FAdder_1bit:U5.a
+b[0] => FAdder_1bit:U1.b
+b[1] => FAdder_1bit:U2.b
+b[2] => FAdder_1bit:U3.b
+b[3] => FAdder_1bit:U4.b
+b[4] => FAdder_1bit:U5.b
+ci => FAdder_1bit:U1.ci
+s[0] <= FAdder_1bit:U1.s
+s[1] <= FAdder_1bit:U2.s
+s[2] <= FAdder_1bit:U3.s
+s[3] <= FAdder_1bit:U4.s
+s[4] <= FAdder_1bit:U5.s
+
+
+|system|FAdder_5bit:U3|FAdder_1bit:U1
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|FAdder_5bit:U3|FAdder_1bit:U2
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|FAdder_5bit:U3|FAdder_1bit:U3
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|FAdder_5bit:U3|FAdder_1bit:U4
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|FAdder_5bit:U3|FAdder_1bit:U5
+a => s.IN0
+a => co.IN0
+b => s.IN1
+b => co.IN1
+ci => s.IN1
+ci => co.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|Mux2x1_4bit:U4
+a[0] => m.IN0
+a[1] => m.IN0
+a[2] => m.IN0
+a[3] => m.IN0
+b[0] => m.IN0
+b[1] => m.IN0
+b[2] => m.IN0
+b[3] => m.IN0
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+m[0] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[1] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[2] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[3] <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|Mux2x1_4bit:U5
+a[0] => m.IN0
+a[1] => m.IN0
+a[2] => m.IN0
+a[3] => m.IN0
+b[0] => m.IN0
+b[1] => m.IN0
+b[2] => m.IN0
+b[3] => m.IN0
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+m[0] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[1] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[2] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[3] <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|HexDisp:U6
+input[0] => HEX0.IN0
+input[0] => HEX0.IN0
+input[0] => HEX0.IN0
+input[0] => HEX0.IN1
+input[0] => HEX0.IN0
+input[0] => HEX0.IN0
+input[0] => HEX0.IN0
+input[0] => HEX0.IN0
+input[1] => HEX0.IN1
+input[1] => HEX0.IN1
+input[1] => HEX0.IN0
+input[1] => HEX0.IN1
+input[1] => HEX0.IN1
+input[1] => HEX0.IN0
+input[1] => HEX0.IN0
+input[1] => HEX0.IN1
+input[2] => HEX0.IN1
+input[2] => HEX0.IN1
+input[2] => HEX0.IN1
+input[2] => HEX0.IN1
+input[2] => HEX0.IN1
+input[2] => HEX0.IN1
+input[2] => HEX0.IN1
+input[2] => HEX0.IN1
+input[3] => HEX0.IN1
+input[3] => HEX0.IN1
+input[3] => HEX0.IN1
+input[3] => HEX0.IN1
+HEX0[0] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[1] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[2] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[3] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[4] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[5] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|HexDisp:U7
+input[0] => HEX0.IN0
+input[0] => HEX0.IN0
+input[0] => HEX0.IN0
+input[0] => HEX0.IN1
+input[0] => HEX0.IN0
+input[0] => HEX0.IN0
+input[0] => HEX0.IN0
+input[0] => HEX0.IN0
+input[1] => HEX0.IN1
+input[1] => HEX0.IN1
+input[1] => HEX0.IN0
+input[1] => HEX0.IN1
+input[1] => HEX0.IN1
+input[1] => HEX0.IN0
+input[1] => HEX0.IN0
+input[1] => HEX0.IN1
+input[2] => HEX0.IN1
+input[2] => HEX0.IN1
+input[2] => HEX0.IN1
+input[2] => HEX0.IN1
+input[2] => HEX0.IN1
+input[2] => HEX0.IN1
+input[2] => HEX0.IN1
+input[2] => HEX0.IN1
+input[3] => HEX0.IN1
+input[3] => HEX0.IN1
+input[3] => HEX0.IN1
+input[3] => HEX0.IN1
+HEX0[0] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[1] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[2] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[3] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[4] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[5] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|HexDisp:U8
+input[0] => HEX0.IN0
+input[0] => HEX0.IN0
+input[0] => HEX0.IN0
+input[0] => HEX0.IN1
+input[0] => HEX0.IN0
+input[0] => HEX0.IN0
+input[0] => HEX0.IN0
+input[0] => HEX0.IN0
+input[1] => HEX0.IN1
+input[1] => HEX0.IN1
+input[1] => HEX0.IN0
+input[1] => HEX0.IN1
+input[1] => HEX0.IN1
+input[1] => HEX0.IN0
+input[1] => HEX0.IN0
+input[1] => HEX0.IN1
+input[2] => HEX0.IN1
+input[2] => HEX0.IN1
+input[2] => HEX0.IN1
+input[2] => HEX0.IN1
+input[2] => HEX0.IN1
+input[2] => HEX0.IN1
+input[2] => HEX0.IN1
+input[2] => HEX0.IN1
+input[3] => HEX0.IN1
+input[3] => HEX0.IN1
+input[3] => HEX0.IN1
+input[3] => HEX0.IN1
+HEX0[0] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[1] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[2] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[3] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[4] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[5] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|HexDisp:U9
+input[0] => HEX0.IN0
+input[0] => HEX0.IN0
+input[0] => HEX0.IN0
+input[0] => HEX0.IN1
+input[0] => HEX0.IN0
+input[0] => HEX0.IN0
+input[0] => HEX0.IN0
+input[0] => HEX0.IN0
+input[1] => HEX0.IN1
+input[1] => HEX0.IN1
+input[1] => HEX0.IN0
+input[1] => HEX0.IN1
+input[1] => HEX0.IN1
+input[1] => HEX0.IN0
+input[1] => HEX0.IN0
+input[1] => HEX0.IN1
+input[2] => HEX0.IN1
+input[2] => HEX0.IN1
+input[2] => HEX0.IN1
+input[2] => HEX0.IN1
+input[2] => HEX0.IN1
+input[2] => HEX0.IN1
+input[2] => HEX0.IN1
+input[2] => HEX0.IN1
+input[3] => HEX0.IN1
+input[3] => HEX0.IN1
+input[3] => HEX0.IN1
+input[3] => HEX0.IN1
+HEX0[0] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[1] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[2] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[3] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[4] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[5] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|comparator_5bit:U10
+a[0] => comparator_1bit:U1.a
+a[1] => comparator_1bit:U2.a
+a[2] => comparator_1bit:U3.a
+a[3] => comparator_1bit:U4.a
+a[4] => comparator_1bit:U5.a
+b[0] => comparator_1bit:U1.b
+b[1] => comparator_1bit:U2.b
+b[2] => comparator_1bit:U3.b
+b[3] => comparator_1bit:U4.b
+b[4] => comparator_1bit:U5.b
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|comparator_5bit:U10|comparator_1bit:U1
+a => g.IN0
+a => e.IN0
+a => l.IN0
+b => l.IN1
+b => e.IN1
+b => g.IN1
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+l <= l.DB_MAX_OUTPUT_PORT_TYPE
+e <= e.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|comparator_5bit:U10|comparator_1bit:U2
+a => g.IN0
+a => e.IN0
+a => l.IN0
+b => l.IN1
+b => e.IN1
+b => g.IN1
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+l <= l.DB_MAX_OUTPUT_PORT_TYPE
+e <= e.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|comparator_5bit:U10|comparator_1bit:U3
+a => g.IN0
+a => e.IN0
+a => l.IN0
+b => l.IN1
+b => e.IN1
+b => g.IN1
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+l <= l.DB_MAX_OUTPUT_PORT_TYPE
+e <= e.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|comparator_5bit:U10|comparator_1bit:U4
+a => g.IN0
+a => e.IN0
+a => l.IN0
+b => l.IN1
+b => e.IN1
+b => g.IN1
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+l <= l.DB_MAX_OUTPUT_PORT_TYPE
+e <= e.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|comparator_5bit:U10|comparator_1bit:U5
+a => g.IN0
+a => e.IN0
+a => l.IN0
+b => l.IN1
+b => e.IN1
+b => g.IN1
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+l <= l.DB_MAX_OUTPUT_PORT_TYPE
+e <= e.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|comparator_5bit:U11
+a[0] => comparator_1bit:U1.a
+a[1] => comparator_1bit:U2.a
+a[2] => comparator_1bit:U3.a
+a[3] => comparator_1bit:U4.a
+a[4] => comparator_1bit:U5.a
+b[0] => comparator_1bit:U1.b
+b[1] => comparator_1bit:U2.b
+b[2] => comparator_1bit:U3.b
+b[3] => comparator_1bit:U4.b
+b[4] => comparator_1bit:U5.b
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|comparator_5bit:U11|comparator_1bit:U1
+a => g.IN0
+a => e.IN0
+a => l.IN0
+b => l.IN1
+b => e.IN1
+b => g.IN1
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+l <= l.DB_MAX_OUTPUT_PORT_TYPE
+e <= e.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|comparator_5bit:U11|comparator_1bit:U2
+a => g.IN0
+a => e.IN0
+a => l.IN0
+b => l.IN1
+b => e.IN1
+b => g.IN1
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+l <= l.DB_MAX_OUTPUT_PORT_TYPE
+e <= e.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|comparator_5bit:U11|comparator_1bit:U3
+a => g.IN0
+a => e.IN0
+a => l.IN0
+b => l.IN1
+b => e.IN1
+b => g.IN1
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+l <= l.DB_MAX_OUTPUT_PORT_TYPE
+e <= e.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|comparator_5bit:U11|comparator_1bit:U4
+a => g.IN0
+a => e.IN0
+a => l.IN0
+b => l.IN1
+b => e.IN1
+b => g.IN1
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+l <= l.DB_MAX_OUTPUT_PORT_TYPE
+e <= e.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|system|comparator_5bit:U11|comparator_1bit:U5
+a => g.IN0
+a => e.IN0
+a => l.IN0
+b => l.IN1
+b => e.IN1
+b => g.IN1
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+l <= l.DB_MAX_OUTPUT_PORT_TYPE
+e <= e.DB_MAX_OUTPUT_PORT_TYPE
+
+
