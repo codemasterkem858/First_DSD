@@ -1,5 +1,5 @@
 Flow report for FAdder
-Fri May 15 11:08:09 2026
+Tue May 19 14:33:16 2026
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Fri May 15 11:08:09 2026          ;
+; Flow Status                     ; Successful - Tue May 19 14:33:16 2026          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; FAdder                                         ;
 ; Top-level Entity Name           ; FAdder                                         ;
@@ -106,7 +106,9 @@ https://fpgasoftware.intel.com/eula.
 ; Assembler            ; 00:00:13     ; 1.0                     ; 4869 MB             ; 00:00:06                           ;
 ; Timing Analyzer      ; 00:00:13     ; 1.0                     ; 5128 MB             ; 00:00:05                           ;
 ; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4733 MB             ; 00:00:01                           ;
-; Total                ; 00:02:20     ; --                      ; --                  ; 00:02:02                           ;
+; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 4720 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:04     ; 1.0                     ; 4724 MB             ; 00:00:01                           ;
+; Total                ; 00:02:27     ; --                      ; --                  ; 00:02:05                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -120,6 +122,8 @@ https://fpgasoftware.intel.com/eula.
 ; Assembler            ; Luna             ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; Luna             ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; Luna             ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Luna             ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Luna             ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -131,6 +135,8 @@ quartus_fit --read_settings_files=off --write_settings_files=off FAdder -c FAdde
 quartus_asm --read_settings_files=off --write_settings_files=off FAdder -c FAdder
 quartus_sta FAdder -c FAdder
 quartus_eda --read_settings_files=off --write_settings_files=off FAdder -c FAdder
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off FAdder -c FAdder --vector_source="C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Full-Adder/Waveform.vwf" --testbench_file="C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Full-Adder/simulation/qsim/Waveform.vwf.vht"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Full-Adder/simulation/qsim/" FAdder -c FAdder
 
 
 

@@ -1,5 +1,5 @@
 Flow report for system
-Wed Apr 22 10:49:49 2026
+Tue May 19 14:23:57 2026
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Wed Apr 22 10:49:49 2026          ;
+; Flow Status                     ; Successful - Tue May 19 14:23:57 2026          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; system                                         ;
 ; Top-level Entity Name           ; system                                         ;
@@ -106,7 +106,11 @@ https://fpgasoftware.intel.com/eula.
 ; Assembler            ; 00:00:52     ; 1.0                     ; 4872 MB             ; 00:00:12                           ;
 ; Timing Analyzer      ; 00:00:22     ; 1.0                     ; 5113 MB             ; 00:00:08                           ;
 ; EDA Netlist Writer   ; 00:00:04     ; 1.0                     ; 4721 MB             ; 00:00:01                           ;
-; Total                ; 00:03:13     ; --                      ; --                  ; 00:01:53                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4720 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4721 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4720 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4721 MB             ; 00:00:01                           ;
+; Total                ; 00:03:21     ; --                      ; --                  ; 00:01:57                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -120,6 +124,10 @@ https://fpgasoftware.intel.com/eula.
 ; Assembler            ; Luna             ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; Luna             ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; Luna             ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Luna             ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Luna             ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Luna             ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Luna             ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -131,6 +139,10 @@ quartus_fit --read_settings_files=off --write_settings_files=off project1_1 -c s
 quartus_asm --read_settings_files=off --write_settings_files=off project1_1 -c system
 quartus_sta project1_1 -c system
 quartus_eda --read_settings_files=off --write_settings_files=off project1_1 -c system
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off project1_1 -c system --vector_source=C:/Users/Kidus/Documents/GitHub/First_DSD/project1_1/Waveform.vwf --testbench_file=C:/Users/Kidus/Documents/GitHub/First_DSD/project1_1/simulation/qsim/Waveform.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/Kidus/Documents/GitHub/First_DSD/project1_1/simulation/qsim/ project1_1 -c system
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off project1_1 -c system --vector_source=C:/Users/Kidus/Documents/GitHub/First_DSD/project1_1/Waveform.vwf --testbench_file=C:/Users/Kidus/Documents/GitHub/First_DSD/project1_1/simulation/qsim/Waveform.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/Kidus/Documents/GitHub/First_DSD/project1_1/simulation/qsim/ project1_1 -c system
 
 
 

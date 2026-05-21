@@ -1,0 +1,277 @@
+|Divider
+clk => count_4bit:u1.clk
+clk => count_4bit:u2.clk
+clk => count_4bit:u3.clk
+clk => count_4bit:u4.clk
+T => count_4bit:u1.T
+rst_n => count_4bit:u1.rst_n
+rst_n => count_4bit:u2.rst_n
+rst_n => count_4bit:u3.rst_n
+rst_n => count_4bit:u4.rst_n
+count[0] <= count_4bit:u1.count[0]
+count[1] <= count_4bit:u1.count[1]
+count[2] <= count_4bit:u1.count[2]
+count[3] <= count_4bit:u1.count[3]
+count[4] <= count_4bit:u2.count[0]
+count[5] <= count_4bit:u2.count[1]
+count[6] <= count_4bit:u2.count[2]
+count[7] <= count_4bit:u2.count[3]
+count[8] <= count_4bit:u3.count[0]
+count[9] <= count_4bit:u3.count[1]
+count[10] <= count_4bit:u3.count[2]
+count[11] <= count_4bit:u3.count[3]
+count[12] <= count_4bit:u4.count[0]
+count[13] <= count_4bit:u4.count[1]
+count[14] <= count_4bit:u4.count[2]
+count[15] <= count_4bit:u4.count[3]
+qm <= count_4bit:u4.tc
+
+
+|Divider|count_4bit:u1
+clk => T_Flip:u1.clk
+clk => T_Flip:u2.clk
+clk => T_Flip:u3.clk
+clk => T_Flip:u4.clk
+T => c[0].IN1
+T => T_Flip:u1.T
+rst_n => T_Flip:u1.rst_n
+rst_n => T_Flip:u2.rst_n
+rst_n => T_Flip:u3.rst_n
+rst_n => T_Flip:u4.rst_n
+count[0] <= T_Flip:u1.Q
+count[1] <= T_Flip:u2.Q
+count[2] <= T_Flip:u3.Q
+count[3] <= T_Flip:u4.Q
+tc <= tc.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Divider|count_4bit:u1|T_Flip:u1
+T => S_m.IN0
+clk => S_m.IN1
+clk => S_s.IN1
+clk => R_s.IN1
+rst_n => Qn_m.IN1
+rst_n => Qn_s.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Qnot <= Qnot.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Divider|count_4bit:u1|T_Flip:u2
+T => S_m.IN0
+clk => S_m.IN1
+clk => S_s.IN1
+clk => R_s.IN1
+rst_n => Qn_m.IN1
+rst_n => Qn_s.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Qnot <= Qnot.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Divider|count_4bit:u1|T_Flip:u3
+T => S_m.IN0
+clk => S_m.IN1
+clk => S_s.IN1
+clk => R_s.IN1
+rst_n => Qn_m.IN1
+rst_n => Qn_s.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Qnot <= Qnot.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Divider|count_4bit:u1|T_Flip:u4
+T => S_m.IN0
+clk => S_m.IN1
+clk => S_s.IN1
+clk => R_s.IN1
+rst_n => Qn_m.IN1
+rst_n => Qn_s.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Qnot <= Qnot.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Divider|count_4bit:u2
+clk => T_Flip:u1.clk
+clk => T_Flip:u2.clk
+clk => T_Flip:u3.clk
+clk => T_Flip:u4.clk
+T => c[0].IN1
+T => T_Flip:u1.T
+rst_n => T_Flip:u1.rst_n
+rst_n => T_Flip:u2.rst_n
+rst_n => T_Flip:u3.rst_n
+rst_n => T_Flip:u4.rst_n
+count[0] <= T_Flip:u1.Q
+count[1] <= T_Flip:u2.Q
+count[2] <= T_Flip:u3.Q
+count[3] <= T_Flip:u4.Q
+tc <= tc.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Divider|count_4bit:u2|T_Flip:u1
+T => S_m.IN0
+clk => S_m.IN1
+clk => S_s.IN1
+clk => R_s.IN1
+rst_n => Qn_m.IN1
+rst_n => Qn_s.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Qnot <= Qnot.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Divider|count_4bit:u2|T_Flip:u2
+T => S_m.IN0
+clk => S_m.IN1
+clk => S_s.IN1
+clk => R_s.IN1
+rst_n => Qn_m.IN1
+rst_n => Qn_s.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Qnot <= Qnot.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Divider|count_4bit:u2|T_Flip:u3
+T => S_m.IN0
+clk => S_m.IN1
+clk => S_s.IN1
+clk => R_s.IN1
+rst_n => Qn_m.IN1
+rst_n => Qn_s.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Qnot <= Qnot.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Divider|count_4bit:u2|T_Flip:u4
+T => S_m.IN0
+clk => S_m.IN1
+clk => S_s.IN1
+clk => R_s.IN1
+rst_n => Qn_m.IN1
+rst_n => Qn_s.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Qnot <= Qnot.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Divider|count_4bit:u3
+clk => T_Flip:u1.clk
+clk => T_Flip:u2.clk
+clk => T_Flip:u3.clk
+clk => T_Flip:u4.clk
+T => c[0].IN1
+T => T_Flip:u1.T
+rst_n => T_Flip:u1.rst_n
+rst_n => T_Flip:u2.rst_n
+rst_n => T_Flip:u3.rst_n
+rst_n => T_Flip:u4.rst_n
+count[0] <= T_Flip:u1.Q
+count[1] <= T_Flip:u2.Q
+count[2] <= T_Flip:u3.Q
+count[3] <= T_Flip:u4.Q
+tc <= tc.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Divider|count_4bit:u3|T_Flip:u1
+T => S_m.IN0
+clk => S_m.IN1
+clk => S_s.IN1
+clk => R_s.IN1
+rst_n => Qn_m.IN1
+rst_n => Qn_s.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Qnot <= Qnot.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Divider|count_4bit:u3|T_Flip:u2
+T => S_m.IN0
+clk => S_m.IN1
+clk => S_s.IN1
+clk => R_s.IN1
+rst_n => Qn_m.IN1
+rst_n => Qn_s.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Qnot <= Qnot.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Divider|count_4bit:u3|T_Flip:u3
+T => S_m.IN0
+clk => S_m.IN1
+clk => S_s.IN1
+clk => R_s.IN1
+rst_n => Qn_m.IN1
+rst_n => Qn_s.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Qnot <= Qnot.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Divider|count_4bit:u3|T_Flip:u4
+T => S_m.IN0
+clk => S_m.IN1
+clk => S_s.IN1
+clk => R_s.IN1
+rst_n => Qn_m.IN1
+rst_n => Qn_s.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Qnot <= Qnot.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Divider|count_4bit:u4
+clk => T_Flip:u1.clk
+clk => T_Flip:u2.clk
+clk => T_Flip:u3.clk
+clk => T_Flip:u4.clk
+T => c[0].IN1
+T => T_Flip:u1.T
+rst_n => T_Flip:u1.rst_n
+rst_n => T_Flip:u2.rst_n
+rst_n => T_Flip:u3.rst_n
+rst_n => T_Flip:u4.rst_n
+count[0] <= T_Flip:u1.Q
+count[1] <= T_Flip:u2.Q
+count[2] <= T_Flip:u3.Q
+count[3] <= T_Flip:u4.Q
+tc <= tc.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Divider|count_4bit:u4|T_Flip:u1
+T => S_m.IN0
+clk => S_m.IN1
+clk => S_s.IN1
+clk => R_s.IN1
+rst_n => Qn_m.IN1
+rst_n => Qn_s.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Qnot <= Qnot.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Divider|count_4bit:u4|T_Flip:u2
+T => S_m.IN0
+clk => S_m.IN1
+clk => S_s.IN1
+clk => R_s.IN1
+rst_n => Qn_m.IN1
+rst_n => Qn_s.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Qnot <= Qnot.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Divider|count_4bit:u4|T_Flip:u3
+T => S_m.IN0
+clk => S_m.IN1
+clk => S_s.IN1
+clk => R_s.IN1
+rst_n => Qn_m.IN1
+rst_n => Qn_s.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Qnot <= Qnot.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Divider|count_4bit:u4|T_Flip:u4
+T => S_m.IN0
+clk => S_m.IN1
+clk => S_s.IN1
+clk => R_s.IN1
+rst_n => Qn_m.IN1
+rst_n => Qn_s.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+Qnot <= Qnot.DB_MAX_OUTPUT_PORT_TYPE
+
+

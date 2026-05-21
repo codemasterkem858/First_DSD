@@ -7,8 +7,7 @@ entity FAdder is
 		a, b : in  std_logic_vector(15 downto 0);	-- 16 bit inputs
 		ci   : in  std_logic;							-- 1 bit carry in
 		sum  : out std_logic_vector(15 downto 0);	-- 16 bit output
-		co   : out std_logic;							-- 1 bit carry out
-		neg  : out std_logic								-- 1 bit negative flag
+		co   : out std_logic 							-- 1 bit carry out
 		
 	);
 end FAdder;
@@ -37,7 +36,6 @@ architecture behavior of FAdder is
 		u3 : FAdder_4bit port map (a => a(15 downto 12), b => b(15 downto 12), ci => co2, sum => summ(15 downto 12), co =>  co);
 		
 		sum <= summ;
-		neg <= summ(15);
 	end behavior;
 
 -- 1 bit Full Adder
@@ -56,7 +54,7 @@ architecture behavior of FAdder_1bit is
 	-- Behavior
 	begin
 		sum <= a xor b xor ci;
-		co  <= a xor (b and ci);
+		co  <= (a and b) or ((a xor b) and ci);
 	end behavior;
 
 -- 4 bit Full Adder
