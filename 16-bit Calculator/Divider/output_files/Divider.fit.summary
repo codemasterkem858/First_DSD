@@ -1,13 +1,13 @@
-Fitter Status : Successful - Thu May 21 10:48:01 2026
+Fitter Status : Successful - Wed May 27 18:12:11 2026
 Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : Divider
 Top-level Entity Name : Divider
 Family : Cyclone V
 Device : 5CEBA2F17A7
 Timing Models : Final
-Logic utilization (in ALMs) : 69 / 9,430 ( < 1 % )
+Logic utilization (in ALMs) : 403 / 9,430 ( 4 % )
 Total registers : 0
-Total pins : 20 / 128 ( 16 % )
+Total pins : 66 / 128 ( 52 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 1,802,240 ( 0 % )
 Total RAM Blocks : 0 / 176 ( 0 % )

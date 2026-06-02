@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Divider
-Thu May 21 10:47:19 2026
+Wed May 27 18:08:39 2026
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -14,29 +14,15 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Source assignments for count_4bit:u1|T_Flip:u1
- 10. Source assignments for count_4bit:u1|T_Flip:u2
- 11. Source assignments for count_4bit:u1|T_Flip:u3
- 12. Source assignments for count_4bit:u1|T_Flip:u4
- 13. Source assignments for count_4bit:u2|T_Flip:u1
- 14. Source assignments for count_4bit:u2|T_Flip:u2
- 15. Source assignments for count_4bit:u2|T_Flip:u3
- 16. Source assignments for count_4bit:u2|T_Flip:u4
- 17. Source assignments for count_4bit:u3|T_Flip:u1
- 18. Source assignments for count_4bit:u3|T_Flip:u2
- 19. Source assignments for count_4bit:u3|T_Flip:u3
- 20. Source assignments for count_4bit:u3|T_Flip:u4
- 21. Source assignments for count_4bit:u4|T_Flip:u1
- 22. Source assignments for count_4bit:u4|T_Flip:u2
- 23. Source assignments for count_4bit:u4|T_Flip:u3
- 24. Source assignments for count_4bit:u4|T_Flip:u4
- 25. Port Connectivity Checks: "count_4bit:u1|T_Flip:u4"
- 26. Port Connectivity Checks: "count_4bit:u1|T_Flip:u3"
- 27. Port Connectivity Checks: "count_4bit:u1|T_Flip:u2"
- 28. Port Connectivity Checks: "count_4bit:u1|T_Flip:u1"
- 29. Post-Synthesis Netlist Statistics for Top Partition
- 30. Elapsed Time Per Partition
- 31. Analysis & Synthesis Messages
+  9. Port Connectivity Checks: "FAdder_16bit:v7"
+ 10. Port Connectivity Checks: "FAdder_16bit:v5"
+ 11. Port Connectivity Checks: "pu4s:u1|pu:u1|FAdder_16bit:u1"
+ 12. Port Connectivity Checks: "pu4s:u1"
+ 13. Port Connectivity Checks: "FAdder_16bit:v3"
+ 14. Port Connectivity Checks: "FAdder_16bit:v1"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -63,14 +49,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu May 21 10:47:19 2026          ;
+; Analysis & Synthesis Status     ; Successful - Wed May 27 18:08:39 2026          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; Divider                                        ;
 ; Top-level Entity Name           ; Divider                                        ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
 ; Total registers                 ; 0                                              ;
-; Total pins                      ; 20                                             ;
+; Total pins                      ; 66                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
 ; Total DSP Blocks                ; 0                                              ;
@@ -196,60 +182,366 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 70        ;
-;                                             ;           ;
-; Combinational ALUT usage for logic          ; 132       ;
-;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 7         ;
-;     -- 5 input functions                    ; 3         ;
-;     -- 4 input functions                    ; 5         ;
-;     -- <=3 input functions                  ; 117       ;
-;                                             ;           ;
-; Dedicated logic registers                   ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 20        ;
-;                                             ;           ;
-; Total DSP Blocks                            ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 43        ;
-; Total fan-out                               ; 384       ;
-; Average fan-out                             ; 2.23      ;
-+---------------------------------------------+-----------+
++----------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                          ;
++---------------------------------------------+------------------------+
+; Resource                                    ; Usage                  ;
++---------------------------------------------+------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 409                    ;
+;                                             ;                        ;
+; Combinational ALUT usage for logic          ; 635                    ;
+;     -- 7 input functions                    ; 1                      ;
+;     -- 6 input functions                    ; 182                    ;
+;     -- 5 input functions                    ; 250                    ;
+;     -- 4 input functions                    ; 139                    ;
+;     -- <=3 input functions                  ; 63                     ;
+;                                             ;                        ;
+; Dedicated logic registers                   ; 0                      ;
+;                                             ;                        ;
+; I/O pins                                    ; 66                     ;
+;                                             ;                        ;
+; Total DSP Blocks                            ; 0                      ;
+;                                             ;                        ;
+; Maximum fan-out node                        ; mux2x1_16bit:v4|m[7]~6 ;
+; Maximum fan-out                             ; 61                     ;
+; Total fan-out                               ; 3174                   ;
+; Average fan-out                             ; 4.14                   ;
++---------------------------------------------+------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                 ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name              ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------+-------------+--------------+
-; |Divider                   ; 132 (0)             ; 0 (0)                     ; 0                 ; 0          ; 20   ; 0            ; |Divider                         ; Divider     ; work         ;
-;    |count_4bit:u1|         ; 32 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|count_4bit:u1           ; count_4bit  ; work         ;
-;       |T_Flip:u1|          ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|count_4bit:u1|T_Flip:u1 ; T_Flip      ; work         ;
-;       |T_Flip:u2|          ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|count_4bit:u1|T_Flip:u2 ; T_Flip      ; work         ;
-;       |T_Flip:u3|          ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|count_4bit:u1|T_Flip:u3 ; T_Flip      ; work         ;
-;       |T_Flip:u4|          ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|count_4bit:u1|T_Flip:u4 ; T_Flip      ; work         ;
-;    |count_4bit:u2|         ; 34 (2)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|count_4bit:u2           ; count_4bit  ; work         ;
-;       |T_Flip:u1|          ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|count_4bit:u2|T_Flip:u1 ; T_Flip      ; work         ;
-;       |T_Flip:u2|          ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|count_4bit:u2|T_Flip:u2 ; T_Flip      ; work         ;
-;       |T_Flip:u3|          ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|count_4bit:u2|T_Flip:u3 ; T_Flip      ; work         ;
-;       |T_Flip:u4|          ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|count_4bit:u2|T_Flip:u4 ; T_Flip      ; work         ;
-;    |count_4bit:u3|         ; 32 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|count_4bit:u3           ; count_4bit  ; work         ;
-;       |T_Flip:u1|          ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|count_4bit:u3|T_Flip:u1 ; T_Flip      ; work         ;
-;       |T_Flip:u2|          ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|count_4bit:u3|T_Flip:u2 ; T_Flip      ; work         ;
-;       |T_Flip:u3|          ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|count_4bit:u3|T_Flip:u3 ; T_Flip      ; work         ;
-;       |T_Flip:u4|          ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|count_4bit:u3|T_Flip:u4 ; T_Flip      ; work         ;
-;    |count_4bit:u4|         ; 34 (2)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|count_4bit:u4           ; count_4bit  ; work         ;
-;       |T_Flip:u1|          ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|count_4bit:u4|T_Flip:u1 ; T_Flip      ; work         ;
-;       |T_Flip:u2|          ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|count_4bit:u4|T_Flip:u2 ; T_Flip      ; work         ;
-;       |T_Flip:u3|          ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|count_4bit:u4|T_Flip:u3 ; T_Flip      ; work         ;
-;       |T_Flip:u4|          ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|count_4bit:u4|T_Flip:u4 ; T_Flip      ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------+-------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                   ;
++------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------+--------------+--------------+
+; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                             ; Entity Name  ; Library Name ;
++------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------+--------------+--------------+
+; |Divider                     ; 635 (18)            ; 0 (0)                     ; 0                 ; 0          ; 66   ; 0            ; |Divider                                                        ; Divider      ; work         ;
+;    |FAdder_16bit:v5|         ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|FAdder_16bit:v5                                        ; FAdder_16bit ; work         ;
+;       |FAdder_4bit:u1|       ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|FAdder_16bit:v5|FAdder_4bit:u1                         ; FAdder_4bit  ; work         ;
+;          |FAdder:u3|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|FAdder_16bit:v5|FAdder_4bit:u1|FAdder:u3               ; FAdder       ; work         ;
+;       |FAdder_4bit:u2|       ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|FAdder_16bit:v5|FAdder_4bit:u2                         ; FAdder_4bit  ; work         ;
+;          |FAdder:u2|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|FAdder_16bit:v5|FAdder_4bit:u2|FAdder:u2               ; FAdder       ; work         ;
+;          |FAdder:u4|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|FAdder_16bit:v5|FAdder_4bit:u2|FAdder:u4               ; FAdder       ; work         ;
+;       |FAdder_4bit:u3|       ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|FAdder_16bit:v5|FAdder_4bit:u3                         ; FAdder_4bit  ; work         ;
+;          |FAdder:u4|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|FAdder_16bit:v5|FAdder_4bit:u3|FAdder:u4               ; FAdder       ; work         ;
+;    |FAdder_16bit:v7|         ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|FAdder_16bit:v7                                        ; FAdder_16bit ; work         ;
+;       |FAdder_4bit:u1|       ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|FAdder_16bit:v7|FAdder_4bit:u1                         ; FAdder_4bit  ; work         ;
+;          |FAdder:u4|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|FAdder_16bit:v7|FAdder_4bit:u1|FAdder:u4               ; FAdder       ; work         ;
+;       |FAdder_4bit:u2|       ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|FAdder_16bit:v7|FAdder_4bit:u2                         ; FAdder_4bit  ; work         ;
+;          |FAdder:u2|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|FAdder_16bit:v7|FAdder_4bit:u2|FAdder:u2               ; FAdder       ; work         ;
+;       |FAdder_4bit:u3|       ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|FAdder_16bit:v7|FAdder_4bit:u3                         ; FAdder_4bit  ; work         ;
+;          |FAdder:u1|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|FAdder_16bit:v7|FAdder_4bit:u3|FAdder:u1               ; FAdder       ; work         ;
+;          |FAdder:u3|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|FAdder_16bit:v7|FAdder_4bit:u3|FAdder:u3               ; FAdder       ; work         ;
+;       |FAdder_4bit:u4|       ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|FAdder_16bit:v7|FAdder_4bit:u4                         ; FAdder_4bit  ; work         ;
+;          |FAdder:u2|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|FAdder_16bit:v7|FAdder_4bit:u4|FAdder:u2               ; FAdder       ; work         ;
+;    |mux2x1_16bit:v2|         ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|mux2x1_16bit:v2                                        ; mux2x1_16bit ; work         ;
+;    |mux2x1_16bit:v4|         ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|mux2x1_16bit:v4                                        ; mux2x1_16bit ; work         ;
+;    |mux2x1_16bit:v6|         ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|mux2x1_16bit:v6                                        ; mux2x1_16bit ; work         ;
+;    |mux2x1_16bit:v8|         ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|mux2x1_16bit:v8                                        ; mux2x1_16bit ; work         ;
+;    |pu4s:u1|                 ; 111 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1                                                ; pu4s         ; work         ;
+;       |pu:u1|                ; 16 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u1                                          ; pu           ; work         ;
+;          |FAdder_16bit:u1|   ; 10 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u1|FAdder_16bit:u1                          ; FAdder_16bit ; work         ;
+;             |FAdder_4bit:u1| ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u1|FAdder_16bit:u1|FAdder_4bit:u1           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u1|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u1|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u3 ; FAdder       ; work         ;
+;             |FAdder_4bit:u2| ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u1|FAdder_16bit:u1|FAdder_4bit:u2           ; FAdder_4bit  ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u1|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u1|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u3 ; FAdder       ; work         ;
+;             |FAdder_4bit:u3| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u1|FAdder_16bit:u1|FAdder_4bit:u3           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u1|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u1|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u2 ; FAdder       ; work         ;
+;             |FAdder_4bit:u4| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u1|FAdder_16bit:u1|FAdder_4bit:u4           ; FAdder_4bit  ; work         ;
+;                |FAdder:u4|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u1|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u4 ; FAdder       ; work         ;
+;          |mux2x1_16bit:u2|   ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u1|mux2x1_16bit:u2                          ; mux2x1_16bit ; work         ;
+;       |pu:u2|                ; 28 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u2                                          ; pu           ; work         ;
+;          |FAdder_16bit:u1|   ; 18 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u2|FAdder_16bit:u1                          ; FAdder_16bit ; work         ;
+;             |FAdder_4bit:u1| ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u2|FAdder_16bit:u1|FAdder_4bit:u1           ; FAdder_4bit  ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u2|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u2|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u3 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u2|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u4 ; FAdder       ; work         ;
+;             |FAdder_4bit:u2| ; 8 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u2|FAdder_16bit:u1|FAdder_4bit:u2           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u2|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u2|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u2|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u3 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u2|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u4 ; FAdder       ; work         ;
+;             |FAdder_4bit:u3| ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u2|FAdder_16bit:u1|FAdder_4bit:u3           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u2|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u2|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u3 ; FAdder       ; work         ;
+;             |FAdder_4bit:u4| ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u2|FAdder_16bit:u1|FAdder_4bit:u4           ; FAdder_4bit  ; work         ;
+;                |FAdder:u4|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u2|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u4 ; FAdder       ; work         ;
+;          |mux2x1_16bit:u2|   ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u2|mux2x1_16bit:u2                          ; mux2x1_16bit ; work         ;
+;       |pu:u3|                ; 37 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u3                                          ; pu           ; work         ;
+;          |FAdder_16bit:u1|   ; 24 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u3|FAdder_16bit:u1                          ; FAdder_16bit ; work         ;
+;             |FAdder_4bit:u1| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u3|FAdder_16bit:u1|FAdder_4bit:u1           ; FAdder_4bit  ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u3|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u3|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u3 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u3|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u4 ; FAdder       ; work         ;
+;             |FAdder_4bit:u2| ; 12 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u3|FAdder_16bit:u1|FAdder_4bit:u2           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u3|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u3|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u3|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u3 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u3|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u4 ; FAdder       ; work         ;
+;             |FAdder_4bit:u3| ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u3|FAdder_16bit:u1|FAdder_4bit:u3           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u3|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u3|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u3|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u3 ; FAdder       ; work         ;
+;             |FAdder_4bit:u4| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u3|FAdder_16bit:u1|FAdder_4bit:u4           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u3|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u3|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u4 ; FAdder       ; work         ;
+;          |mux2x1_16bit:u2|   ; 13 (13)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u3|mux2x1_16bit:u2                          ; mux2x1_16bit ; work         ;
+;       |pu:u4|                ; 30 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u4                                          ; pu           ; work         ;
+;          |FAdder_16bit:u1|   ; 18 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u4|FAdder_16bit:u1                          ; FAdder_16bit ; work         ;
+;             |FAdder_4bit:u1| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u4|FAdder_16bit:u1|FAdder_4bit:u1           ; FAdder_4bit  ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u4|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u4|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u4 ; FAdder       ; work         ;
+;             |FAdder_4bit:u2| ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u4|FAdder_16bit:u1|FAdder_4bit:u2           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u4|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u4|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u4|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u3 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u4|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u4 ; FAdder       ; work         ;
+;             |FAdder_4bit:u3| ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u4|FAdder_16bit:u1|FAdder_4bit:u3           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u4|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u4|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u4|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u3 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u4|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u4 ; FAdder       ; work         ;
+;             |FAdder_4bit:u4| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u4|FAdder_16bit:u1|FAdder_4bit:u4           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u4|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u4|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u4 ; FAdder       ; work         ;
+;          |mux2x1_16bit:u2|   ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u1|pu:u4|mux2x1_16bit:u2                          ; mux2x1_16bit ; work         ;
+;    |pu4s:u2|                 ; 144 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2                                                ; pu4s         ; work         ;
+;       |pu:u1|                ; 36 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u1                                          ; pu           ; work         ;
+;          |FAdder_16bit:u1|   ; 21 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u1|FAdder_16bit:u1                          ; FAdder_16bit ; work         ;
+;             |FAdder_4bit:u1| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u1|FAdder_16bit:u1|FAdder_4bit:u1           ; FAdder_4bit  ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u1|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u1|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u4 ; FAdder       ; work         ;
+;             |FAdder_4bit:u2| ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u1|FAdder_16bit:u1|FAdder_4bit:u2           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u1|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u1|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u1|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u3 ; FAdder       ; work         ;
+;             |FAdder_4bit:u3| ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u1|FAdder_16bit:u1|FAdder_4bit:u3           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u1|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u1|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u1|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u3 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u1|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u4 ; FAdder       ; work         ;
+;             |FAdder_4bit:u4| ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u1|FAdder_16bit:u1|FAdder_4bit:u4           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u1|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u1|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u1|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u4 ; FAdder       ; work         ;
+;          |mux2x1_16bit:u2|   ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u1|mux2x1_16bit:u2                          ; mux2x1_16bit ; work         ;
+;       |pu:u2|                ; 36 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u2                                          ; pu           ; work         ;
+;          |FAdder_16bit:u1|   ; 21 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u2|FAdder_16bit:u1                          ; FAdder_16bit ; work         ;
+;             |FAdder_4bit:u1| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u2|FAdder_16bit:u1|FAdder_4bit:u1           ; FAdder_4bit  ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u2|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u2|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u4 ; FAdder       ; work         ;
+;             |FAdder_4bit:u2| ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u2|FAdder_16bit:u1|FAdder_4bit:u2           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u2|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u2|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u2|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u3 ; FAdder       ; work         ;
+;             |FAdder_4bit:u3| ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u2|FAdder_16bit:u1|FAdder_4bit:u3           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u2|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u2|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u2|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u3 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u2|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u4 ; FAdder       ; work         ;
+;             |FAdder_4bit:u4| ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u2|FAdder_16bit:u1|FAdder_4bit:u4           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u2|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u2|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u2|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u4 ; FAdder       ; work         ;
+;          |mux2x1_16bit:u2|   ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u2|mux2x1_16bit:u2                          ; mux2x1_16bit ; work         ;
+;       |pu:u3|                ; 36 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u3                                          ; pu           ; work         ;
+;          |FAdder_16bit:u1|   ; 21 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u3|FAdder_16bit:u1                          ; FAdder_16bit ; work         ;
+;             |FAdder_4bit:u1| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u3|FAdder_16bit:u1|FAdder_4bit:u1           ; FAdder_4bit  ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u3|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u3|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u4 ; FAdder       ; work         ;
+;             |FAdder_4bit:u2| ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u3|FAdder_16bit:u1|FAdder_4bit:u2           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u3|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u3|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u3|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u3 ; FAdder       ; work         ;
+;             |FAdder_4bit:u3| ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u3|FAdder_16bit:u1|FAdder_4bit:u3           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u3|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u3|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u3|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u3 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u3|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u4 ; FAdder       ; work         ;
+;             |FAdder_4bit:u4| ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u3|FAdder_16bit:u1|FAdder_4bit:u4           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u3|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u3|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u3|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u4 ; FAdder       ; work         ;
+;          |mux2x1_16bit:u2|   ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u3|mux2x1_16bit:u2                          ; mux2x1_16bit ; work         ;
+;       |pu:u4|                ; 36 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u4                                          ; pu           ; work         ;
+;          |FAdder_16bit:u1|   ; 21 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u4|FAdder_16bit:u1                          ; FAdder_16bit ; work         ;
+;             |FAdder_4bit:u1| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u4|FAdder_16bit:u1|FAdder_4bit:u1           ; FAdder_4bit  ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u4|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u4|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u4 ; FAdder       ; work         ;
+;             |FAdder_4bit:u2| ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u4|FAdder_16bit:u1|FAdder_4bit:u2           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u4|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u4|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u4|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u3 ; FAdder       ; work         ;
+;             |FAdder_4bit:u3| ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u4|FAdder_16bit:u1|FAdder_4bit:u3           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u4|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u4|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u4|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u3 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u4|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u4 ; FAdder       ; work         ;
+;             |FAdder_4bit:u4| ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u4|FAdder_16bit:u1|FAdder_4bit:u4           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u4|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u4|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u4|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u4 ; FAdder       ; work         ;
+;          |mux2x1_16bit:u2|   ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u2|pu:u4|mux2x1_16bit:u2                          ; mux2x1_16bit ; work         ;
+;    |pu4s:u3|                 ; 144 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3                                                ; pu4s         ; work         ;
+;       |pu:u1|                ; 36 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u1                                          ; pu           ; work         ;
+;          |FAdder_16bit:u1|   ; 21 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u1|FAdder_16bit:u1                          ; FAdder_16bit ; work         ;
+;             |FAdder_4bit:u1| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u1|FAdder_16bit:u1|FAdder_4bit:u1           ; FAdder_4bit  ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u1|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u1|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u4 ; FAdder       ; work         ;
+;             |FAdder_4bit:u2| ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u1|FAdder_16bit:u1|FAdder_4bit:u2           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u1|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u1|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u1|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u3 ; FAdder       ; work         ;
+;             |FAdder_4bit:u3| ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u1|FAdder_16bit:u1|FAdder_4bit:u3           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u1|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u1|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u1|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u3 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u1|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u4 ; FAdder       ; work         ;
+;             |FAdder_4bit:u4| ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u1|FAdder_16bit:u1|FAdder_4bit:u4           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u1|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u1|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u1|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u4 ; FAdder       ; work         ;
+;          |mux2x1_16bit:u2|   ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u1|mux2x1_16bit:u2                          ; mux2x1_16bit ; work         ;
+;       |pu:u2|                ; 36 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u2                                          ; pu           ; work         ;
+;          |FAdder_16bit:u1|   ; 21 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u2|FAdder_16bit:u1                          ; FAdder_16bit ; work         ;
+;             |FAdder_4bit:u1| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u2|FAdder_16bit:u1|FAdder_4bit:u1           ; FAdder_4bit  ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u2|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u2|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u4 ; FAdder       ; work         ;
+;             |FAdder_4bit:u2| ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u2|FAdder_16bit:u1|FAdder_4bit:u2           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u2|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u2|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u2|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u3 ; FAdder       ; work         ;
+;             |FAdder_4bit:u3| ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u2|FAdder_16bit:u1|FAdder_4bit:u3           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u2|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u2|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u2|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u3 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u2|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u4 ; FAdder       ; work         ;
+;             |FAdder_4bit:u4| ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u2|FAdder_16bit:u1|FAdder_4bit:u4           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u2|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u2|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u2|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u4 ; FAdder       ; work         ;
+;          |mux2x1_16bit:u2|   ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u2|mux2x1_16bit:u2                          ; mux2x1_16bit ; work         ;
+;       |pu:u3|                ; 36 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u3                                          ; pu           ; work         ;
+;          |FAdder_16bit:u1|   ; 21 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u3|FAdder_16bit:u1                          ; FAdder_16bit ; work         ;
+;             |FAdder_4bit:u1| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u3|FAdder_16bit:u1|FAdder_4bit:u1           ; FAdder_4bit  ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u3|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u3|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u4 ; FAdder       ; work         ;
+;             |FAdder_4bit:u2| ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u3|FAdder_16bit:u1|FAdder_4bit:u2           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u3|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u3|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u3|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u3 ; FAdder       ; work         ;
+;             |FAdder_4bit:u3| ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u3|FAdder_16bit:u1|FAdder_4bit:u3           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u3|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u3|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u3|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u3 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u3|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u4 ; FAdder       ; work         ;
+;             |FAdder_4bit:u4| ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u3|FAdder_16bit:u1|FAdder_4bit:u4           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u3|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u3|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u3|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u4 ; FAdder       ; work         ;
+;          |mux2x1_16bit:u2|   ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u3|mux2x1_16bit:u2                          ; mux2x1_16bit ; work         ;
+;       |pu:u4|                ; 36 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u4                                          ; pu           ; work         ;
+;          |FAdder_16bit:u1|   ; 21 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u4|FAdder_16bit:u1                          ; FAdder_16bit ; work         ;
+;             |FAdder_4bit:u1| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u4|FAdder_16bit:u1|FAdder_4bit:u1           ; FAdder_4bit  ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u4|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u4|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u4 ; FAdder       ; work         ;
+;             |FAdder_4bit:u2| ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u4|FAdder_16bit:u1|FAdder_4bit:u2           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u4|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u4|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u4|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u3 ; FAdder       ; work         ;
+;             |FAdder_4bit:u3| ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u4|FAdder_16bit:u1|FAdder_4bit:u3           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u4|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u4|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u4|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u3 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u4|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u4 ; FAdder       ; work         ;
+;             |FAdder_4bit:u4| ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u4|FAdder_16bit:u1|FAdder_4bit:u4           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u4|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u4|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u4|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u4 ; FAdder       ; work         ;
+;          |mux2x1_16bit:u2|   ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u3|pu:u4|mux2x1_16bit:u2                          ; mux2x1_16bit ; work         ;
+;    |pu4s:u4|                 ; 151 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4                                                ; pu4s         ; work         ;
+;       |pu:u1|                ; 36 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u1                                          ; pu           ; work         ;
+;          |FAdder_16bit:u1|   ; 21 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u1|FAdder_16bit:u1                          ; FAdder_16bit ; work         ;
+;             |FAdder_4bit:u1| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u1|FAdder_16bit:u1|FAdder_4bit:u1           ; FAdder_4bit  ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u1|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u1|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u4 ; FAdder       ; work         ;
+;             |FAdder_4bit:u2| ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u1|FAdder_16bit:u1|FAdder_4bit:u2           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u1|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u1|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u1|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u3 ; FAdder       ; work         ;
+;             |FAdder_4bit:u3| ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u1|FAdder_16bit:u1|FAdder_4bit:u3           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u1|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u1|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u1|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u3 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u1|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u4 ; FAdder       ; work         ;
+;             |FAdder_4bit:u4| ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u1|FAdder_16bit:u1|FAdder_4bit:u4           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u1|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u1|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u1|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u4 ; FAdder       ; work         ;
+;          |mux2x1_16bit:u2|   ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u1|mux2x1_16bit:u2                          ; mux2x1_16bit ; work         ;
+;       |pu:u2|                ; 36 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u2                                          ; pu           ; work         ;
+;          |FAdder_16bit:u1|   ; 21 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u2|FAdder_16bit:u1                          ; FAdder_16bit ; work         ;
+;             |FAdder_4bit:u1| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u2|FAdder_16bit:u1|FAdder_4bit:u1           ; FAdder_4bit  ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u2|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u2|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u4 ; FAdder       ; work         ;
+;             |FAdder_4bit:u2| ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u2|FAdder_16bit:u1|FAdder_4bit:u2           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u2|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u2|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u2|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u3 ; FAdder       ; work         ;
+;             |FAdder_4bit:u3| ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u2|FAdder_16bit:u1|FAdder_4bit:u3           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u2|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u2|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u2|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u3 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u2|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u4 ; FAdder       ; work         ;
+;             |FAdder_4bit:u4| ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u2|FAdder_16bit:u1|FAdder_4bit:u4           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u2|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u2|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u2|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u4 ; FAdder       ; work         ;
+;          |mux2x1_16bit:u2|   ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u2|mux2x1_16bit:u2                          ; mux2x1_16bit ; work         ;
+;       |pu:u3|                ; 36 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u3                                          ; pu           ; work         ;
+;          |FAdder_16bit:u1|   ; 21 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u3|FAdder_16bit:u1                          ; FAdder_16bit ; work         ;
+;             |FAdder_4bit:u1| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u3|FAdder_16bit:u1|FAdder_4bit:u1           ; FAdder_4bit  ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u3|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u3|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u4 ; FAdder       ; work         ;
+;             |FAdder_4bit:u2| ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u3|FAdder_16bit:u1|FAdder_4bit:u2           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u3|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u3|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u3|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u3 ; FAdder       ; work         ;
+;             |FAdder_4bit:u3| ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u3|FAdder_16bit:u1|FAdder_4bit:u3           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u3|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u3|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u3|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u3 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u3|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u4 ; FAdder       ; work         ;
+;             |FAdder_4bit:u4| ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u3|FAdder_16bit:u1|FAdder_4bit:u4           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u3|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u3|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u3|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u4 ; FAdder       ; work         ;
+;          |mux2x1_16bit:u2|   ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u3|mux2x1_16bit:u2                          ; mux2x1_16bit ; work         ;
+;       |pu:u4|                ; 43 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u4                                          ; pu           ; work         ;
+;          |FAdder_16bit:u1|   ; 27 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u4|FAdder_16bit:u1                          ; FAdder_16bit ; work         ;
+;             |FAdder_4bit:u1| ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u4|FAdder_16bit:u1|FAdder_4bit:u1           ; FAdder_4bit  ; work         ;
+;                |FAdder:u2|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u4|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u4|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u3 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u4|FAdder_16bit:u1|FAdder_4bit:u1|FAdder:u4 ; FAdder       ; work         ;
+;             |FAdder_4bit:u2| ; 8 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u4|FAdder_16bit:u1|FAdder_4bit:u2           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u4|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u4|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u4|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u3 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u4|FAdder_16bit:u1|FAdder_4bit:u2|FAdder:u4 ; FAdder       ; work         ;
+;             |FAdder_4bit:u3| ; 8 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u4|FAdder_16bit:u1|FAdder_4bit:u3           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u4|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u4|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u4|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u3 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u4|FAdder_16bit:u1|FAdder_4bit:u3|FAdder:u4 ; FAdder       ; work         ;
+;             |FAdder_4bit:u4| ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u4|FAdder_16bit:u1|FAdder_4bit:u4           ; FAdder_4bit  ; work         ;
+;                |FAdder:u1|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u4|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u1 ; FAdder       ; work         ;
+;                |FAdder:u2|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u4|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u2 ; FAdder       ; work         ;
+;                |FAdder:u3|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u4|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u3 ; FAdder       ; work         ;
+;                |FAdder:u4|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u4|FAdder_16bit:u1|FAdder_4bit:u4|FAdder:u4 ; FAdder       ; work         ;
+;          |mux2x1_16bit:u2|   ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Divider|pu4s:u4|pu:u4|mux2x1_16bit:u2                          ; mux2x1_16bit ; work         ;
++------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -268,423 +560,65 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------+
-; Source assignments for count_4bit:u1|T_Flip:u1     ;
-+------------------------------+-------+------+------+
-; Assignment                   ; Value ; From ; To   ;
-+------------------------------+-------+------+------+
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; S_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; S_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; R_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; R_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Q_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Q_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Qn_m ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Qn_m ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; S_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; S_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; R_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; R_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Q_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Q_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Qn_s ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Qn_s ;
-+------------------------------+-------+------+------+
-
-
-+----------------------------------------------------+
-; Source assignments for count_4bit:u1|T_Flip:u2     ;
-+------------------------------+-------+------+------+
-; Assignment                   ; Value ; From ; To   ;
-+------------------------------+-------+------+------+
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; S_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; S_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; R_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; R_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Q_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Q_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Qn_m ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Qn_m ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; S_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; S_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; R_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; R_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Q_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Q_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Qn_s ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Qn_s ;
-+------------------------------+-------+------+------+
-
-
-+----------------------------------------------------+
-; Source assignments for count_4bit:u1|T_Flip:u3     ;
-+------------------------------+-------+------+------+
-; Assignment                   ; Value ; From ; To   ;
-+------------------------------+-------+------+------+
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; S_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; S_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; R_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; R_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Q_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Q_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Qn_m ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Qn_m ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; S_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; S_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; R_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; R_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Q_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Q_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Qn_s ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Qn_s ;
-+------------------------------+-------+------+------+
-
-
-+----------------------------------------------------+
-; Source assignments for count_4bit:u1|T_Flip:u4     ;
-+------------------------------+-------+------+------+
-; Assignment                   ; Value ; From ; To   ;
-+------------------------------+-------+------+------+
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; S_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; S_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; R_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; R_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Q_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Q_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Qn_m ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Qn_m ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; S_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; S_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; R_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; R_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Q_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Q_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Qn_s ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Qn_s ;
-+------------------------------+-------+------+------+
-
-
-+----------------------------------------------------+
-; Source assignments for count_4bit:u2|T_Flip:u1     ;
-+------------------------------+-------+------+------+
-; Assignment                   ; Value ; From ; To   ;
-+------------------------------+-------+------+------+
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; S_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; S_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; R_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; R_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Q_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Q_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Qn_m ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Qn_m ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; S_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; S_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; R_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; R_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Q_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Q_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Qn_s ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Qn_s ;
-+------------------------------+-------+------+------+
-
-
-+----------------------------------------------------+
-; Source assignments for count_4bit:u2|T_Flip:u2     ;
-+------------------------------+-------+------+------+
-; Assignment                   ; Value ; From ; To   ;
-+------------------------------+-------+------+------+
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; S_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; S_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; R_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; R_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Q_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Q_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Qn_m ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Qn_m ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; S_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; S_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; R_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; R_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Q_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Q_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Qn_s ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Qn_s ;
-+------------------------------+-------+------+------+
-
-
-+----------------------------------------------------+
-; Source assignments for count_4bit:u2|T_Flip:u3     ;
-+------------------------------+-------+------+------+
-; Assignment                   ; Value ; From ; To   ;
-+------------------------------+-------+------+------+
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; S_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; S_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; R_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; R_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Q_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Q_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Qn_m ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Qn_m ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; S_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; S_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; R_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; R_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Q_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Q_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Qn_s ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Qn_s ;
-+------------------------------+-------+------+------+
-
-
-+----------------------------------------------------+
-; Source assignments for count_4bit:u2|T_Flip:u4     ;
-+------------------------------+-------+------+------+
-; Assignment                   ; Value ; From ; To   ;
-+------------------------------+-------+------+------+
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; S_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; S_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; R_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; R_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Q_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Q_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Qn_m ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Qn_m ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; S_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; S_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; R_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; R_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Q_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Q_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Qn_s ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Qn_s ;
-+------------------------------+-------+------+------+
-
-
-+----------------------------------------------------+
-; Source assignments for count_4bit:u3|T_Flip:u1     ;
-+------------------------------+-------+------+------+
-; Assignment                   ; Value ; From ; To   ;
-+------------------------------+-------+------+------+
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; S_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; S_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; R_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; R_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Q_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Q_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Qn_m ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Qn_m ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; S_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; S_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; R_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; R_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Q_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Q_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Qn_s ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Qn_s ;
-+------------------------------+-------+------+------+
-
-
-+----------------------------------------------------+
-; Source assignments for count_4bit:u3|T_Flip:u2     ;
-+------------------------------+-------+------+------+
-; Assignment                   ; Value ; From ; To   ;
-+------------------------------+-------+------+------+
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; S_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; S_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; R_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; R_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Q_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Q_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Qn_m ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Qn_m ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; S_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; S_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; R_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; R_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Q_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Q_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Qn_s ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Qn_s ;
-+------------------------------+-------+------+------+
-
-
-+----------------------------------------------------+
-; Source assignments for count_4bit:u3|T_Flip:u3     ;
-+------------------------------+-------+------+------+
-; Assignment                   ; Value ; From ; To   ;
-+------------------------------+-------+------+------+
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; S_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; S_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; R_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; R_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Q_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Q_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Qn_m ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Qn_m ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; S_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; S_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; R_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; R_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Q_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Q_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Qn_s ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Qn_s ;
-+------------------------------+-------+------+------+
-
-
-+----------------------------------------------------+
-; Source assignments for count_4bit:u3|T_Flip:u4     ;
-+------------------------------+-------+------+------+
-; Assignment                   ; Value ; From ; To   ;
-+------------------------------+-------+------+------+
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; S_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; S_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; R_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; R_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Q_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Q_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Qn_m ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Qn_m ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; S_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; S_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; R_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; R_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Q_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Q_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Qn_s ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Qn_s ;
-+------------------------------+-------+------+------+
-
-
-+----------------------------------------------------+
-; Source assignments for count_4bit:u4|T_Flip:u1     ;
-+------------------------------+-------+------+------+
-; Assignment                   ; Value ; From ; To   ;
-+------------------------------+-------+------+------+
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; S_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; S_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; R_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; R_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Q_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Q_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Qn_m ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Qn_m ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; S_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; S_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; R_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; R_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Q_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Q_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Qn_s ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Qn_s ;
-+------------------------------+-------+------+------+
-
-
-+----------------------------------------------------+
-; Source assignments for count_4bit:u4|T_Flip:u2     ;
-+------------------------------+-------+------+------+
-; Assignment                   ; Value ; From ; To   ;
-+------------------------------+-------+------+------+
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; S_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; S_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; R_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; R_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Q_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Q_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Qn_m ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Qn_m ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; S_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; S_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; R_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; R_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Q_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Q_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Qn_s ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Qn_s ;
-+------------------------------+-------+------+------+
-
-
-+----------------------------------------------------+
-; Source assignments for count_4bit:u4|T_Flip:u3     ;
-+------------------------------+-------+------+------+
-; Assignment                   ; Value ; From ; To   ;
-+------------------------------+-------+------+------+
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; S_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; S_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; R_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; R_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Q_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Q_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Qn_m ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Qn_m ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; S_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; S_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; R_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; R_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Q_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Q_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Qn_s ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Qn_s ;
-+------------------------------+-------+------+------+
-
-
-+----------------------------------------------------+
-; Source assignments for count_4bit:u4|T_Flip:u4     ;
-+------------------------------+-------+------+------+
-; Assignment                   ; Value ; From ; To   ;
-+------------------------------+-------+------+------+
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; S_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; S_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; R_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; R_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Q_m  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Q_m  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Qn_m ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Qn_m ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; S_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; S_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; R_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; R_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Q_s  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Q_s  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; Qn_s ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; Qn_s ;
-+------------------------------+-------+------+------+
-
-
 +----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "count_4bit:u1|T_Flip:u4"                                                            ;
+; Port Connectivity Checks: "FAdder_16bit:v7"                                                                    ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
-; qnot ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; a    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; ci   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; co   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "count_4bit:u1|T_Flip:u3"                                                            ;
+; Port Connectivity Checks: "FAdder_16bit:v5"                                                                    ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
-; qnot ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; a    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; ci   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; co   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "pu4s:u1|pu:u1|FAdder_16bit:u1" ;
++------+-------+----------+---------------------------------+
+; Port ; Type  ; Severity ; Details                         ;
++------+-------+----------+---------------------------------+
+; ci   ; Input ; Info     ; Stuck at VCC                    ;
++------+-------+----------+---------------------------------+
+
+
++----------------------------------------+
+; Port Connectivity Checks: "pu4s:u1"    ;
++------+-------+----------+--------------+
+; Port ; Type  ; Severity ; Details      ;
++------+-------+----------+--------------+
+; a    ; Input ; Info     ; Stuck at GND ;
++------+-------+----------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FAdder_16bit:v3"                                                                    ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; a    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; ci   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; co   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "count_4bit:u1|T_Flip:u2"                                                            ;
+; Port Connectivity Checks: "FAdder_16bit:v1"                                                                    ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
-; qnot ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "count_4bit:u1|T_Flip:u1"                                                            ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; qnot ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; a    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; ci   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; co   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -693,17 +627,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 132                         ;
-;     normal            ; 132                         ;
-;         2 data inputs ; 81                          ;
-;         3 data inputs ; 36                          ;
-;         4 data inputs ; 5                           ;
-;         5 data inputs ; 3                           ;
-;         6 data inputs ; 7                           ;
-; boundary_port         ; 20                          ;
+; arriav_lcell_comb     ; 635                         ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 634                         ;
+;         2 data inputs ; 20                          ;
+;         3 data inputs ; 43                          ;
+;         4 data inputs ; 139                         ;
+;         5 data inputs ; 250                         ;
+;         6 data inputs ; 182                         ;
+; boundary_port         ; 66                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 8.00                        ;
-; Average LUT depth     ; 6.35                        ;
+; Max LUT depth         ; 98.00                       ;
+; Average LUT depth     ; 92.96                       ;
 +-----------------------+-----------------------------+
 
 
@@ -712,7 +648,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:11     ;
 +----------------+--------------+
 
 
@@ -722,32 +658,44 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Thu May 21 10:47:02 2026
+    Info: Processing started: Wed May 27 18:07:57 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Divider -c Divider
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 6 design units, including 3 entities, in source file divider.vhd
-    Info (12022): Found design unit 1: Divider-behavior File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Divider/Divider.vhd Line: 16
-    Info (12022): Found design unit 2: count_4bit-behavior File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Divider/Divider.vhd Line: 59
-    Info (12022): Found design unit 3: T_Flip-structural File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Divider/Divider.vhd Line: 111
-    Info (12023): Found entity 1: Divider File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Divider/Divider.vhd Line: 8
-    Info (12023): Found entity 2: count_4bit File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Divider/Divider.vhd Line: 51
-    Info (12023): Found entity 3: T_Flip File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Divider/Divider.vhd Line: 101
+Info (12021): Found 14 design units, including 7 entities, in source file divider.vhd
+    Info (12022): Found design unit 1: Divider-behavior File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Divider/Divider.vhd Line: 15
+    Info (12022): Found design unit 2: FAdder-behavior File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Divider/Divider.vhd Line: 116
+    Info (12022): Found design unit 3: FAdder_4bit-behavior File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Divider/Divider.vhd Line: 139
+    Info (12022): Found design unit 4: FAdder_16bit-behavior File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Divider/Divider.vhd Line: 176
+    Info (12022): Found design unit 5: mux2x1_16bit-behavior File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Divider/Divider.vhd Line: 215
+    Info (12022): Found design unit 6: pu-behavior File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Divider/Divider.vhd Line: 242
+    Info (12022): Found design unit 7: pu4s-behavior File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Divider/Divider.vhd Line: 292
+    Info (12023): Found entity 1: Divider File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Divider/Divider.vhd Line: 7
+    Info (12023): Found entity 2: FAdder File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Divider/Divider.vhd Line: 109
+    Info (12023): Found entity 3: FAdder_4bit File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Divider/Divider.vhd Line: 130
+    Info (12023): Found entity 4: FAdder_16bit File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Divider/Divider.vhd Line: 167
+    Info (12023): Found entity 5: mux2x1_16bit File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Divider/Divider.vhd Line: 207
+    Info (12023): Found entity 6: pu File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Divider/Divider.vhd Line: 233
+    Info (12023): Found entity 7: pu4s File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Divider/Divider.vhd Line: 283
 Warning (12019): Can't analyze file -- file Placeholder.vhd is missing
 Info (12127): Elaborating entity "Divider" for the top level hierarchy
-Info (12128): Elaborating entity "count_4bit" for hierarchy "count_4bit:u1" File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Divider/Divider.vhd Line: 29
-Info (12128): Elaborating entity "T_Flip" for hierarchy "count_4bit:u1|T_Flip:u1" File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Divider/Divider.vhd Line: 73
+Info (12128): Elaborating entity "FAdder_16bit" for hierarchy "FAdder_16bit:v1" File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Divider/Divider.vhd Line: 60
+Info (12128): Elaborating entity "FAdder_4bit" for hierarchy "FAdder_16bit:v1|FAdder_4bit:u1" File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Divider/Divider.vhd Line: 193
+Info (12128): Elaborating entity "FAdder" for hierarchy "FAdder_16bit:v1|FAdder_4bit:u1|FAdder:u1" File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Divider/Divider.vhd Line: 154
+Info (12128): Elaborating entity "mux2x1_16bit" for hierarchy "mux2x1_16bit:v2" File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Divider/Divider.vhd Line: 61
+Info (12128): Elaborating entity "pu4s" for hierarchy "pu4s:u1" File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Divider/Divider.vhd Line: 64
+Info (12128): Elaborating entity "pu" for hierarchy "pu4s:u1|pu:u1" File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Divider/Divider.vhd Line: 310
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 152 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 132 logic cells
+Info (21057): Implemented 701 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 32 input pins
+    Info (21059): Implemented 34 output pins
+    Info (21061): Implemented 635 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4852 megabytes
-    Info: Processing ended: Thu May 21 10:47:19 2026
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Peak virtual memory: 4883 megabytes
+    Info: Processing ended: Wed May 27 18:08:39 2026
+    Info: Elapsed time: 00:00:42
+    Info: Total CPU time (on all processors): 00:00:44
 
 

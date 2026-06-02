@@ -1,50 +1,8 @@
 m255
 K4
 z2
-Z0 !s12c _opt
-Z1 !s99 nomlopt
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
+!s12c _opt
+Z0 !s99 nomlopt
 !s11e vcom 2023.3 2023.07, Jul 17 2023
 13
 !s112 1.1
@@ -52,109 +10,108 @@ R1
 !i10e 25
 !i10f 100
 cModel Technology
-Z2 dC:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Divider/simulation/qsim
+Z1 dC:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Divider/simulation/qsim
 T_opt
-!s110 1779350184
-VVk`ie4Pej1iI>B>Y21e;W0
+!s110 1779895524
+V_R:aHDb@8fNf]E_I@FYFg1
 04 19 12 work divider_vhd_vec_tst divider_arch 1
-=1-7cb0c2e14d12-6a0ebaa8-cf-1728
-R1
+=1-7cb0c2e14d12-6a170ce3-91-29c4
+R0
 !s12b OEM100
 !s124 OEM10U2 
 o-quiet -auto_acc_if_foreign -work work -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim +acc
 tCvgOpt 0
 n@_opt
 OL;O;2023.3;77
-R2
 Edivider
-Z3 w1779352212
-Z4 DPx4 ieee 16 vital_primitives 0 22 Y]H?Y_]z4@VoaWAGJ=36m1
-Z5 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 DjRARHG[mMoWnfQ1@E6OI1
-Z6 DPx4 ieee 12 vital_timing 0 22 6STbz=m1W[80IE06h_el^0
-Z7 DPx8 cyclonev 19 cyclonev_components 0 22 a<5aF4D8K=jjT7FHmJc[20
-Z8 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
-Z9 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
-Z10 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 IF4KkEKl]c`WfAAM7V0iN1
-!i122 66
-R2
-Z11 8Divider.vho
-Z12 FDivider.vho
+Z2 w1779895520
+Z3 DPx4 ieee 16 vital_primitives 0 22 Y]H?Y_]z4@VoaWAGJ=36m1
+Z4 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 DjRARHG[mMoWnfQ1@E6OI1
+Z5 DPx4 ieee 12 vital_timing 0 22 6STbz=m1W[80IE06h_el^0
+Z6 DPx8 cyclonev 19 cyclonev_components 0 22 a<5aF4D8K=jjT7FHmJc[20
+Z7 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z8 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+Z9 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 IF4KkEKl]c`WfAAM7V0iN1
+!i122 0
+R1
+Z10 8Divider.vho
+Z11 FDivider.vho
 l0
 L37 1
-V_kIjjOUO_nQ7ZRJ;5^6]:1
-!s100 B6mR20k=2NV^2BNg4CdSI0
-Z13 OL;C;2023.3;77
+Ve9Sk8l<O@c`biJhP54Rk^0
+!s100 kg8BjNdg3h<Wdo;Fh;FQ;3
+Z12 OL;C;2023.3;77
 32
-Z14 !s110 1779352218
+Z13 !s110 1779895522
 !i10b 1
-Z15 !s108 1779352218.000000
-Z16 !s90 -work|work|Divider.vho|
-Z17 !s107 Divider.vho|
+Z14 !s108 1779895522.000000
+Z15 !s90 -work|work|Divider.vho|
+Z16 !s107 Divider.vho|
 !i113 0
-Z18 o-work work
-Z19 tExplicit 1 CvgOpt 0
+Z17 o-work work
+Z18 tExplicit 1 CvgOpt 0
 Astructure
+R3
 R4
 R5
 R6
 R7
 R8
 R9
-R10
-DEx4 work 7 divider 0 22 _kIjjOUO_nQ7ZRJ;5^6]:1
-!i122 66
-l356
-L70 2898
-VbLlEb1OoUd_gjdA_0E0cH0
-!s100 1URV[gNbPJSjYniKMf4o]3
-R13
+DEx4 work 7 divider 0 22 e9Sk8l<O@c`biJhP54Rk^0
+!i122 0
+l1437
+L117 15586
+VD1;oMQb8n<P7SB0E26<1N0
+!s100 ]Fe=G[cmbOadQFV97h7XZ0
+R12
 32
-R14
+R13
 !i10b 1
+R14
 R15
 R16
-R17
 !i113 0
+R17
 R18
-R19
 Edivider_vhd_vec_tst
-Z20 w1779352211
+Z19 w1779895519
+R7
 R8
-R9
-!i122 67
-R2
-Z21 8Waveform.vwf.vht
-Z22 FWaveform.vwf.vht
+!i122 1
+R1
+Z20 8Waveform.vwf.vht
+Z21 FWaveform.vwf.vht
 l0
 L32 1
 V?hTMF8T]V6aQamliE8nTZ3
 !s100 [J0F=e`^dldcTHC79l7gC3
-R13
+R12
 32
-Z23 !s110 1779352219
+R13
 !i10b 1
-R15
-Z24 !s90 -work|work|Waveform.vwf.vht|
-Z25 !s107 Waveform.vwf.vht|
+R14
+Z22 !s90 -work|work|Waveform.vwf.vht|
+Z23 !s107 Waveform.vwf.vht|
 !i113 0
+R17
 R18
-R19
 Adivider_arch
+R7
 R8
-R9
-Z26 DEx4 work 19 divider_vhd_vec_tst 0 22 ?hTMF8T]V6aQamliE8nTZ3
-!i122 67
-l51
-Z27 L34 59
-Z28 VUdfbfRXomlHF9SOa4a5jT0
-Z29 !s100 lh;=ZeijY]>D<5ginm:A`0
-R13
+DEx4 work 19 divider_vhd_vec_tst 0 22 ?hTMF8T]V6aQamliE8nTZ3
+!i122 1
+l53
+L34 223
+VNIalCHiON8U0W=dcK:8hZ1
+!s100 b<I?Vb=Qiz3e9WiYl96]03
+R12
 32
-R23
+R13
 !i10b 1
-R15
-R24
-R25
+R14
+R22
+R23
 !i113 0
+R17
 R18
-R19
