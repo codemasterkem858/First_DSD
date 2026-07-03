@@ -1,5 +1,5 @@
 Flow report for bcdconv
-Mon Jun  1 08:21:05 2026
+Sun Jun 21 19:06:27 2026
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -41,16 +41,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Mon Jun  1 08:21:05 2026          ;
+; Flow Status                     ; Successful - Sun Jun 21 19:06:27 2026          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; bcdconv                                        ;
 ; Top-level Entity Name           ; bcdconv                                        ;
 ; Family                          ; Cyclone V                                      ;
 ; Device                          ; 5CSEMA5F31C6                                   ;
 ; Timing Models                   ; Final                                          ;
-; Logic utilization (in ALMs)     ; 2 / 32,070 ( < 1 % )                           ;
-; Total registers                 ; 4                                              ;
-; Total pins                      ; 11 / 457 ( 2 % )                               ;
+; Logic utilization (in ALMs)     ; 223 / 32,070 ( < 1 % )                         ;
+; Total registers                 ; 0                                              ;
+; Total pins                      ; 37 / 457 ( 8 % )                               ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                          ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                                 ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/01/2026 08:18:15 ;
+; Start date & time ; 06/21/2026 18:46:44 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; bcdconv             ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 137098625633554.178029109504076        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 137098625633555.178205680405000        ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -101,12 +101,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 4852 MB             ; 00:00:22                           ;
-; Fitter               ; 00:01:48     ; 1.0                     ; 6127 MB             ; 00:01:16                           ;
-; Assembler            ; 00:00:15     ; 1.0                     ; 4880 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:19     ; 1.0                     ; 5106 MB             ; 00:00:03                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4721 MB             ; 00:00:01                           ;
-; Total                ; 00:02:37     ; --                      ; --                  ; 00:01:46                           ;
+; Analysis & Synthesis ; 00:00:42     ; 1.0                     ; 4883 MB             ; 00:00:36                           ;
+; Fitter               ; 00:01:50     ; 1.0                     ; 6124 MB             ; 00:01:23                           ;
+; Assembler            ; 00:00:16     ; 1.0                     ; 4870 MB             ; 00:00:08                           ;
+; Timing Analyzer      ; 00:00:13     ; 1.1                     ; 5127 MB             ; 00:00:07                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4739 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4726 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4730 MB             ; 00:00:00                           ;
+; Total                ; 00:03:05     ; --                      ; --                  ; 00:02:15                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -120,6 +122,8 @@ https://fpgasoftware.intel.com/eula.
 ; Assembler            ; Luna             ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; Luna             ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; Luna             ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Luna             ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Luna             ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -131,6 +135,8 @@ quartus_fit --read_settings_files=off --write_settings_files=off bcdconv -c bcdc
 quartus_asm --read_settings_files=off --write_settings_files=off bcdconv -c bcdconv
 quartus_sta bcdconv -c bcdconv
 quartus_eda --read_settings_files=off --write_settings_files=off bcdconv -c bcdconv
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off bcdconv -c bcdconv --vector_source="C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/BCD converter/Waveform.vwf" --testbench_file="C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/BCD converter/simulation/qsim/Waveform.vwf.vht"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/BCD converter/simulation/qsim/" bcdconv -c bcdconv
 
 
 

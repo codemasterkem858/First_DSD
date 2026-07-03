@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Mon Jun  1 08:18:28 2026
+Analysis & Synthesis Status : Successful - Sun Jun 21 18:47:29 2026
 Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : bcdconv
 Top-level Entity Name : bcdconv
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 4
-Total pins : 11
+Total registers : 0
+Total pins : 37
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

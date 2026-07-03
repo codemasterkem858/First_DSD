@@ -1,108 +1,56 @@
+-- =====================================
+-- 1. Binary to BCD converter
+-- =====================================
 library ieee;
 use ieee.std_logic_1164.all;
 
 entity bcdconv is
 	port(
-		a	:  in std_logic_vector(15 downto 0);
-		d	: out std_logic_vector(19 downto 0);
-		clk:  in std_logic;
+		a							:  in std_logic_vector(15 downto  0);
+		b0, b1, b2, b3, b4	: out std_logic_vector(3  downto  0);
+		sign						: out std_logic
 	);
 end bcdconv;
 
 architecture behavior of bcdconv is
 	
-	-- Components
-	-- 16 bit divider
 	component Divider is
 		port(
 			a, b	:  in std_logic_vector(15 downto 0);
-			r, q	:  in std_logic_vector
+			r, q	: out std_logic_vector(15 downto 0)
 		);
 	end component;
 	
-	-- 4 bit register
-	component reg4bit is
+	component FAdder is
 		port(
-			d					:  in std_logic_vector(3 downto 0);
-			clk, en, clr	:  in std_logic;
-			q					: out std_logic_vector(3 downto 0)
-		);
-	end component;
-
-	-- 16 bit register
-	component reg16bit is
-		port(
-			d					:  in std_logic_vector(15 downto 0);
-			clk, en, clr	:  in std_logic;
-			q					: out std_logic_vector(15 downto 0)
+			a, b : in  std_logic_vector(15 downto 0);
+			ci   : in  std_logic;
+			s    : out std_logic_vector(15 downto 0);	
+			co   : out std_logic
 		);
 	end component;
 	
-	-- Signals
-	signal q1, q2, q3, q4, q5	: std_logic_vector(15 downto 0);
-	signal r1, r2, r3, r4, r5	: std_logic_vector(15 downto 0);
+	signal q0, q1, q2, q3, r0, r1, r2, r3, r4 : std_logic_vector(15 downto  0);
+	signal aneg, amag	: std_logic_vector(15 downto 0);
 	
-	-- Constants
-	constant ten : std_logic_vector(15 downto 0) := "0000000000001010"
 	
-	-- Behavior
+	constant ten : std_logic_vector(15 downto  0) := "0000000000001010";
+	
 	begin
-		u1: Divider port map (a => a, b => ten, q => q1, );
-	
-end behavior;
-
------------------------------------------------
---              4 bit register
------------------------------------------------
-library ieee;
-use ieee.std_logic_1164.all;
-
-entity reg4bit is
-    port(
-        d            : in  std_logic_vector(3 downto 0);
-        clk, clr, en : in  std_logic;
-        q            : out std_logic_vector(3 downto 0)
-    );
-end reg4bit;
-
-architecture behavior of reg4bit is
-begin
-    process(clk, clr)
-    begin
-        if clr = '0' then
-            q <= (others => '0');
-        elsif rising_edge(clk) then
-            if en = '1' then
-                q <= d;
-            end if;
-        end if;
-    end process;
-end behavior;
-
------------------------------------------------
---              16 bit register
------------------------------------------------
-library ieee;
-use ieee.std_logic_1164.all;
-
-entity reg16bit is
-    port(
-        d            : in  std_logic_vector(15 downto 0);
-        clk, clr, en : in  std_logic;
-        q            : out std_logic_vector(15 downto 0)
-    );
-end reg16bit;
-
-architecture behavior of reg16bit is
-begin
-    process(clk, clr)
-    begin
-        if clr = '0' then
-            q <= (others => '0');
-        elsif rising_edge(clk) then
-            if en = '1' then
-                q <= d;
-            end if;
-        end if;
-    end process;
+		v1  : FAdder port map (a => (others => '0'), b => not a, ci => '1', s => aneg);
+		amag <= aneg when (a(15) = '1') else a;
+		
+		u1  : Divider port map (a => amag, b => ten, q => q0, r => r0);
+		u2  : Divider port map (a =>   q0, b => ten, q => q1, r => r1);
+		u3  : Divider port map (a =>   q1, b => ten, q => q2, r => r2);
+		u4  : Divider port map (a =>   q2, b => ten, q => q3, r => r3);
+		u5  : Divider port map (a =>   q3, b => ten, r => r4);
+		
+		b0 <= r0(3 downto 0);
+		b1 <= r1(3 downto 0);
+		b2 <= r2(3 downto 0);
+		b3 <= r3(3 downto 0);
+		b4 <= r4(3 downto 0);
+		
+		sign <= a(15);
 end behavior;

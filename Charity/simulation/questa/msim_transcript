@@ -1,0 +1,81 @@
+# Reading pref.tcl
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 win64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do safe_lock_top_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2023.3 Lib Mapping Utility 2023.07 Jul 17 2023
+# vmap work rtl_work 
+# Copying c:/intelfpga_lite/23.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/Kidus/Documents/GitHub/First_DSD/Charity/safe_lock_top.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:44:43 on Jun 22,2026
+# vcom -reportprogress 300 -93 -work work C:/Users/Kidus/Documents/GitHub/First_DSD/Charity/safe_lock_top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity debounce
+# -- Compiling architecture rtl of debounce
+# -- Compiling entity safe_lock_top
+# -- Compiling architecture rtl of safe_lock_top
+# End time: 13:44:43 on Jun 22,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.safe_lock_top
+# vsim work.safe_lock_top 
+# Start time: 13:46:39 on Jun 22,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.safe_lock_top(rtl)#1
+vsim work.safe_lock_top
+# End time: 13:47:54 on Jun 22,2026, Elapsed time: 0:01:15
+# Errors: 0, Warnings: 0
+# vsim work.safe_lock_top 
+# Start time: 13:47:54 on Jun 22,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.safe_lock_top(rtl)#1
+add wave  \
+sim:/safe_lock_top/HEX0
+add wave  \
+sim:/safe_lock_top/LEDR
+add wave  \
+sim:/safe_lock_top/CLOCK_50 \
+sim:/safe_lock_top/KEY \
+sim:/safe_lock_top/SW \
+sim:/safe_lock_top/LEDR \
+sim:/safe_lock_top/HEX0 \
+sim:/safe_lock_top/HEX1 \
+sim:/safe_lock_top/HEX5 \
+sim:/safe_lock_top/state \
+sim:/safe_lock_top/entered \
+sim:/safe_lock_top/entry_count \
+sim:/safe_lock_top/fail_count \
+sim:/safe_lock_top/enter_pulse \
+sim:/safe_lock_top/reset_pulse \
+sim:/safe_lock_top/delay_counter \
+sim:/safe_lock_top/PASSWORD
+force -freeze sim:/safe_lock_top/CLOCK_50 1 0, 0 {10 ns} -r 20
+# End time: 14:08:57 on Jun 22,2026, Elapsed time: 0:21:03
+# Errors: 0, Warnings: 0

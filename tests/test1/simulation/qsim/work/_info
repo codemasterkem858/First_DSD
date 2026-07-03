@@ -1,0 +1,121 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11e vcom 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Users/Kidus/Documents/GitHub/First_DSD/tests/test1/simulation/qsim
+T_opt
+!s110 1781520212
+VN>4D23KdE?_HcJe2WlOWi2
+04 17 10 work test1_vhd_vec_tst test1_arch 1
+=1-7cb0c2e14d12-6a2fd751-3ce-2640
+R0
+!s12b OEM100
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim +acc
+tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+Etest1
+Z2 w1781520204
+Z3 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 DjRARHG[mMoWnfQ1@E6OI1
+Z4 DPx8 cyclonev 19 cyclonev_components 0 22 a<5aF4D8K=jjT7FHmJc[20
+Z5 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 IF4KkEKl]c`WfAAM7V0iN1
+Z6 DPx4 ieee 16 vital_primitives 0 22 Y]H?Y_]z4@VoaWAGJ=36m1
+Z7 DPx6 altera 11 dffeas_pack 0 22 mB4IFnUT3:DoZN@NS]Gzg0
+Z8 DPx4 ieee 12 vital_timing 0 22 6STbz=m1W[80IE06h_el^0
+Z9 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z10 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+Z11 DPx6 altera 28 altera_primitives_components 0 22 >1_OP3SHemAi5ZBLF?7g43
+!i122 0
+R1
+Z12 8test1.vho
+Z13 Ftest1.vho
+l0
+L39 1
+VmRzh4A6UMTN21=9@NzDZN3
+!s100 HLfjXMY_RPjdLEFaS9Y2h3
+Z14 OL;C;2023.3;77
+32
+Z15 !s110 1781520207
+!i10b 1
+Z16 !s108 1781520207.000000
+Z17 !s90 -work|work|test1.vho|
+Z18 !s107 test1.vho|
+!i113 0
+Z19 o-work work
+Z20 tExplicit 1 CvgOpt 0
+Astructure
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+R11
+DEx4 work 5 test1 0 22 mRzh4A6UMTN21=9@NzDZN3
+!i122 0
+l103
+L64 382
+V?2=<4[ik@L2^bmbfoFPcX1
+!s100 h^i13d?6kT4MD<7Bial2D3
+R14
+32
+R15
+!i10b 1
+R16
+R17
+R18
+!i113 0
+R19
+R20
+Etest1_vhd_vec_tst
+Z21 w1781520200
+R9
+R10
+!i122 1
+R1
+Z22 8Waveform.vwf.vht
+Z23 FWaveform.vwf.vht
+l0
+L32 1
+VHn2FDhldHWMC^>RFmano90
+!s100 =@Jd^>W8Z8F6_J]DicRU82
+R14
+32
+R15
+!i10b 1
+R16
+Z24 !s90 -work|work|Waveform.vwf.vht|
+Z25 !s107 Waveform.vwf.vht|
+!i113 0
+R19
+R20
+Atest1_arch
+R9
+R10
+DEx4 work 17 test1_vhd_vec_tst 0 22 Hn2FDhldHWMC^>RFmano90
+!i122 1
+l51
+L34 690
+VQnID47e36OYka4:JHo0f72
+!s100 NWKK1>V`8Bm:Mo8z@=lc:0
+R14
+32
+!s110 1781520208
+!i10b 1
+R16
+R24
+R25
+!i113 0
+R19
+R20

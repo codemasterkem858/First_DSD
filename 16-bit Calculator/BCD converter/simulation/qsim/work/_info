@@ -1,0 +1,123 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+!s11e vcom 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 dC:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/BCD converter/simulation/qsim
+T_opt
+!s110 1782058001
+VBmOP3CBgf@gk4l_K2YnzT2
+04 19 12 work bcdconv_vhd_vec_tst bcdconv_arch 1
+=1-7cb0c2e14d12-6a380c06-23c-958
+R1
+!s12b OEM100
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim +acc
+tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+Ebcdconv
+Z3 w1782057987
+Z4 DPx4 ieee 16 vital_primitives 0 22 Y]H?Y_]z4@VoaWAGJ=36m1
+Z5 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 DjRARHG[mMoWnfQ1@E6OI1
+Z6 DPx4 ieee 12 vital_timing 0 22 6STbz=m1W[80IE06h_el^0
+Z7 DPx8 cyclonev 19 cyclonev_components 0 22 a<5aF4D8K=jjT7FHmJc[20
+Z8 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z9 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+Z10 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 IF4KkEKl]c`WfAAM7V0iN1
+!i122 8
+R2
+Z11 8bcdconv.vho
+Z12 Fbcdconv.vho
+l0
+L37 1
+VTHX`7@m]`5Jb8L5IGifmd2
+!s100 5hZfkQhNOj?zdFhhH01bh0
+Z13 OL;C;2023.3;77
+32
+Z14 !s110 1782057989
+!i10b 1
+Z15 !s108 1782057989.000000
+Z16 !s90 -work|work|bcdconv.vho|
+Z17 !s107 bcdconv.vho|
+!i113 0
+Z18 o-work work
+Z19 tExplicit 1 CvgOpt 0
+Astructure
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+DEx4 work 7 bcdconv 0 22 THX`7@m]`5Jb8L5IGifmd2
+!i122 8
+l819
+L89 8433
+V>4KF007>6lSEenU;88kVF3
+!s100 CadjULEOGeBLn_K9iVjaR1
+R13
+32
+R14
+!i10b 1
+R15
+R16
+R17
+!i113 0
+R18
+R19
+Ebcdconv_vhd_vec_tst
+Z20 w1782057985
+R8
+R9
+!i122 9
+R2
+Z21 8Waveform.vwf.vht
+Z22 FWaveform.vwf.vht
+l0
+L32 1
+VMPZCc8XELT;dAfP3:emJY3
+!s100 VATXdSzMV9?RTCjE2Im2S3
+R13
+32
+R14
+!i10b 1
+R15
+Z23 !s90 -work|work|Waveform.vwf.vht|
+Z24 !s107 Waveform.vwf.vht|
+!i113 0
+R18
+R19
+Abcdconv_arch
+R8
+R9
+DEx4 work 19 bcdconv_vhd_vec_tst 0 22 MPZCc8XELT;dAfP3:emJY3
+!i122 9
+l55
+L34 1722
+V?8l4AO6K0[1>jR??eOTi52
+!s100 lF5[M2Ak^Y?;FU;8iOSOV1
+R13
+32
+R14
+!i10b 1
+R15
+R23
+R24
+!i113 0
+R18
+R19

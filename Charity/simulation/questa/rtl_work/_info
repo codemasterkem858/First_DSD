@@ -1,0 +1,107 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11e vcom 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Users/Kidus/Documents/GitHub/First_DSD/Charity/simulation/questa
+T_opt
+!s110 1782125204
+VMgE5DzIgW^O9:D8DkG8331
+04 13 3 work safe_lock_top rtl 1
+=1-7cb0c2e14d12-6a391290-382-1ed8
+R0
+!s12b OEM100
+!s124 OEM10U3 
+o-quiet -auto_acc_if_foreign -work work
+tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+Edebounce
+Z2 w1782066153
+Z3 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z4 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+!i122 0
+R1
+Z5 8C:/Users/Kidus/Documents/GitHub/First_DSD/Charity/safe_lock_top.vhd
+Z6 FC:/Users/Kidus/Documents/GitHub/First_DSD/Charity/safe_lock_top.vhd
+l0
+L8 1
+VePQ=goXX@@_KQ]GmGhA]D3
+!s100 dU^h;zgREaI^3BkL5:2OL2
+Z7 OL;C;2023.3;77
+31
+Z8 !s110 1782125083
+!i10b 1
+Z9 !s108 1782125083.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/Kidus/Documents/GitHub/First_DSD/Charity/safe_lock_top.vhd|
+Z11 !s107 C:/Users/Kidus/Documents/GitHub/First_DSD/Charity/safe_lock_top.vhd|
+!i113 0
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Artl
+R3
+R4
+DEx4 work 8 debounce 0 22 ePQ=goXX@@_KQ]GmGhA]D3
+!i122 0
+l21
+L17 23
+V`=[iBS6DRJhdMELA6NWFe2
+!s100 9VkYiCX5X][4Lo0^84]571
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13
+Esafe_lock_top
+R2
+R3
+R4
+!i122 0
+R1
+R5
+R6
+l0
+L49 1
+VEEFUE16JXkc:<;8ZVoa9Q2
+!s100 ko?K5KAiR;E5?UZ?aI[ND3
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13
+Artl
+R3
+R4
+DEx4 work 13 safe_lock_top 0 22 EEFUE16JXkc:<;8ZVoa9Q2
+!i122 0
+l113
+L61 139
+Vc0[G5LSKd?`a==j`XZ>a62
+!s100 XaS>NjV_6^X8nliLW3QaS1
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13

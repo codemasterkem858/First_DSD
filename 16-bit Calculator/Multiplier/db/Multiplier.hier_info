@@ -1,116 +1,866 @@
 |Multiplier
-a[0] => Mul_4bit:u1.a[0]
-a[0] => Mul_4bit:u2.a[0]
-a[0] => Mul_4bit:u3.a[0]
-a[0] => Mul_4bit:u4.a[0]
-a[1] => Mul_4bit:u1.a[1]
-a[1] => Mul_4bit:u2.a[1]
-a[1] => Mul_4bit:u3.a[1]
-a[1] => Mul_4bit:u4.a[1]
-a[2] => Mul_4bit:u1.a[2]
-a[2] => Mul_4bit:u2.a[2]
-a[2] => Mul_4bit:u3.a[2]
-a[2] => Mul_4bit:u4.a[2]
-a[3] => Mul_4bit:u1.a[3]
-a[3] => Mul_4bit:u2.a[3]
-a[3] => Mul_4bit:u3.a[3]
-a[3] => Mul_4bit:u4.a[3]
-a[4] => Mul_4bit:u1.a[4]
-a[4] => Mul_4bit:u2.a[4]
-a[4] => Mul_4bit:u3.a[4]
-a[4] => Mul_4bit:u4.a[4]
-a[5] => Mul_4bit:u1.a[5]
-a[5] => Mul_4bit:u2.a[5]
-a[5] => Mul_4bit:u3.a[5]
-a[5] => Mul_4bit:u4.a[5]
-a[6] => Mul_4bit:u1.a[6]
-a[6] => Mul_4bit:u2.a[6]
-a[6] => Mul_4bit:u3.a[6]
-a[6] => Mul_4bit:u4.a[6]
-a[7] => Mul_4bit:u1.a[7]
-a[7] => Mul_4bit:u2.a[7]
-a[7] => Mul_4bit:u3.a[7]
-a[7] => Mul_4bit:u4.a[7]
-a[8] => Mul_4bit:u1.a[8]
-a[8] => Mul_4bit:u2.a[8]
-a[8] => Mul_4bit:u3.a[8]
-a[8] => Mul_4bit:u4.a[8]
-a[9] => Mul_4bit:u1.a[9]
-a[9] => Mul_4bit:u2.a[9]
-a[9] => Mul_4bit:u3.a[9]
-a[9] => Mul_4bit:u4.a[9]
-a[10] => Mul_4bit:u1.a[10]
-a[10] => Mul_4bit:u2.a[10]
-a[10] => Mul_4bit:u3.a[10]
-a[10] => Mul_4bit:u4.a[10]
-a[11] => Mul_4bit:u1.a[11]
-a[11] => Mul_4bit:u2.a[11]
-a[11] => Mul_4bit:u3.a[11]
-a[11] => Mul_4bit:u4.a[11]
-a[12] => Mul_4bit:u1.a[12]
-a[12] => Mul_4bit:u2.a[12]
-a[12] => Mul_4bit:u3.a[12]
-a[12] => Mul_4bit:u4.a[12]
-a[13] => Mul_4bit:u1.a[13]
-a[13] => Mul_4bit:u2.a[13]
-a[13] => Mul_4bit:u3.a[13]
-a[13] => Mul_4bit:u4.a[13]
-a[14] => Mul_4bit:u1.a[14]
-a[14] => Mul_4bit:u2.a[14]
-a[14] => Mul_4bit:u3.a[14]
-a[14] => Mul_4bit:u4.a[14]
-a[15] => Mul_4bit:u1.a[15]
-a[15] => Mul_4bit:u2.a[15]
-a[15] => Mul_4bit:u3.a[15]
-a[15] => Mul_4bit:u4.a[15]
-b[0] => Mul_4bit:u1.b[0]
-b[1] => Mul_4bit:u1.b[1]
-b[2] => Mul_4bit:u1.b[2]
-b[3] => Mul_4bit:u1.b[3]
-b[4] => Mul_4bit:u2.b[0]
-b[5] => Mul_4bit:u2.b[1]
-b[6] => Mul_4bit:u2.b[2]
-b[7] => Mul_4bit:u2.b[3]
-b[8] => Mul_4bit:u3.b[0]
-b[9] => Mul_4bit:u3.b[1]
-b[10] => Mul_4bit:u3.b[2]
-b[11] => Mul_4bit:u3.b[3]
-b[12] => Mul_4bit:u4.b[0]
-b[13] => Mul_4bit:u4.b[1]
-b[14] => Mul_4bit:u4.b[2]
-b[15] => Mul_4bit:u4.b[3]
-prod[0] << FAdder_32bit:u7.sum[0]
-prod[1] << FAdder_32bit:u7.sum[1]
-prod[2] << FAdder_32bit:u7.sum[2]
-prod[3] << FAdder_32bit:u7.sum[3]
-prod[4] << FAdder_32bit:u7.sum[4]
-prod[5] << FAdder_32bit:u7.sum[5]
-prod[6] << FAdder_32bit:u7.sum[6]
-prod[7] << FAdder_32bit:u7.sum[7]
-prod[8] << FAdder_32bit:u7.sum[8]
-prod[9] << FAdder_32bit:u7.sum[9]
-prod[10] << FAdder_32bit:u7.sum[10]
-prod[11] << FAdder_32bit:u7.sum[11]
-prod[12] << FAdder_32bit:u7.sum[12]
-prod[13] << FAdder_32bit:u7.sum[13]
-prod[14] << FAdder_32bit:u7.sum[14]
-prod[15] << FAdder_32bit:u7.sum[15]
-prod[16] << FAdder_32bit:u7.sum[16]
-prod[17] << FAdder_32bit:u7.sum[17]
-prod[18] << FAdder_32bit:u7.sum[18]
-prod[19] << FAdder_32bit:u7.sum[19]
-prod[20] << FAdder_32bit:u7.sum[20]
-prod[21] << FAdder_32bit:u7.sum[21]
-prod[22] << FAdder_32bit:u7.sum[22]
-prod[23] << FAdder_32bit:u7.sum[23]
-prod[24] << FAdder_32bit:u7.sum[24]
-prod[25] << FAdder_32bit:u7.sum[25]
-prod[26] << FAdder_32bit:u7.sum[26]
-prod[27] << FAdder_32bit:u7.sum[27]
-prod[28] << FAdder_32bit:u7.sum[28]
-prod[29] << FAdder_32bit:u7.sum[29]
-prod[30] << FAdder_32bit:u7.sum[30]
-prod[31] << FAdder_32bit:u7.sum[31]
+a[0] => mux2x1_16bit:v3.a[0]
+a[0] => FAdder:v1.b[0]
+a[1] => mux2x1_16bit:v3.a[1]
+a[1] => FAdder:v1.b[1]
+a[2] => mux2x1_16bit:v3.a[2]
+a[2] => FAdder:v1.b[2]
+a[3] => mux2x1_16bit:v3.a[3]
+a[3] => FAdder:v1.b[3]
+a[4] => mux2x1_16bit:v3.a[4]
+a[4] => FAdder:v1.b[4]
+a[5] => mux2x1_16bit:v3.a[5]
+a[5] => FAdder:v1.b[5]
+a[6] => mux2x1_16bit:v3.a[6]
+a[6] => FAdder:v1.b[6]
+a[7] => mux2x1_16bit:v3.a[7]
+a[7] => FAdder:v1.b[7]
+a[8] => mux2x1_16bit:v3.a[8]
+a[8] => FAdder:v1.b[8]
+a[9] => mux2x1_16bit:v3.a[9]
+a[9] => FAdder:v1.b[9]
+a[10] => mux2x1_16bit:v3.a[10]
+a[10] => FAdder:v1.b[10]
+a[11] => mux2x1_16bit:v3.a[11]
+a[11] => FAdder:v1.b[11]
+a[12] => mux2x1_16bit:v3.a[12]
+a[12] => FAdder:v1.b[12]
+a[13] => mux2x1_16bit:v3.a[13]
+a[13] => FAdder:v1.b[13]
+a[14] => mux2x1_16bit:v3.a[14]
+a[14] => FAdder:v1.b[14]
+a[15] => comb.IN0
+a[15] => comb.IN0
+a[15] => mux2x1_16bit:v3.a[15]
+a[15] => mux2x1_16bit:v3.s
+a[15] => FAdder:v1.b[15]
+b[0] => mux2x1_16bit:v4.a[0]
+b[0] => FAdder:v2.b[0]
+b[1] => mux2x1_16bit:v4.a[1]
+b[1] => FAdder:v2.b[1]
+b[2] => mux2x1_16bit:v4.a[2]
+b[2] => FAdder:v2.b[2]
+b[3] => mux2x1_16bit:v4.a[3]
+b[3] => FAdder:v2.b[3]
+b[4] => mux2x1_16bit:v4.a[4]
+b[4] => FAdder:v2.b[4]
+b[5] => mux2x1_16bit:v4.a[5]
+b[5] => FAdder:v2.b[5]
+b[6] => mux2x1_16bit:v4.a[6]
+b[6] => FAdder:v2.b[6]
+b[7] => mux2x1_16bit:v4.a[7]
+b[7] => FAdder:v2.b[7]
+b[8] => mux2x1_16bit:v4.a[8]
+b[8] => FAdder:v2.b[8]
+b[9] => mux2x1_16bit:v4.a[9]
+b[9] => FAdder:v2.b[9]
+b[10] => mux2x1_16bit:v4.a[10]
+b[10] => FAdder:v2.b[10]
+b[11] => mux2x1_16bit:v4.a[11]
+b[11] => FAdder:v2.b[11]
+b[12] => mux2x1_16bit:v4.a[12]
+b[12] => FAdder:v2.b[12]
+b[13] => mux2x1_16bit:v4.a[13]
+b[13] => FAdder:v2.b[13]
+b[14] => mux2x1_16bit:v4.a[14]
+b[14] => FAdder:v2.b[14]
+b[15] => comb.IN1
+b[15] => comb.IN1
+b[15] => mux2x1_16bit:v4.a[15]
+b[15] => mux2x1_16bit:v4.s
+b[15] => FAdder:v2.b[15]
+prod[0] <= mux2x1_16bit:v7.m[0]
+prod[1] <= mux2x1_16bit:v7.m[1]
+prod[2] <= mux2x1_16bit:v7.m[2]
+prod[3] <= mux2x1_16bit:v7.m[3]
+prod[4] <= mux2x1_16bit:v7.m[4]
+prod[5] <= mux2x1_16bit:v7.m[5]
+prod[6] <= mux2x1_16bit:v7.m[6]
+prod[7] <= mux2x1_16bit:v7.m[7]
+prod[8] <= mux2x1_16bit:v7.m[8]
+prod[9] <= mux2x1_16bit:v7.m[9]
+prod[10] <= mux2x1_16bit:v7.m[10]
+prod[11] <= mux2x1_16bit:v7.m[11]
+prod[12] <= mux2x1_16bit:v7.m[12]
+prod[13] <= mux2x1_16bit:v7.m[13]
+prod[14] <= mux2x1_16bit:v7.m[14]
+prod[15] <= mux2x1_16bit:v7.m[15]
+prod[16] <= mux2x1_16bit:v6.m[0]
+prod[17] <= mux2x1_16bit:v6.m[1]
+prod[18] <= mux2x1_16bit:v6.m[2]
+prod[19] <= mux2x1_16bit:v6.m[3]
+prod[20] <= mux2x1_16bit:v6.m[4]
+prod[21] <= mux2x1_16bit:v6.m[5]
+prod[22] <= mux2x1_16bit:v6.m[6]
+prod[23] <= mux2x1_16bit:v6.m[7]
+prod[24] <= mux2x1_16bit:v6.m[8]
+prod[25] <= mux2x1_16bit:v6.m[9]
+prod[26] <= mux2x1_16bit:v6.m[10]
+prod[27] <= mux2x1_16bit:v6.m[11]
+prod[28] <= mux2x1_16bit:v6.m[12]
+prod[29] <= mux2x1_16bit:v6.m[13]
+prod[30] <= mux2x1_16bit:v6.m[14]
+prod[31] <= mux2x1_16bit:v6.m[15]
+
+
+|Multiplier|FAdder:v1
+a[0] => FAdder_4bit:u0.a[0]
+a[1] => FAdder_4bit:u0.a[1]
+a[2] => FAdder_4bit:u0.a[2]
+a[3] => FAdder_4bit:u0.a[3]
+a[4] => FAdder_4bit:u1.a[0]
+a[5] => FAdder_4bit:u1.a[1]
+a[6] => FAdder_4bit:u1.a[2]
+a[7] => FAdder_4bit:u1.a[3]
+a[8] => FAdder_4bit:u2.a[0]
+a[9] => FAdder_4bit:u2.a[1]
+a[10] => FAdder_4bit:u2.a[2]
+a[11] => FAdder_4bit:u2.a[3]
+a[12] => FAdder_4bit:u3.a[0]
+a[13] => FAdder_4bit:u3.a[1]
+a[14] => FAdder_4bit:u3.a[2]
+a[15] => FAdder_4bit:u3.a[3]
+b[0] => FAdder_4bit:u0.b[0]
+b[1] => FAdder_4bit:u0.b[1]
+b[2] => FAdder_4bit:u0.b[2]
+b[3] => FAdder_4bit:u0.b[3]
+b[4] => FAdder_4bit:u1.b[0]
+b[5] => FAdder_4bit:u1.b[1]
+b[6] => FAdder_4bit:u1.b[2]
+b[7] => FAdder_4bit:u1.b[3]
+b[8] => FAdder_4bit:u2.b[0]
+b[9] => FAdder_4bit:u2.b[1]
+b[10] => FAdder_4bit:u2.b[2]
+b[11] => FAdder_4bit:u2.b[3]
+b[12] => FAdder_4bit:u3.b[0]
+b[13] => FAdder_4bit:u3.b[1]
+b[14] => FAdder_4bit:u3.b[2]
+b[15] => FAdder_4bit:u3.b[3]
+ci => FAdder_4bit:u0.ci
+sum[0] <= FAdder_4bit:u0.sum[0]
+sum[1] <= FAdder_4bit:u0.sum[1]
+sum[2] <= FAdder_4bit:u0.sum[2]
+sum[3] <= FAdder_4bit:u0.sum[3]
+sum[4] <= FAdder_4bit:u1.sum[0]
+sum[5] <= FAdder_4bit:u1.sum[1]
+sum[6] <= FAdder_4bit:u1.sum[2]
+sum[7] <= FAdder_4bit:u1.sum[3]
+sum[8] <= FAdder_4bit:u2.sum[0]
+sum[9] <= FAdder_4bit:u2.sum[1]
+sum[10] <= FAdder_4bit:u2.sum[2]
+sum[11] <= FAdder_4bit:u2.sum[3]
+sum[12] <= FAdder_4bit:u3.sum[0]
+sum[13] <= FAdder_4bit:u3.sum[1]
+sum[14] <= FAdder_4bit:u3.sum[2]
+sum[15] <= FAdder_4bit:u3.sum[3]
+co <= FAdder_4bit:u3.co
+
+
+|Multiplier|FAdder:v1|FAdder_4bit:u0
+a[0] => FAdder_1bit:u0.a
+a[1] => FAdder_1bit:u1.a
+a[2] => FAdder_1bit:u2.a
+a[3] => FAdder_1bit:u3.a
+b[0] => FAdder_1bit:u0.b
+b[1] => FAdder_1bit:u1.b
+b[2] => FAdder_1bit:u2.b
+b[3] => FAdder_1bit:u3.b
+ci => FAdder_1bit:u0.ci
+sum[0] <= FAdder_1bit:u0.sum
+sum[1] <= FAdder_1bit:u1.sum
+sum[2] <= FAdder_1bit:u2.sum
+sum[3] <= FAdder_1bit:u3.sum
+co <= FAdder_1bit:u3.co
+
+
+|Multiplier|FAdder:v1|FAdder_4bit:u0|FAdder_1bit:u0
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder:v1|FAdder_4bit:u0|FAdder_1bit:u1
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder:v1|FAdder_4bit:u0|FAdder_1bit:u2
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder:v1|FAdder_4bit:u0|FAdder_1bit:u3
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder:v1|FAdder_4bit:u1
+a[0] => FAdder_1bit:u0.a
+a[1] => FAdder_1bit:u1.a
+a[2] => FAdder_1bit:u2.a
+a[3] => FAdder_1bit:u3.a
+b[0] => FAdder_1bit:u0.b
+b[1] => FAdder_1bit:u1.b
+b[2] => FAdder_1bit:u2.b
+b[3] => FAdder_1bit:u3.b
+ci => FAdder_1bit:u0.ci
+sum[0] <= FAdder_1bit:u0.sum
+sum[1] <= FAdder_1bit:u1.sum
+sum[2] <= FAdder_1bit:u2.sum
+sum[3] <= FAdder_1bit:u3.sum
+co <= FAdder_1bit:u3.co
+
+
+|Multiplier|FAdder:v1|FAdder_4bit:u1|FAdder_1bit:u0
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder:v1|FAdder_4bit:u1|FAdder_1bit:u1
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder:v1|FAdder_4bit:u1|FAdder_1bit:u2
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder:v1|FAdder_4bit:u1|FAdder_1bit:u3
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder:v1|FAdder_4bit:u2
+a[0] => FAdder_1bit:u0.a
+a[1] => FAdder_1bit:u1.a
+a[2] => FAdder_1bit:u2.a
+a[3] => FAdder_1bit:u3.a
+b[0] => FAdder_1bit:u0.b
+b[1] => FAdder_1bit:u1.b
+b[2] => FAdder_1bit:u2.b
+b[3] => FAdder_1bit:u3.b
+ci => FAdder_1bit:u0.ci
+sum[0] <= FAdder_1bit:u0.sum
+sum[1] <= FAdder_1bit:u1.sum
+sum[2] <= FAdder_1bit:u2.sum
+sum[3] <= FAdder_1bit:u3.sum
+co <= FAdder_1bit:u3.co
+
+
+|Multiplier|FAdder:v1|FAdder_4bit:u2|FAdder_1bit:u0
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder:v1|FAdder_4bit:u2|FAdder_1bit:u1
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder:v1|FAdder_4bit:u2|FAdder_1bit:u2
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder:v1|FAdder_4bit:u2|FAdder_1bit:u3
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder:v1|FAdder_4bit:u3
+a[0] => FAdder_1bit:u0.a
+a[1] => FAdder_1bit:u1.a
+a[2] => FAdder_1bit:u2.a
+a[3] => FAdder_1bit:u3.a
+b[0] => FAdder_1bit:u0.b
+b[1] => FAdder_1bit:u1.b
+b[2] => FAdder_1bit:u2.b
+b[3] => FAdder_1bit:u3.b
+ci => FAdder_1bit:u0.ci
+sum[0] <= FAdder_1bit:u0.sum
+sum[1] <= FAdder_1bit:u1.sum
+sum[2] <= FAdder_1bit:u2.sum
+sum[3] <= FAdder_1bit:u3.sum
+co <= FAdder_1bit:u3.co
+
+
+|Multiplier|FAdder:v1|FAdder_4bit:u3|FAdder_1bit:u0
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder:v1|FAdder_4bit:u3|FAdder_1bit:u1
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder:v1|FAdder_4bit:u3|FAdder_1bit:u2
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder:v1|FAdder_4bit:u3|FAdder_1bit:u3
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder:v2
+a[0] => FAdder_4bit:u0.a[0]
+a[1] => FAdder_4bit:u0.a[1]
+a[2] => FAdder_4bit:u0.a[2]
+a[3] => FAdder_4bit:u0.a[3]
+a[4] => FAdder_4bit:u1.a[0]
+a[5] => FAdder_4bit:u1.a[1]
+a[6] => FAdder_4bit:u1.a[2]
+a[7] => FAdder_4bit:u1.a[3]
+a[8] => FAdder_4bit:u2.a[0]
+a[9] => FAdder_4bit:u2.a[1]
+a[10] => FAdder_4bit:u2.a[2]
+a[11] => FAdder_4bit:u2.a[3]
+a[12] => FAdder_4bit:u3.a[0]
+a[13] => FAdder_4bit:u3.a[1]
+a[14] => FAdder_4bit:u3.a[2]
+a[15] => FAdder_4bit:u3.a[3]
+b[0] => FAdder_4bit:u0.b[0]
+b[1] => FAdder_4bit:u0.b[1]
+b[2] => FAdder_4bit:u0.b[2]
+b[3] => FAdder_4bit:u0.b[3]
+b[4] => FAdder_4bit:u1.b[0]
+b[5] => FAdder_4bit:u1.b[1]
+b[6] => FAdder_4bit:u1.b[2]
+b[7] => FAdder_4bit:u1.b[3]
+b[8] => FAdder_4bit:u2.b[0]
+b[9] => FAdder_4bit:u2.b[1]
+b[10] => FAdder_4bit:u2.b[2]
+b[11] => FAdder_4bit:u2.b[3]
+b[12] => FAdder_4bit:u3.b[0]
+b[13] => FAdder_4bit:u3.b[1]
+b[14] => FAdder_4bit:u3.b[2]
+b[15] => FAdder_4bit:u3.b[3]
+ci => FAdder_4bit:u0.ci
+sum[0] <= FAdder_4bit:u0.sum[0]
+sum[1] <= FAdder_4bit:u0.sum[1]
+sum[2] <= FAdder_4bit:u0.sum[2]
+sum[3] <= FAdder_4bit:u0.sum[3]
+sum[4] <= FAdder_4bit:u1.sum[0]
+sum[5] <= FAdder_4bit:u1.sum[1]
+sum[6] <= FAdder_4bit:u1.sum[2]
+sum[7] <= FAdder_4bit:u1.sum[3]
+sum[8] <= FAdder_4bit:u2.sum[0]
+sum[9] <= FAdder_4bit:u2.sum[1]
+sum[10] <= FAdder_4bit:u2.sum[2]
+sum[11] <= FAdder_4bit:u2.sum[3]
+sum[12] <= FAdder_4bit:u3.sum[0]
+sum[13] <= FAdder_4bit:u3.sum[1]
+sum[14] <= FAdder_4bit:u3.sum[2]
+sum[15] <= FAdder_4bit:u3.sum[3]
+co <= FAdder_4bit:u3.co
+
+
+|Multiplier|FAdder:v2|FAdder_4bit:u0
+a[0] => FAdder_1bit:u0.a
+a[1] => FAdder_1bit:u1.a
+a[2] => FAdder_1bit:u2.a
+a[3] => FAdder_1bit:u3.a
+b[0] => FAdder_1bit:u0.b
+b[1] => FAdder_1bit:u1.b
+b[2] => FAdder_1bit:u2.b
+b[3] => FAdder_1bit:u3.b
+ci => FAdder_1bit:u0.ci
+sum[0] <= FAdder_1bit:u0.sum
+sum[1] <= FAdder_1bit:u1.sum
+sum[2] <= FAdder_1bit:u2.sum
+sum[3] <= FAdder_1bit:u3.sum
+co <= FAdder_1bit:u3.co
+
+
+|Multiplier|FAdder:v2|FAdder_4bit:u0|FAdder_1bit:u0
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder:v2|FAdder_4bit:u0|FAdder_1bit:u1
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder:v2|FAdder_4bit:u0|FAdder_1bit:u2
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder:v2|FAdder_4bit:u0|FAdder_1bit:u3
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder:v2|FAdder_4bit:u1
+a[0] => FAdder_1bit:u0.a
+a[1] => FAdder_1bit:u1.a
+a[2] => FAdder_1bit:u2.a
+a[3] => FAdder_1bit:u3.a
+b[0] => FAdder_1bit:u0.b
+b[1] => FAdder_1bit:u1.b
+b[2] => FAdder_1bit:u2.b
+b[3] => FAdder_1bit:u3.b
+ci => FAdder_1bit:u0.ci
+sum[0] <= FAdder_1bit:u0.sum
+sum[1] <= FAdder_1bit:u1.sum
+sum[2] <= FAdder_1bit:u2.sum
+sum[3] <= FAdder_1bit:u3.sum
+co <= FAdder_1bit:u3.co
+
+
+|Multiplier|FAdder:v2|FAdder_4bit:u1|FAdder_1bit:u0
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder:v2|FAdder_4bit:u1|FAdder_1bit:u1
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder:v2|FAdder_4bit:u1|FAdder_1bit:u2
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder:v2|FAdder_4bit:u1|FAdder_1bit:u3
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder:v2|FAdder_4bit:u2
+a[0] => FAdder_1bit:u0.a
+a[1] => FAdder_1bit:u1.a
+a[2] => FAdder_1bit:u2.a
+a[3] => FAdder_1bit:u3.a
+b[0] => FAdder_1bit:u0.b
+b[1] => FAdder_1bit:u1.b
+b[2] => FAdder_1bit:u2.b
+b[3] => FAdder_1bit:u3.b
+ci => FAdder_1bit:u0.ci
+sum[0] <= FAdder_1bit:u0.sum
+sum[1] <= FAdder_1bit:u1.sum
+sum[2] <= FAdder_1bit:u2.sum
+sum[3] <= FAdder_1bit:u3.sum
+co <= FAdder_1bit:u3.co
+
+
+|Multiplier|FAdder:v2|FAdder_4bit:u2|FAdder_1bit:u0
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder:v2|FAdder_4bit:u2|FAdder_1bit:u1
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder:v2|FAdder_4bit:u2|FAdder_1bit:u2
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder:v2|FAdder_4bit:u2|FAdder_1bit:u3
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder:v2|FAdder_4bit:u3
+a[0] => FAdder_1bit:u0.a
+a[1] => FAdder_1bit:u1.a
+a[2] => FAdder_1bit:u2.a
+a[3] => FAdder_1bit:u3.a
+b[0] => FAdder_1bit:u0.b
+b[1] => FAdder_1bit:u1.b
+b[2] => FAdder_1bit:u2.b
+b[3] => FAdder_1bit:u3.b
+ci => FAdder_1bit:u0.ci
+sum[0] <= FAdder_1bit:u0.sum
+sum[1] <= FAdder_1bit:u1.sum
+sum[2] <= FAdder_1bit:u2.sum
+sum[3] <= FAdder_1bit:u3.sum
+co <= FAdder_1bit:u3.co
+
+
+|Multiplier|FAdder:v2|FAdder_4bit:u3|FAdder_1bit:u0
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder:v2|FAdder_4bit:u3|FAdder_1bit:u1
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder:v2|FAdder_4bit:u3|FAdder_1bit:u2
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder:v2|FAdder_4bit:u3|FAdder_1bit:u3
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|mux2x1_16bit:v3
+a[0] => m.IN0
+a[1] => m.IN0
+a[2] => m.IN0
+a[3] => m.IN0
+a[4] => m.IN0
+a[5] => m.IN0
+a[6] => m.IN0
+a[7] => m.IN0
+a[8] => m.IN0
+a[9] => m.IN0
+a[10] => m.IN0
+a[11] => m.IN0
+a[12] => m.IN0
+a[13] => m.IN0
+a[14] => m.IN0
+a[15] => m.IN0
+b[0] => m.IN0
+b[1] => m.IN0
+b[2] => m.IN0
+b[3] => m.IN0
+b[4] => m.IN0
+b[5] => m.IN0
+b[6] => m.IN0
+b[7] => m.IN0
+b[8] => m.IN0
+b[9] => m.IN0
+b[10] => m.IN0
+b[11] => m.IN0
+b[12] => m.IN0
+b[13] => m.IN0
+b[14] => m.IN0
+b[15] => m.IN0
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+m[0] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[1] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[2] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[3] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[4] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[5] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[6] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[7] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[8] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[9] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[10] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[11] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[12] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[13] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[14] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[15] <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|mux2x1_16bit:v4
+a[0] => m.IN0
+a[1] => m.IN0
+a[2] => m.IN0
+a[3] => m.IN0
+a[4] => m.IN0
+a[5] => m.IN0
+a[6] => m.IN0
+a[7] => m.IN0
+a[8] => m.IN0
+a[9] => m.IN0
+a[10] => m.IN0
+a[11] => m.IN0
+a[12] => m.IN0
+a[13] => m.IN0
+a[14] => m.IN0
+a[15] => m.IN0
+b[0] => m.IN0
+b[1] => m.IN0
+b[2] => m.IN0
+b[3] => m.IN0
+b[4] => m.IN0
+b[5] => m.IN0
+b[6] => m.IN0
+b[7] => m.IN0
+b[8] => m.IN0
+b[9] => m.IN0
+b[10] => m.IN0
+b[11] => m.IN0
+b[12] => m.IN0
+b[13] => m.IN0
+b[14] => m.IN0
+b[15] => m.IN0
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+m[0] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[1] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[2] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[3] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[4] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[5] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[6] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[7] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[8] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[9] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[10] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[11] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[12] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[13] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[14] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[15] <= m.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Multiplier|Mul_4bit:u1
@@ -5559,38 +6309,38 @@ b[29] => FAdder:u1.b[13]
 b[30] => FAdder:u1.b[14]
 b[31] => FAdder:u1.b[15]
 ci => FAdder:u0.ci
-sum[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-sum[1] <= sum[1].DB_MAX_OUTPUT_PORT_TYPE
-sum[2] <= sum[2].DB_MAX_OUTPUT_PORT_TYPE
-sum[3] <= sum[3].DB_MAX_OUTPUT_PORT_TYPE
-sum[4] <= sum[4].DB_MAX_OUTPUT_PORT_TYPE
-sum[5] <= sum[5].DB_MAX_OUTPUT_PORT_TYPE
-sum[6] <= sum[6].DB_MAX_OUTPUT_PORT_TYPE
-sum[7] <= sum[7].DB_MAX_OUTPUT_PORT_TYPE
-sum[8] <= sum[8].DB_MAX_OUTPUT_PORT_TYPE
-sum[9] <= sum[9].DB_MAX_OUTPUT_PORT_TYPE
-sum[10] <= sum[10].DB_MAX_OUTPUT_PORT_TYPE
-sum[11] <= sum[11].DB_MAX_OUTPUT_PORT_TYPE
-sum[12] <= sum[12].DB_MAX_OUTPUT_PORT_TYPE
-sum[13] <= sum[13].DB_MAX_OUTPUT_PORT_TYPE
-sum[14] <= sum[14].DB_MAX_OUTPUT_PORT_TYPE
-sum[15] <= sum[15].DB_MAX_OUTPUT_PORT_TYPE
-sum[16] <= sum[16].DB_MAX_OUTPUT_PORT_TYPE
-sum[17] <= sum[17].DB_MAX_OUTPUT_PORT_TYPE
-sum[18] <= sum[18].DB_MAX_OUTPUT_PORT_TYPE
-sum[19] <= sum[19].DB_MAX_OUTPUT_PORT_TYPE
-sum[20] <= sum[20].DB_MAX_OUTPUT_PORT_TYPE
-sum[21] <= sum[21].DB_MAX_OUTPUT_PORT_TYPE
-sum[22] <= sum[22].DB_MAX_OUTPUT_PORT_TYPE
-sum[23] <= sum[23].DB_MAX_OUTPUT_PORT_TYPE
-sum[24] <= sum[24].DB_MAX_OUTPUT_PORT_TYPE
-sum[25] <= sum[25].DB_MAX_OUTPUT_PORT_TYPE
-sum[26] <= sum[26].DB_MAX_OUTPUT_PORT_TYPE
-sum[27] <= sum[27].DB_MAX_OUTPUT_PORT_TYPE
-sum[28] <= sum[28].DB_MAX_OUTPUT_PORT_TYPE
-sum[29] <= sum[29].DB_MAX_OUTPUT_PORT_TYPE
-sum[30] <= sum[30].DB_MAX_OUTPUT_PORT_TYPE
-sum[31] <= sum[31].DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= FAdder:u0.sum[0]
+sum[1] <= FAdder:u0.sum[1]
+sum[2] <= FAdder:u0.sum[2]
+sum[3] <= FAdder:u0.sum[3]
+sum[4] <= FAdder:u0.sum[4]
+sum[5] <= FAdder:u0.sum[5]
+sum[6] <= FAdder:u0.sum[6]
+sum[7] <= FAdder:u0.sum[7]
+sum[8] <= FAdder:u0.sum[8]
+sum[9] <= FAdder:u0.sum[9]
+sum[10] <= FAdder:u0.sum[10]
+sum[11] <= FAdder:u0.sum[11]
+sum[12] <= FAdder:u0.sum[12]
+sum[13] <= FAdder:u0.sum[13]
+sum[14] <= FAdder:u0.sum[14]
+sum[15] <= FAdder:u0.sum[15]
+sum[16] <= FAdder:u1.sum[0]
+sum[17] <= FAdder:u1.sum[1]
+sum[18] <= FAdder:u1.sum[2]
+sum[19] <= FAdder:u1.sum[3]
+sum[20] <= FAdder:u1.sum[4]
+sum[21] <= FAdder:u1.sum[5]
+sum[22] <= FAdder:u1.sum[6]
+sum[23] <= FAdder:u1.sum[7]
+sum[24] <= FAdder:u1.sum[8]
+sum[25] <= FAdder:u1.sum[9]
+sum[26] <= FAdder:u1.sum[10]
+sum[27] <= FAdder:u1.sum[11]
+sum[28] <= FAdder:u1.sum[12]
+sum[29] <= FAdder:u1.sum[13]
+sum[30] <= FAdder:u1.sum[14]
+sum[31] <= FAdder:u1.sum[15]
 co <= FAdder:u1.co
 
 
@@ -6254,38 +7004,38 @@ b[29] => FAdder:u1.b[13]
 b[30] => FAdder:u1.b[14]
 b[31] => FAdder:u1.b[15]
 ci => FAdder:u0.ci
-sum[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-sum[1] <= sum[1].DB_MAX_OUTPUT_PORT_TYPE
-sum[2] <= sum[2].DB_MAX_OUTPUT_PORT_TYPE
-sum[3] <= sum[3].DB_MAX_OUTPUT_PORT_TYPE
-sum[4] <= sum[4].DB_MAX_OUTPUT_PORT_TYPE
-sum[5] <= sum[5].DB_MAX_OUTPUT_PORT_TYPE
-sum[6] <= sum[6].DB_MAX_OUTPUT_PORT_TYPE
-sum[7] <= sum[7].DB_MAX_OUTPUT_PORT_TYPE
-sum[8] <= sum[8].DB_MAX_OUTPUT_PORT_TYPE
-sum[9] <= sum[9].DB_MAX_OUTPUT_PORT_TYPE
-sum[10] <= sum[10].DB_MAX_OUTPUT_PORT_TYPE
-sum[11] <= sum[11].DB_MAX_OUTPUT_PORT_TYPE
-sum[12] <= sum[12].DB_MAX_OUTPUT_PORT_TYPE
-sum[13] <= sum[13].DB_MAX_OUTPUT_PORT_TYPE
-sum[14] <= sum[14].DB_MAX_OUTPUT_PORT_TYPE
-sum[15] <= sum[15].DB_MAX_OUTPUT_PORT_TYPE
-sum[16] <= sum[16].DB_MAX_OUTPUT_PORT_TYPE
-sum[17] <= sum[17].DB_MAX_OUTPUT_PORT_TYPE
-sum[18] <= sum[18].DB_MAX_OUTPUT_PORT_TYPE
-sum[19] <= sum[19].DB_MAX_OUTPUT_PORT_TYPE
-sum[20] <= sum[20].DB_MAX_OUTPUT_PORT_TYPE
-sum[21] <= sum[21].DB_MAX_OUTPUT_PORT_TYPE
-sum[22] <= sum[22].DB_MAX_OUTPUT_PORT_TYPE
-sum[23] <= sum[23].DB_MAX_OUTPUT_PORT_TYPE
-sum[24] <= sum[24].DB_MAX_OUTPUT_PORT_TYPE
-sum[25] <= sum[25].DB_MAX_OUTPUT_PORT_TYPE
-sum[26] <= sum[26].DB_MAX_OUTPUT_PORT_TYPE
-sum[27] <= sum[27].DB_MAX_OUTPUT_PORT_TYPE
-sum[28] <= sum[28].DB_MAX_OUTPUT_PORT_TYPE
-sum[29] <= sum[29].DB_MAX_OUTPUT_PORT_TYPE
-sum[30] <= sum[30].DB_MAX_OUTPUT_PORT_TYPE
-sum[31] <= sum[31].DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= FAdder:u0.sum[0]
+sum[1] <= FAdder:u0.sum[1]
+sum[2] <= FAdder:u0.sum[2]
+sum[3] <= FAdder:u0.sum[3]
+sum[4] <= FAdder:u0.sum[4]
+sum[5] <= FAdder:u0.sum[5]
+sum[6] <= FAdder:u0.sum[6]
+sum[7] <= FAdder:u0.sum[7]
+sum[8] <= FAdder:u0.sum[8]
+sum[9] <= FAdder:u0.sum[9]
+sum[10] <= FAdder:u0.sum[10]
+sum[11] <= FAdder:u0.sum[11]
+sum[12] <= FAdder:u0.sum[12]
+sum[13] <= FAdder:u0.sum[13]
+sum[14] <= FAdder:u0.sum[14]
+sum[15] <= FAdder:u0.sum[15]
+sum[16] <= FAdder:u1.sum[0]
+sum[17] <= FAdder:u1.sum[1]
+sum[18] <= FAdder:u1.sum[2]
+sum[19] <= FAdder:u1.sum[3]
+sum[20] <= FAdder:u1.sum[4]
+sum[21] <= FAdder:u1.sum[5]
+sum[22] <= FAdder:u1.sum[6]
+sum[23] <= FAdder:u1.sum[7]
+sum[24] <= FAdder:u1.sum[8]
+sum[25] <= FAdder:u1.sum[9]
+sum[26] <= FAdder:u1.sum[10]
+sum[27] <= FAdder:u1.sum[11]
+sum[28] <= FAdder:u1.sum[12]
+sum[29] <= FAdder:u1.sum[13]
+sum[30] <= FAdder:u1.sum[14]
+sum[31] <= FAdder:u1.sum[15]
 co <= FAdder:u1.co
 
 
@@ -6949,38 +7699,38 @@ b[29] => FAdder:u1.b[13]
 b[30] => FAdder:u1.b[14]
 b[31] => FAdder:u1.b[15]
 ci => FAdder:u0.ci
-sum[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-sum[1] <= sum[1].DB_MAX_OUTPUT_PORT_TYPE
-sum[2] <= sum[2].DB_MAX_OUTPUT_PORT_TYPE
-sum[3] <= sum[3].DB_MAX_OUTPUT_PORT_TYPE
-sum[4] <= sum[4].DB_MAX_OUTPUT_PORT_TYPE
-sum[5] <= sum[5].DB_MAX_OUTPUT_PORT_TYPE
-sum[6] <= sum[6].DB_MAX_OUTPUT_PORT_TYPE
-sum[7] <= sum[7].DB_MAX_OUTPUT_PORT_TYPE
-sum[8] <= sum[8].DB_MAX_OUTPUT_PORT_TYPE
-sum[9] <= sum[9].DB_MAX_OUTPUT_PORT_TYPE
-sum[10] <= sum[10].DB_MAX_OUTPUT_PORT_TYPE
-sum[11] <= sum[11].DB_MAX_OUTPUT_PORT_TYPE
-sum[12] <= sum[12].DB_MAX_OUTPUT_PORT_TYPE
-sum[13] <= sum[13].DB_MAX_OUTPUT_PORT_TYPE
-sum[14] <= sum[14].DB_MAX_OUTPUT_PORT_TYPE
-sum[15] <= sum[15].DB_MAX_OUTPUT_PORT_TYPE
-sum[16] <= sum[16].DB_MAX_OUTPUT_PORT_TYPE
-sum[17] <= sum[17].DB_MAX_OUTPUT_PORT_TYPE
-sum[18] <= sum[18].DB_MAX_OUTPUT_PORT_TYPE
-sum[19] <= sum[19].DB_MAX_OUTPUT_PORT_TYPE
-sum[20] <= sum[20].DB_MAX_OUTPUT_PORT_TYPE
-sum[21] <= sum[21].DB_MAX_OUTPUT_PORT_TYPE
-sum[22] <= sum[22].DB_MAX_OUTPUT_PORT_TYPE
-sum[23] <= sum[23].DB_MAX_OUTPUT_PORT_TYPE
-sum[24] <= sum[24].DB_MAX_OUTPUT_PORT_TYPE
-sum[25] <= sum[25].DB_MAX_OUTPUT_PORT_TYPE
-sum[26] <= sum[26].DB_MAX_OUTPUT_PORT_TYPE
-sum[27] <= sum[27].DB_MAX_OUTPUT_PORT_TYPE
-sum[28] <= sum[28].DB_MAX_OUTPUT_PORT_TYPE
-sum[29] <= sum[29].DB_MAX_OUTPUT_PORT_TYPE
-sum[30] <= sum[30].DB_MAX_OUTPUT_PORT_TYPE
-sum[31] <= sum[31].DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= FAdder:u0.sum[0]
+sum[1] <= FAdder:u0.sum[1]
+sum[2] <= FAdder:u0.sum[2]
+sum[3] <= FAdder:u0.sum[3]
+sum[4] <= FAdder:u0.sum[4]
+sum[5] <= FAdder:u0.sum[5]
+sum[6] <= FAdder:u0.sum[6]
+sum[7] <= FAdder:u0.sum[7]
+sum[8] <= FAdder:u0.sum[8]
+sum[9] <= FAdder:u0.sum[9]
+sum[10] <= FAdder:u0.sum[10]
+sum[11] <= FAdder:u0.sum[11]
+sum[12] <= FAdder:u0.sum[12]
+sum[13] <= FAdder:u0.sum[13]
+sum[14] <= FAdder:u0.sum[14]
+sum[15] <= FAdder:u0.sum[15]
+sum[16] <= FAdder:u1.sum[0]
+sum[17] <= FAdder:u1.sum[1]
+sum[18] <= FAdder:u1.sum[2]
+sum[19] <= FAdder:u1.sum[3]
+sum[20] <= FAdder:u1.sum[4]
+sum[21] <= FAdder:u1.sum[5]
+sum[22] <= FAdder:u1.sum[6]
+sum[23] <= FAdder:u1.sum[7]
+sum[24] <= FAdder:u1.sum[8]
+sum[25] <= FAdder:u1.sum[9]
+sum[26] <= FAdder:u1.sum[10]
+sum[27] <= FAdder:u1.sum[11]
+sum[28] <= FAdder:u1.sum[12]
+sum[29] <= FAdder:u1.sum[13]
+sum[30] <= FAdder:u1.sum[14]
+sum[31] <= FAdder:u1.sum[15]
 co <= FAdder:u1.co
 
 
@@ -7576,5 +8326,866 @@ ci => sum.IN1
 ci => co.IN1
 sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
 co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder_32bit:v5
+a[0] => FAdder:u0.a[0]
+a[1] => FAdder:u0.a[1]
+a[2] => FAdder:u0.a[2]
+a[3] => FAdder:u0.a[3]
+a[4] => FAdder:u0.a[4]
+a[5] => FAdder:u0.a[5]
+a[6] => FAdder:u0.a[6]
+a[7] => FAdder:u0.a[7]
+a[8] => FAdder:u0.a[8]
+a[9] => FAdder:u0.a[9]
+a[10] => FAdder:u0.a[10]
+a[11] => FAdder:u0.a[11]
+a[12] => FAdder:u0.a[12]
+a[13] => FAdder:u0.a[13]
+a[14] => FAdder:u0.a[14]
+a[15] => FAdder:u0.a[15]
+a[16] => FAdder:u1.a[0]
+a[17] => FAdder:u1.a[1]
+a[18] => FAdder:u1.a[2]
+a[19] => FAdder:u1.a[3]
+a[20] => FAdder:u1.a[4]
+a[21] => FAdder:u1.a[5]
+a[22] => FAdder:u1.a[6]
+a[23] => FAdder:u1.a[7]
+a[24] => FAdder:u1.a[8]
+a[25] => FAdder:u1.a[9]
+a[26] => FAdder:u1.a[10]
+a[27] => FAdder:u1.a[11]
+a[28] => FAdder:u1.a[12]
+a[29] => FAdder:u1.a[13]
+a[30] => FAdder:u1.a[14]
+a[31] => FAdder:u1.a[15]
+b[0] => FAdder:u0.b[0]
+b[1] => FAdder:u0.b[1]
+b[2] => FAdder:u0.b[2]
+b[3] => FAdder:u0.b[3]
+b[4] => FAdder:u0.b[4]
+b[5] => FAdder:u0.b[5]
+b[6] => FAdder:u0.b[6]
+b[7] => FAdder:u0.b[7]
+b[8] => FAdder:u0.b[8]
+b[9] => FAdder:u0.b[9]
+b[10] => FAdder:u0.b[10]
+b[11] => FAdder:u0.b[11]
+b[12] => FAdder:u0.b[12]
+b[13] => FAdder:u0.b[13]
+b[14] => FAdder:u0.b[14]
+b[15] => FAdder:u0.b[15]
+b[16] => FAdder:u1.b[0]
+b[17] => FAdder:u1.b[1]
+b[18] => FAdder:u1.b[2]
+b[19] => FAdder:u1.b[3]
+b[20] => FAdder:u1.b[4]
+b[21] => FAdder:u1.b[5]
+b[22] => FAdder:u1.b[6]
+b[23] => FAdder:u1.b[7]
+b[24] => FAdder:u1.b[8]
+b[25] => FAdder:u1.b[9]
+b[26] => FAdder:u1.b[10]
+b[27] => FAdder:u1.b[11]
+b[28] => FAdder:u1.b[12]
+b[29] => FAdder:u1.b[13]
+b[30] => FAdder:u1.b[14]
+b[31] => FAdder:u1.b[15]
+ci => FAdder:u0.ci
+sum[0] <= FAdder:u0.sum[0]
+sum[1] <= FAdder:u0.sum[1]
+sum[2] <= FAdder:u0.sum[2]
+sum[3] <= FAdder:u0.sum[3]
+sum[4] <= FAdder:u0.sum[4]
+sum[5] <= FAdder:u0.sum[5]
+sum[6] <= FAdder:u0.sum[6]
+sum[7] <= FAdder:u0.sum[7]
+sum[8] <= FAdder:u0.sum[8]
+sum[9] <= FAdder:u0.sum[9]
+sum[10] <= FAdder:u0.sum[10]
+sum[11] <= FAdder:u0.sum[11]
+sum[12] <= FAdder:u0.sum[12]
+sum[13] <= FAdder:u0.sum[13]
+sum[14] <= FAdder:u0.sum[14]
+sum[15] <= FAdder:u0.sum[15]
+sum[16] <= FAdder:u1.sum[0]
+sum[17] <= FAdder:u1.sum[1]
+sum[18] <= FAdder:u1.sum[2]
+sum[19] <= FAdder:u1.sum[3]
+sum[20] <= FAdder:u1.sum[4]
+sum[21] <= FAdder:u1.sum[5]
+sum[22] <= FAdder:u1.sum[6]
+sum[23] <= FAdder:u1.sum[7]
+sum[24] <= FAdder:u1.sum[8]
+sum[25] <= FAdder:u1.sum[9]
+sum[26] <= FAdder:u1.sum[10]
+sum[27] <= FAdder:u1.sum[11]
+sum[28] <= FAdder:u1.sum[12]
+sum[29] <= FAdder:u1.sum[13]
+sum[30] <= FAdder:u1.sum[14]
+sum[31] <= FAdder:u1.sum[15]
+co <= FAdder:u1.co
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u0
+a[0] => FAdder_4bit:u0.a[0]
+a[1] => FAdder_4bit:u0.a[1]
+a[2] => FAdder_4bit:u0.a[2]
+a[3] => FAdder_4bit:u0.a[3]
+a[4] => FAdder_4bit:u1.a[0]
+a[5] => FAdder_4bit:u1.a[1]
+a[6] => FAdder_4bit:u1.a[2]
+a[7] => FAdder_4bit:u1.a[3]
+a[8] => FAdder_4bit:u2.a[0]
+a[9] => FAdder_4bit:u2.a[1]
+a[10] => FAdder_4bit:u2.a[2]
+a[11] => FAdder_4bit:u2.a[3]
+a[12] => FAdder_4bit:u3.a[0]
+a[13] => FAdder_4bit:u3.a[1]
+a[14] => FAdder_4bit:u3.a[2]
+a[15] => FAdder_4bit:u3.a[3]
+b[0] => FAdder_4bit:u0.b[0]
+b[1] => FAdder_4bit:u0.b[1]
+b[2] => FAdder_4bit:u0.b[2]
+b[3] => FAdder_4bit:u0.b[3]
+b[4] => FAdder_4bit:u1.b[0]
+b[5] => FAdder_4bit:u1.b[1]
+b[6] => FAdder_4bit:u1.b[2]
+b[7] => FAdder_4bit:u1.b[3]
+b[8] => FAdder_4bit:u2.b[0]
+b[9] => FAdder_4bit:u2.b[1]
+b[10] => FAdder_4bit:u2.b[2]
+b[11] => FAdder_4bit:u2.b[3]
+b[12] => FAdder_4bit:u3.b[0]
+b[13] => FAdder_4bit:u3.b[1]
+b[14] => FAdder_4bit:u3.b[2]
+b[15] => FAdder_4bit:u3.b[3]
+ci => FAdder_4bit:u0.ci
+sum[0] <= FAdder_4bit:u0.sum[0]
+sum[1] <= FAdder_4bit:u0.sum[1]
+sum[2] <= FAdder_4bit:u0.sum[2]
+sum[3] <= FAdder_4bit:u0.sum[3]
+sum[4] <= FAdder_4bit:u1.sum[0]
+sum[5] <= FAdder_4bit:u1.sum[1]
+sum[6] <= FAdder_4bit:u1.sum[2]
+sum[7] <= FAdder_4bit:u1.sum[3]
+sum[8] <= FAdder_4bit:u2.sum[0]
+sum[9] <= FAdder_4bit:u2.sum[1]
+sum[10] <= FAdder_4bit:u2.sum[2]
+sum[11] <= FAdder_4bit:u2.sum[3]
+sum[12] <= FAdder_4bit:u3.sum[0]
+sum[13] <= FAdder_4bit:u3.sum[1]
+sum[14] <= FAdder_4bit:u3.sum[2]
+sum[15] <= FAdder_4bit:u3.sum[3]
+co <= FAdder_4bit:u3.co
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u0|FAdder_4bit:u0
+a[0] => FAdder_1bit:u0.a
+a[1] => FAdder_1bit:u1.a
+a[2] => FAdder_1bit:u2.a
+a[3] => FAdder_1bit:u3.a
+b[0] => FAdder_1bit:u0.b
+b[1] => FAdder_1bit:u1.b
+b[2] => FAdder_1bit:u2.b
+b[3] => FAdder_1bit:u3.b
+ci => FAdder_1bit:u0.ci
+sum[0] <= FAdder_1bit:u0.sum
+sum[1] <= FAdder_1bit:u1.sum
+sum[2] <= FAdder_1bit:u2.sum
+sum[3] <= FAdder_1bit:u3.sum
+co <= FAdder_1bit:u3.co
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u0|FAdder_4bit:u0|FAdder_1bit:u0
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u0|FAdder_4bit:u0|FAdder_1bit:u1
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u0|FAdder_4bit:u0|FAdder_1bit:u2
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u0|FAdder_4bit:u0|FAdder_1bit:u3
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u0|FAdder_4bit:u1
+a[0] => FAdder_1bit:u0.a
+a[1] => FAdder_1bit:u1.a
+a[2] => FAdder_1bit:u2.a
+a[3] => FAdder_1bit:u3.a
+b[0] => FAdder_1bit:u0.b
+b[1] => FAdder_1bit:u1.b
+b[2] => FAdder_1bit:u2.b
+b[3] => FAdder_1bit:u3.b
+ci => FAdder_1bit:u0.ci
+sum[0] <= FAdder_1bit:u0.sum
+sum[1] <= FAdder_1bit:u1.sum
+sum[2] <= FAdder_1bit:u2.sum
+sum[3] <= FAdder_1bit:u3.sum
+co <= FAdder_1bit:u3.co
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u0|FAdder_4bit:u1|FAdder_1bit:u0
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u0|FAdder_4bit:u1|FAdder_1bit:u1
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u0|FAdder_4bit:u1|FAdder_1bit:u2
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u0|FAdder_4bit:u1|FAdder_1bit:u3
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u0|FAdder_4bit:u2
+a[0] => FAdder_1bit:u0.a
+a[1] => FAdder_1bit:u1.a
+a[2] => FAdder_1bit:u2.a
+a[3] => FAdder_1bit:u3.a
+b[0] => FAdder_1bit:u0.b
+b[1] => FAdder_1bit:u1.b
+b[2] => FAdder_1bit:u2.b
+b[3] => FAdder_1bit:u3.b
+ci => FAdder_1bit:u0.ci
+sum[0] <= FAdder_1bit:u0.sum
+sum[1] <= FAdder_1bit:u1.sum
+sum[2] <= FAdder_1bit:u2.sum
+sum[3] <= FAdder_1bit:u3.sum
+co <= FAdder_1bit:u3.co
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u0|FAdder_4bit:u2|FAdder_1bit:u0
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u0|FAdder_4bit:u2|FAdder_1bit:u1
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u0|FAdder_4bit:u2|FAdder_1bit:u2
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u0|FAdder_4bit:u2|FAdder_1bit:u3
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u0|FAdder_4bit:u3
+a[0] => FAdder_1bit:u0.a
+a[1] => FAdder_1bit:u1.a
+a[2] => FAdder_1bit:u2.a
+a[3] => FAdder_1bit:u3.a
+b[0] => FAdder_1bit:u0.b
+b[1] => FAdder_1bit:u1.b
+b[2] => FAdder_1bit:u2.b
+b[3] => FAdder_1bit:u3.b
+ci => FAdder_1bit:u0.ci
+sum[0] <= FAdder_1bit:u0.sum
+sum[1] <= FAdder_1bit:u1.sum
+sum[2] <= FAdder_1bit:u2.sum
+sum[3] <= FAdder_1bit:u3.sum
+co <= FAdder_1bit:u3.co
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u0|FAdder_4bit:u3|FAdder_1bit:u0
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u0|FAdder_4bit:u3|FAdder_1bit:u1
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u0|FAdder_4bit:u3|FAdder_1bit:u2
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u0|FAdder_4bit:u3|FAdder_1bit:u3
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u1
+a[0] => FAdder_4bit:u0.a[0]
+a[1] => FAdder_4bit:u0.a[1]
+a[2] => FAdder_4bit:u0.a[2]
+a[3] => FAdder_4bit:u0.a[3]
+a[4] => FAdder_4bit:u1.a[0]
+a[5] => FAdder_4bit:u1.a[1]
+a[6] => FAdder_4bit:u1.a[2]
+a[7] => FAdder_4bit:u1.a[3]
+a[8] => FAdder_4bit:u2.a[0]
+a[9] => FAdder_4bit:u2.a[1]
+a[10] => FAdder_4bit:u2.a[2]
+a[11] => FAdder_4bit:u2.a[3]
+a[12] => FAdder_4bit:u3.a[0]
+a[13] => FAdder_4bit:u3.a[1]
+a[14] => FAdder_4bit:u3.a[2]
+a[15] => FAdder_4bit:u3.a[3]
+b[0] => FAdder_4bit:u0.b[0]
+b[1] => FAdder_4bit:u0.b[1]
+b[2] => FAdder_4bit:u0.b[2]
+b[3] => FAdder_4bit:u0.b[3]
+b[4] => FAdder_4bit:u1.b[0]
+b[5] => FAdder_4bit:u1.b[1]
+b[6] => FAdder_4bit:u1.b[2]
+b[7] => FAdder_4bit:u1.b[3]
+b[8] => FAdder_4bit:u2.b[0]
+b[9] => FAdder_4bit:u2.b[1]
+b[10] => FAdder_4bit:u2.b[2]
+b[11] => FAdder_4bit:u2.b[3]
+b[12] => FAdder_4bit:u3.b[0]
+b[13] => FAdder_4bit:u3.b[1]
+b[14] => FAdder_4bit:u3.b[2]
+b[15] => FAdder_4bit:u3.b[3]
+ci => FAdder_4bit:u0.ci
+sum[0] <= FAdder_4bit:u0.sum[0]
+sum[1] <= FAdder_4bit:u0.sum[1]
+sum[2] <= FAdder_4bit:u0.sum[2]
+sum[3] <= FAdder_4bit:u0.sum[3]
+sum[4] <= FAdder_4bit:u1.sum[0]
+sum[5] <= FAdder_4bit:u1.sum[1]
+sum[6] <= FAdder_4bit:u1.sum[2]
+sum[7] <= FAdder_4bit:u1.sum[3]
+sum[8] <= FAdder_4bit:u2.sum[0]
+sum[9] <= FAdder_4bit:u2.sum[1]
+sum[10] <= FAdder_4bit:u2.sum[2]
+sum[11] <= FAdder_4bit:u2.sum[3]
+sum[12] <= FAdder_4bit:u3.sum[0]
+sum[13] <= FAdder_4bit:u3.sum[1]
+sum[14] <= FAdder_4bit:u3.sum[2]
+sum[15] <= FAdder_4bit:u3.sum[3]
+co <= FAdder_4bit:u3.co
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u1|FAdder_4bit:u0
+a[0] => FAdder_1bit:u0.a
+a[1] => FAdder_1bit:u1.a
+a[2] => FAdder_1bit:u2.a
+a[3] => FAdder_1bit:u3.a
+b[0] => FAdder_1bit:u0.b
+b[1] => FAdder_1bit:u1.b
+b[2] => FAdder_1bit:u2.b
+b[3] => FAdder_1bit:u3.b
+ci => FAdder_1bit:u0.ci
+sum[0] <= FAdder_1bit:u0.sum
+sum[1] <= FAdder_1bit:u1.sum
+sum[2] <= FAdder_1bit:u2.sum
+sum[3] <= FAdder_1bit:u3.sum
+co <= FAdder_1bit:u3.co
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u1|FAdder_4bit:u0|FAdder_1bit:u0
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u1|FAdder_4bit:u0|FAdder_1bit:u1
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u1|FAdder_4bit:u0|FAdder_1bit:u2
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u1|FAdder_4bit:u0|FAdder_1bit:u3
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u1|FAdder_4bit:u1
+a[0] => FAdder_1bit:u0.a
+a[1] => FAdder_1bit:u1.a
+a[2] => FAdder_1bit:u2.a
+a[3] => FAdder_1bit:u3.a
+b[0] => FAdder_1bit:u0.b
+b[1] => FAdder_1bit:u1.b
+b[2] => FAdder_1bit:u2.b
+b[3] => FAdder_1bit:u3.b
+ci => FAdder_1bit:u0.ci
+sum[0] <= FAdder_1bit:u0.sum
+sum[1] <= FAdder_1bit:u1.sum
+sum[2] <= FAdder_1bit:u2.sum
+sum[3] <= FAdder_1bit:u3.sum
+co <= FAdder_1bit:u3.co
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u0
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u1
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u2
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u3
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u1|FAdder_4bit:u2
+a[0] => FAdder_1bit:u0.a
+a[1] => FAdder_1bit:u1.a
+a[2] => FAdder_1bit:u2.a
+a[3] => FAdder_1bit:u3.a
+b[0] => FAdder_1bit:u0.b
+b[1] => FAdder_1bit:u1.b
+b[2] => FAdder_1bit:u2.b
+b[3] => FAdder_1bit:u3.b
+ci => FAdder_1bit:u0.ci
+sum[0] <= FAdder_1bit:u0.sum
+sum[1] <= FAdder_1bit:u1.sum
+sum[2] <= FAdder_1bit:u2.sum
+sum[3] <= FAdder_1bit:u3.sum
+co <= FAdder_1bit:u3.co
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u1|FAdder_4bit:u2|FAdder_1bit:u0
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u1|FAdder_4bit:u2|FAdder_1bit:u1
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u1|FAdder_4bit:u2|FAdder_1bit:u2
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u1|FAdder_4bit:u2|FAdder_1bit:u3
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u1|FAdder_4bit:u3
+a[0] => FAdder_1bit:u0.a
+a[1] => FAdder_1bit:u1.a
+a[2] => FAdder_1bit:u2.a
+a[3] => FAdder_1bit:u3.a
+b[0] => FAdder_1bit:u0.b
+b[1] => FAdder_1bit:u1.b
+b[2] => FAdder_1bit:u2.b
+b[3] => FAdder_1bit:u3.b
+ci => FAdder_1bit:u0.ci
+sum[0] <= FAdder_1bit:u0.sum
+sum[1] <= FAdder_1bit:u1.sum
+sum[2] <= FAdder_1bit:u2.sum
+sum[3] <= FAdder_1bit:u3.sum
+co <= FAdder_1bit:u3.co
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u1|FAdder_4bit:u3|FAdder_1bit:u0
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u1|FAdder_4bit:u3|FAdder_1bit:u1
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u1|FAdder_4bit:u3|FAdder_1bit:u2
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|FAdder_32bit:v5|FAdder:u1|FAdder_4bit:u3|FAdder_1bit:u3
+a => sum.IN0
+a => co.IN0
+b => sum.IN1
+b => co.IN1
+ci => sum.IN1
+ci => co.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|mux2x1_16bit:v6
+a[0] => m.IN0
+a[1] => m.IN0
+a[2] => m.IN0
+a[3] => m.IN0
+a[4] => m.IN0
+a[5] => m.IN0
+a[6] => m.IN0
+a[7] => m.IN0
+a[8] => m.IN0
+a[9] => m.IN0
+a[10] => m.IN0
+a[11] => m.IN0
+a[12] => m.IN0
+a[13] => m.IN0
+a[14] => m.IN0
+a[15] => m.IN0
+b[0] => m.IN0
+b[1] => m.IN0
+b[2] => m.IN0
+b[3] => m.IN0
+b[4] => m.IN0
+b[5] => m.IN0
+b[6] => m.IN0
+b[7] => m.IN0
+b[8] => m.IN0
+b[9] => m.IN0
+b[10] => m.IN0
+b[11] => m.IN0
+b[12] => m.IN0
+b[13] => m.IN0
+b[14] => m.IN0
+b[15] => m.IN0
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+m[0] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[1] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[2] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[3] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[4] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[5] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[6] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[7] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[8] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[9] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[10] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[11] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[12] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[13] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[14] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[15] <= m.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Multiplier|mux2x1_16bit:v7
+a[0] => m.IN0
+a[1] => m.IN0
+a[2] => m.IN0
+a[3] => m.IN0
+a[4] => m.IN0
+a[5] => m.IN0
+a[6] => m.IN0
+a[7] => m.IN0
+a[8] => m.IN0
+a[9] => m.IN0
+a[10] => m.IN0
+a[11] => m.IN0
+a[12] => m.IN0
+a[13] => m.IN0
+a[14] => m.IN0
+a[15] => m.IN0
+b[0] => m.IN0
+b[1] => m.IN0
+b[2] => m.IN0
+b[3] => m.IN0
+b[4] => m.IN0
+b[5] => m.IN0
+b[6] => m.IN0
+b[7] => m.IN0
+b[8] => m.IN0
+b[9] => m.IN0
+b[10] => m.IN0
+b[11] => m.IN0
+b[12] => m.IN0
+b[13] => m.IN0
+b[14] => m.IN0
+b[15] => m.IN0
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+s => m.IN1
+m[0] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[1] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[2] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[3] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[4] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[5] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[6] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[7] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[8] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[9] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[10] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[11] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[12] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[13] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[14] <= m.DB_MAX_OUTPUT_PORT_TYPE
+m[15] <= m.DB_MAX_OUTPUT_PORT_TYPE
 
 

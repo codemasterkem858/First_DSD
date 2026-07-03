@@ -1,0 +1,98 @@
+-- ==========================================================
+-- 1. 1 bit Full Adder
+-- ==========================================================
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity FAdder_1bit is
+	port(
+		a, b, ci	:  in std_logic;
+		s, co		: out std_logic
+	);
+end FAdder_1bit;
+
+architecture behavior of FAdder_1bit is
+	
+	-- Behavior
+	begin
+		s	 <= a xor (b xor ci);
+		co  <=(a and b) or (ci and (a xor b));
+end behavior;
+
+-- ==========================================================
+-- 2. 4 bit Full Adder
+-- ==========================================================
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity FAdder_4bit is
+	port(
+		a, b	:  in std_logic_vector(3 downto 0);
+		ci		:  in std_logic;
+		s		: out std_logic_vector(3 downto 0);
+		co		: out std_logic
+	);
+end FAdder_4bit;
+
+architecture behavior of FAdder_4bit is
+
+	-- Component
+	-- 1 bit Full Adder
+	component FAdder_1bit is
+		port(
+			a, b, ci	:  in std_logic;
+			s, co		: out std_logic
+		);
+	end component;
+	
+	-- Signals
+	signal co0, co1, co2 : std_logic;
+	
+	--Behavior
+	begin
+		u0 : FAdder_1bit port map (a => a(0), b => b(0), ci => ci , s => s(0), co => co0);
+		u1 : FAdder_1bit port map (a => a(1), b => b(1), ci => co0, s => s(1), co => co1);
+		u2 : FAdder_1bit port map (a => a(2), b => b(2), ci => co1, s => s(2), co => co2);
+		u3 : FAdder_1bit port map (a => a(3), b => b(3), ci => co2, s => s(3), co =>  co);
+		
+end behavior;
+-- ==========================================================
+-- 3. 16 bit Full Adder
+-- ==========================================================
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity FAdder is
+	port(
+		a, b	: in  std_logic_vector(15 downto 0);	-- 16 bit inputs
+		ci		: in  std_logic;								--  1 bit carry in
+		s		: out std_logic_vector(15 downto 0);	-- 16 bit output
+		co		: out std_logic								--  1 bit carry out
+	);
+end FAdder;
+
+architecture behavior of FAdder is
+	-- Component
+	-- 4 bit Full Adders
+	component FAdder_4bit is
+		port(
+			a, b :  in std_logic_vector(3 downto 0);
+			ci   :  in std_logic;
+			s	  : out std_logic_vector(3 downto 0);
+			co   : out std_logic
+		);
+	end component;
+	
+	-- Signal
+	signal co0, co1, co2 : std_logic;
+	signal summ : std_logic_vector(15 downto 0);
+	
+	-- Behavior
+	begin
+		u0 : FAdder_4bit port map (a => a(3  downto  0), b => b(3  downto  0), ci =>  ci, s => summ(3  downto  0), co => co0);
+		u1 : FAdder_4bit port map (a => a(7  downto  4), b => b(7  downto  4), ci => co0, s => summ(7  downto  4), co => co1);
+		u2 : FAdder_4bit port map (a => a(11 downto  8), b => b(11 downto  8), ci => co1, s => summ(11 downto  8), co => co2);
+		u3 : FAdder_4bit port map (a => a(15 downto 12), b => b(15 downto 12), ci => co2, s => summ(15 downto 12), co =>  co);
+		
+		s <= summ;
+end behavior;

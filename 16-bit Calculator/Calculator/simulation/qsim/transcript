@@ -1,0 +1,107 @@
+# do Calculator.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 08:04:11 on Jun 22,2026
+# vcom -work work Calculator.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package altera_lnsim_components
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cyclonev_atom_pack
+# -- Loading package cyclonev_components
+# -- Compiling entity Calculator
+# -- Compiling architecture structure of Calculator
+# End time: 08:04:12 on Jun 22,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 08:04:12 on Jun 22,2026
+# vcom -work work Waveform.vwf.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Calculator_vhd_vec_tst
+# -- Compiling architecture Calculator_arch of Calculator_vhd_vec_tst
+# End time: 08:04:12 on Jun 22,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.Calculator_vhd_vec_tst 
+# Start time: 08:04:12 on Jun 22,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 win64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.calculator_vhd_vec_tst(calculator_arch)#1
+# Loading altera_lnsim.altera_lnsim_components
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cyclonev.cyclonev_atom_pack(body)
+# Loading cyclonev.cyclonev_components
+# Loading work.calculator(structure)#1
+# Loading ieee.std_logic_arith(body)
+# Loading cyclonev.cyclonev_io_obuf(arch)#1
+# Loading cyclonev.cyclonev_io_ibuf(arch)#1
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#1155
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#607
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#907
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#701
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#6
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#1151
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#10
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#1130
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#16
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#674
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#734
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#188
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#196
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#1143
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#1153
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#73
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#325
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#1138
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#95
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#96
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#105
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#108
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#752
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#1150
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#138
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#1139
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#621
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#940
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#729
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#310
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#311
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#808
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#362
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#798
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#546
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#547
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#795
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#1142
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#1154
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#929
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#1148
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#757
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#1146
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)#1156
+# after#33
+# End time: 08:04:21 on Jun 22,2026, Elapsed time: 0:00:09
+# Errors: 0, Warnings: 1

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for bcdconv
-Mon Jun  1 08:18:28 2026
+Sun Jun 21 18:47:30 2026
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -14,9 +14,21 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  9. Port Connectivity Checks: "Divider:u5"
+ 10. Port Connectivity Checks: "Divider:u4"
+ 11. Port Connectivity Checks: "Divider:u3"
+ 12. Port Connectivity Checks: "Divider:u2"
+ 13. Port Connectivity Checks: "Divider:u1|FAdder:v4"
+ 14. Port Connectivity Checks: "Divider:u1|FAdder:v3"
+ 15. Port Connectivity Checks: "Divider:u1|pu4s:u1|pu:u1|FAdder:u1"
+ 16. Port Connectivity Checks: "Divider:u1|pu4s:u1"
+ 17. Port Connectivity Checks: "Divider:u1|FAdder:v2"
+ 18. Port Connectivity Checks: "Divider:u1|FAdder:v1"
+ 19. Port Connectivity Checks: "Divider:u1"
+ 20. Port Connectivity Checks: "FAdder:v1"
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
 
 
 
@@ -43,14 +55,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Jun  1 08:18:28 2026          ;
+; Analysis & Synthesis Status     ; Successful - Sun Jun 21 18:47:29 2026          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; bcdconv                                        ;
 ; Top-level Entity Name           ; bcdconv                                        ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 4                                              ;
-; Total pins                      ; 11                                             ;
+; Total registers                 ; 0                                              ;
+; Total pins                      ; 37                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
 ; Total DSP Blocks                ; 0                                              ;
@@ -166,49 +178,335 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                 ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                          ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+---------+
-; bcdconv.vhd                      ; yes             ; User VHDL File  ; C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/BCD converter/bcdconv.vhd ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                       ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                                          ; Library ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------------------------------------------+---------+
+; bcdconv.vhd                      ; yes             ; User VHDL File        ; C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/BCD converter/bcdconv.vhd ;         ;
+; fadder.vhd                       ; yes             ; Auto-Found VHDL File  ; C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/BCD converter/fadder.vhd  ;         ;
+; divider.vhd                      ; yes             ; Auto-Found VHDL File  ; C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/BCD converter/divider.vhd ;         ;
++----------------------------------+-----------------+-----------------------+---------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 2         ;
-;                                             ;           ;
-; Combinational ALUT usage for logic          ; 0         ;
-;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 0         ;
-;     -- 5 input functions                    ; 0         ;
-;     -- 4 input functions                    ; 0         ;
-;     -- <=3 input functions                  ; 0         ;
-;                                             ;           ;
-; Dedicated logic registers                   ; 4         ;
-;                                             ;           ;
-; I/O pins                                    ; 11        ;
-;                                             ;           ;
-; Total DSP Blocks                            ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 4         ;
-; Total fan-out                               ; 31        ;
-; Average fan-out                             ; 1.19      ;
-+---------------------------------------------+-----------+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimate of Logic utilization (ALMs needed) ; 227        ;
+;                                             ;            ;
+; Combinational ALUT usage for logic          ; 347        ;
+;     -- 7 input functions                    ; 3          ;
+;     -- 6 input functions                    ; 104        ;
+;     -- 5 input functions                    ; 102        ;
+;     -- 4 input functions                    ; 59         ;
+;     -- <=3 input functions                  ; 79         ;
+;                                             ;            ;
+; Dedicated logic registers                   ; 0          ;
+;                                             ;            ;
+; I/O pins                                    ; 37         ;
+;                                             ;            ;
+; Total DSP Blocks                            ; 0          ;
+;                                             ;            ;
+; Maximum fan-out node                        ; amag[15]~1 ;
+; Maximum fan-out                             ; 48         ;
+; Total fan-out                               ; 1674       ;
+; Average fan-out                             ; 3.98       ;
++---------------------------------------------+------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |bcdconv                   ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 11   ; 0            ; |bcdconv            ; bcdconv     ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                  ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                       ; Entity Name ; Library Name ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------+-------------+--------------+
+; |bcdconv                           ; 347 (9)             ; 0 (0)                     ; 0                 ; 0          ; 37   ; 0            ; |bcdconv                                                                  ; bcdconv     ; work         ;
+;    |Divider:u1|                    ; 125 (18)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1                                                       ; Divider     ; work         ;
+;       |FAdder:v1|                  ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|FAdder:v1                                             ; FAdder      ; work         ;
+;          |FAdder_4bit:u2|          ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|FAdder:v1|FAdder_4bit:u2                              ; FAdder_4bit ; work         ;
+;             |FAdder_1bit:u0|       ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|FAdder:v1|FAdder_4bit:u2|FAdder_1bit:u0               ; FAdder_1bit ; work         ;
+;             |FAdder_1bit:u2|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|FAdder:v1|FAdder_4bit:u2|FAdder_1bit:u2               ; FAdder_1bit ; work         ;
+;          |FAdder_4bit:u3|          ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|FAdder:v1|FAdder_4bit:u3                              ; FAdder_4bit ; work         ;
+;             |FAdder_1bit:u2|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|FAdder:v1|FAdder_4bit:u3|FAdder_1bit:u2               ; FAdder_1bit ; work         ;
+;       |FAdder:v3|                  ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|FAdder:v3                                             ; FAdder      ; work         ;
+;          |FAdder_4bit:u0|          ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|FAdder:v3|FAdder_4bit:u0                              ; FAdder_4bit ; work         ;
+;             |FAdder_1bit:u1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|FAdder:v3|FAdder_4bit:u0|FAdder_1bit:u1               ; FAdder_1bit ; work         ;
+;          |FAdder_4bit:u1|          ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|FAdder:v3|FAdder_4bit:u1                              ; FAdder_4bit ; work         ;
+;             |FAdder_1bit:u0|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|FAdder:v3|FAdder_4bit:u1|FAdder_1bit:u0               ; FAdder_1bit ; work         ;
+;             |FAdder_1bit:u1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|FAdder:v3|FAdder_4bit:u1|FAdder_1bit:u1               ; FAdder_1bit ; work         ;
+;             |FAdder_1bit:u2|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|FAdder:v3|FAdder_4bit:u1|FAdder_1bit:u2               ; FAdder_1bit ; work         ;
+;          |FAdder_4bit:u2|          ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|FAdder:v3|FAdder_4bit:u2                              ; FAdder_4bit ; work         ;
+;             |FAdder_1bit:u1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|FAdder:v3|FAdder_4bit:u2|FAdder_1bit:u1               ; FAdder_1bit ; work         ;
+;             |FAdder_1bit:u3|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|FAdder:v3|FAdder_4bit:u2|FAdder_1bit:u3               ; FAdder_1bit ; work         ;
+;       |pu4s:u2|                    ; 12 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u2                                               ; pu4s        ; work         ;
+;          |pu:u1|                   ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u2|pu:u1                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u2|pu:u1|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u1|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u2|pu:u1|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u0| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u2|pu:u1|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u0 ; FAdder_1bit ; work         ;
+;          |pu:u2|                   ; 6 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u2|pu:u2                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u2|pu:u2|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u1|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u2|pu:u2|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u1| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u2|pu:u2|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u1 ; FAdder_1bit ; work         ;
+;          |pu:u3|                   ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u2|pu:u3                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u2|pu:u3|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u1|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u2|pu:u3|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u1| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u2|pu:u3|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u1 ; FAdder_1bit ; work         ;
+;          |pu:u4|                   ; 4 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u2|pu:u4                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u2|pu:u4|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u1|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u2|pu:u4|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u2|pu:u4|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u2 ; FAdder_1bit ; work         ;
+;       |pu4s:u3|                    ; 41 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u3                                               ; pu4s        ; work         ;
+;          |pu:u1|                   ; 8 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u3|pu:u1                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u3|pu:u1|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u1|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u3|pu:u1|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u3| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u3|pu:u1|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u3 ; FAdder_1bit ; work         ;
+;          |pu:u2|                   ; 11 (8)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u3|pu:u2                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u3|pu:u2|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u1|    ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u3|pu:u2|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u1| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u3|pu:u2|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u1 ; FAdder_1bit ; work         ;
+;                   |FAdder_1bit:u2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u3|pu:u2|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u2 ; FAdder_1bit ; work         ;
+;                |FAdder_4bit:u2|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u3|pu:u2|FAdder:u1|FAdder_4bit:u2                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u0| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u3|pu:u2|FAdder:u1|FAdder_4bit:u2|FAdder_1bit:u0 ; FAdder_1bit ; work         ;
+;          |pu:u3|                   ; 11 (9)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u3|pu:u3                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u3|pu:u3|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u1|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u3|pu:u3|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u0| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u3|pu:u3|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u0 ; FAdder_1bit ; work         ;
+;                |FAdder_4bit:u2|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u3|pu:u3|FAdder:u1|FAdder_4bit:u2                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u1| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u3|pu:u3|FAdder:u1|FAdder_4bit:u2|FAdder_1bit:u1 ; FAdder_1bit ; work         ;
+;          |pu:u4|                   ; 11 (9)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u3|pu:u4                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u3|pu:u4|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u1|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u3|pu:u4|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u3|pu:u4|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u2 ; FAdder_1bit ; work         ;
+;                |FAdder_4bit:u2|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u3|pu:u4|FAdder:u1|FAdder_4bit:u2                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u3|pu:u4|FAdder:u1|FAdder_4bit:u2|FAdder_1bit:u2 ; FAdder_1bit ; work         ;
+;       |pu4s:u4|                    ; 42 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u4                                               ; pu4s        ; work         ;
+;          |pu:u1|                   ; 12 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u4|pu:u1                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u4|pu:u1|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u1|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u4|pu:u1|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u4|pu:u1|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u2 ; FAdder_1bit ; work         ;
+;                |FAdder_4bit:u2|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u4|pu:u1|FAdder:u1|FAdder_4bit:u2                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u3| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u4|pu:u1|FAdder:u1|FAdder_4bit:u2|FAdder_1bit:u3 ; FAdder_1bit ; work         ;
+;          |pu:u2|                   ; 13 (9)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u4|pu:u2                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u4|pu:u2|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u1|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u4|pu:u2|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u4|pu:u2|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u2 ; FAdder_1bit ; work         ;
+;                |FAdder_4bit:u2|    ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u4|pu:u2|FAdder:u1|FAdder_4bit:u2                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u0| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u4|pu:u2|FAdder:u1|FAdder_4bit:u2|FAdder_1bit:u0 ; FAdder_1bit ; work         ;
+;                   |FAdder_1bit:u3| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u4|pu:u2|FAdder:u1|FAdder_4bit:u2|FAdder_1bit:u3 ; FAdder_1bit ; work         ;
+;                |FAdder_4bit:u3|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u4|pu:u2|FAdder:u1|FAdder_4bit:u3                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u0| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u4|pu:u2|FAdder:u1|FAdder_4bit:u3|FAdder_1bit:u0 ; FAdder_1bit ; work         ;
+;          |pu:u3|                   ; 12 (6)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u4|pu:u3                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u4|pu:u3|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u0|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u4|pu:u3|FAdder:u1|FAdder_4bit:u0                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u3| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u4|pu:u3|FAdder:u1|FAdder_4bit:u0|FAdder_1bit:u3 ; FAdder_1bit ; work         ;
+;                |FAdder_4bit:u1|    ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u4|pu:u3|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u1| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u4|pu:u3|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u1 ; FAdder_1bit ; work         ;
+;                   |FAdder_1bit:u2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u4|pu:u3|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u2 ; FAdder_1bit ; work         ;
+;                |FAdder_4bit:u2|    ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u4|pu:u3|FAdder:u1|FAdder_4bit:u2                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u0| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u4|pu:u3|FAdder:u1|FAdder_4bit:u2|FAdder_1bit:u0 ; FAdder_1bit ; work         ;
+;                   |FAdder_1bit:u2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u4|pu:u3|FAdder:u1|FAdder_4bit:u2|FAdder_1bit:u2 ; FAdder_1bit ; work         ;
+;                |FAdder_4bit:u3|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u4|pu:u3|FAdder:u1|FAdder_4bit:u3                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u1| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u4|pu:u3|FAdder:u1|FAdder_4bit:u3|FAdder_1bit:u1 ; FAdder_1bit ; work         ;
+;          |pu:u4|                   ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u4|pu:u4                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u4|pu:u4|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u3|    ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u4|pu:u4|FAdder:u1|FAdder_4bit:u3                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u3| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u1|pu4s:u4|pu:u4|FAdder:u1|FAdder_4bit:u3|FAdder_1bit:u3 ; FAdder_1bit ; work         ;
+;    |Divider:u2|                    ; 82 (13)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2                                                       ; Divider     ; work         ;
+;       |FAdder:v1|                  ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|FAdder:v1                                             ; FAdder      ; work         ;
+;          |FAdder_4bit:u1|          ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|FAdder:v1|FAdder_4bit:u1                              ; FAdder_4bit ; work         ;
+;             |FAdder_1bit:u0|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|FAdder:v1|FAdder_4bit:u1|FAdder_1bit:u0               ; FAdder_1bit ; work         ;
+;             |FAdder_1bit:u1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|FAdder:v1|FAdder_4bit:u1|FAdder_1bit:u1               ; FAdder_1bit ; work         ;
+;             |FAdder_1bit:u3|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|FAdder:v1|FAdder_4bit:u1|FAdder_1bit:u3               ; FAdder_1bit ; work         ;
+;          |FAdder_4bit:u2|          ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|FAdder:v1|FAdder_4bit:u2                              ; FAdder_4bit ; work         ;
+;             |FAdder_1bit:u0|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|FAdder:v1|FAdder_4bit:u2|FAdder_1bit:u0               ; FAdder_1bit ; work         ;
+;             |FAdder_1bit:u3|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|FAdder:v1|FAdder_4bit:u2|FAdder_1bit:u3               ; FAdder_1bit ; work         ;
+;       |FAdder:v3|                  ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|FAdder:v3                                             ; FAdder      ; work         ;
+;          |FAdder_4bit:u0|          ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|FAdder:v3|FAdder_4bit:u0                              ; FAdder_4bit ; work         ;
+;             |FAdder_1bit:u3|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|FAdder:v3|FAdder_4bit:u0|FAdder_1bit:u3               ; FAdder_1bit ; work         ;
+;          |FAdder_4bit:u1|          ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|FAdder:v3|FAdder_4bit:u1                              ; FAdder_4bit ; work         ;
+;             |FAdder_1bit:u0|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|FAdder:v3|FAdder_4bit:u1|FAdder_1bit:u0               ; FAdder_1bit ; work         ;
+;             |FAdder_1bit:u1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|FAdder:v3|FAdder_4bit:u1|FAdder_1bit:u1               ; FAdder_1bit ; work         ;
+;       |pu4s:u2|                    ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u2                                               ; pu4s        ; work         ;
+;          |pu:u1|                   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u2|pu:u1                                         ; pu          ; work         ;
+;          |pu:u3|                   ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u2|pu:u3                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u2|pu:u3|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u1|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u2|pu:u3|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u0| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u2|pu:u3|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u0 ; FAdder_1bit ; work         ;
+;          |pu:u4|                   ; 4 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u2|pu:u4                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u2|pu:u4|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u1|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u2|pu:u4|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u1| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u2|pu:u4|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u1 ; FAdder_1bit ; work         ;
+;       |pu4s:u3|                    ; 27 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u3                                               ; pu4s        ; work         ;
+;          |pu:u1|                   ; 6 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u3|pu:u1                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u3|pu:u1|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u1|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u3|pu:u1|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u1| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u3|pu:u1|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u1 ; FAdder_1bit ; work         ;
+;          |pu:u2|                   ; 3 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u3|pu:u2                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u3|pu:u2|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u1|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u3|pu:u2|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u3|pu:u2|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u2 ; FAdder_1bit ; work         ;
+;          |pu:u3|                   ; 8 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u3|pu:u3                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u3|pu:u3|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u1|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u3|pu:u3|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u3| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u3|pu:u3|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u3 ; FAdder_1bit ; work         ;
+;          |pu:u4|                   ; 10 (8)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u3|pu:u4                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u3|pu:u4|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u1|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u3|pu:u4|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u3|pu:u4|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u2 ; FAdder_1bit ; work         ;
+;                |FAdder_4bit:u2|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u3|pu:u4|FAdder:u1|FAdder_4bit:u2                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u0| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u3|pu:u4|FAdder:u1|FAdder_4bit:u2|FAdder_1bit:u0 ; FAdder_1bit ; work         ;
+;       |pu4s:u4|                    ; 28 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u4                                               ; pu4s        ; work         ;
+;          |pu:u1|                   ; 11 (9)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u4|pu:u1                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u4|pu:u1|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u1|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u4|pu:u1|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u0| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u4|pu:u1|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u0 ; FAdder_1bit ; work         ;
+;                |FAdder_4bit:u2|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u4|pu:u1|FAdder:u1|FAdder_4bit:u2                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u1| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u4|pu:u1|FAdder:u1|FAdder_4bit:u2|FAdder_1bit:u1 ; FAdder_1bit ; work         ;
+;          |pu:u2|                   ; 7 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u4|pu:u2                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u4|pu:u2|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u1|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u4|pu:u2|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u4|pu:u2|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u2 ; FAdder_1bit ; work         ;
+;                |FAdder_4bit:u2|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u4|pu:u2|FAdder:u1|FAdder_4bit:u2                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u4|pu:u2|FAdder:u1|FAdder_4bit:u2|FAdder_1bit:u2 ; FAdder_1bit ; work         ;
+;          |pu:u3|                   ; 7 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u4|pu:u3                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u4|pu:u3|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u1|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u4|pu:u3|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u4|pu:u3|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u2 ; FAdder_1bit ; work         ;
+;                |FAdder_4bit:u2|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u4|pu:u3|FAdder:u1|FAdder_4bit:u2                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u3| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u4|pu:u3|FAdder:u1|FAdder_4bit:u2|FAdder_1bit:u3 ; FAdder_1bit ; work         ;
+;          |pu:u4|                   ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u4|pu:u4                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u4|pu:u4|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u3|    ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u4|pu:u4|FAdder:u1|FAdder_4bit:u3                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u3| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u2|pu4s:u4|pu:u4|FAdder:u1|FAdder_4bit:u3|FAdder_1bit:u3 ; FAdder_1bit ; work         ;
+;    |Divider:u3|                    ; 63 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3                                                       ; Divider     ; work         ;
+;       |FAdder:v1|                  ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|FAdder:v1                                             ; FAdder      ; work         ;
+;          |FAdder_4bit:u0|          ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|FAdder:v1|FAdder_4bit:u0                              ; FAdder_4bit ; work         ;
+;             |FAdder_1bit:u3|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|FAdder:v1|FAdder_4bit:u0|FAdder_1bit:u3               ; FAdder_1bit ; work         ;
+;          |FAdder_4bit:u1|          ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|FAdder:v1|FAdder_4bit:u1                              ; FAdder_4bit ; work         ;
+;             |FAdder_1bit:u0|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|FAdder:v1|FAdder_4bit:u1|FAdder_1bit:u0               ; FAdder_1bit ; work         ;
+;             |FAdder_1bit:u2|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|FAdder:v1|FAdder_4bit:u1|FAdder_1bit:u2               ; FAdder_1bit ; work         ;
+;             |FAdder_1bit:u3|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|FAdder:v1|FAdder_4bit:u1|FAdder_1bit:u3               ; FAdder_1bit ; work         ;
+;       |FAdder:v3|                  ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|FAdder:v3                                             ; FAdder      ; work         ;
+;          |FAdder_4bit:u0|          ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|FAdder:v3|FAdder_4bit:u0                              ; FAdder_4bit ; work         ;
+;             |FAdder_1bit:u1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|FAdder:v3|FAdder_4bit:u0|FAdder_1bit:u1               ; FAdder_1bit ; work         ;
+;          |FAdder_4bit:u1|          ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|FAdder:v3|FAdder_4bit:u1                              ; FAdder_4bit ; work         ;
+;             |FAdder_1bit:u0|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|FAdder:v3|FAdder_4bit:u1|FAdder_1bit:u0               ; FAdder_1bit ; work         ;
+;       |pu4s:u3|                    ; 19 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u3                                               ; pu4s        ; work         ;
+;          |pu:u1|                   ; 4 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u3|pu:u1                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u3|pu:u1|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u1|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u3|pu:u1|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u0| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u3|pu:u1|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u0 ; FAdder_1bit ; work         ;
+;          |pu:u2|                   ; 2 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u3|pu:u2                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u3|pu:u2|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u1|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u3|pu:u2|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u1| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u3|pu:u2|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u1 ; FAdder_1bit ; work         ;
+;          |pu:u3|                   ; 5 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u3|pu:u3                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u3|pu:u3|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u1|    ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u3|pu:u3|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u0| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u3|pu:u3|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u0 ; FAdder_1bit ; work         ;
+;                   |FAdder_1bit:u2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u3|pu:u3|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u2 ; FAdder_1bit ; work         ;
+;          |pu:u4|                   ; 8 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u3|pu:u4                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u3|pu:u4|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u1|    ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u3|pu:u4|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u1| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u3|pu:u4|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u1 ; FAdder_1bit ; work         ;
+;                   |FAdder_1bit:u3| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u3|pu:u4|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u3 ; FAdder_1bit ; work         ;
+;       |pu4s:u4|                    ; 24 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u4                                               ; pu4s        ; work         ;
+;          |pu:u1|                   ; 9 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u4|pu:u1                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u4|pu:u1|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u1|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u4|pu:u1|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u4|pu:u1|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u2 ; FAdder_1bit ; work         ;
+;                |FAdder_4bit:u2|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u4|pu:u1|FAdder:u1|FAdder_4bit:u2                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u0| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u4|pu:u1|FAdder:u1|FAdder_4bit:u2|FAdder_1bit:u0 ; FAdder_1bit ; work         ;
+;          |pu:u2|                   ; 5 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u4|pu:u2                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u4|pu:u2|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u1|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u4|pu:u2|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u0| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u4|pu:u2|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u0 ; FAdder_1bit ; work         ;
+;                |FAdder_4bit:u2|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u4|pu:u2|FAdder:u1|FAdder_4bit:u2                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u1| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u4|pu:u2|FAdder:u1|FAdder_4bit:u2|FAdder_1bit:u1 ; FAdder_1bit ; work         ;
+;          |pu:u3|                   ; 7 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u4|pu:u3                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u4|pu:u3|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u0|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u4|pu:u3|FAdder:u1|FAdder_4bit:u0                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u4|pu:u3|FAdder:u1|FAdder_4bit:u0|FAdder_1bit:u2 ; FAdder_1bit ; work         ;
+;                |FAdder_4bit:u1|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u4|pu:u3|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u4|pu:u3|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u2 ; FAdder_1bit ; work         ;
+;                |FAdder_4bit:u2|    ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u4|pu:u3|FAdder:u1|FAdder_4bit:u2                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u2| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u4|pu:u3|FAdder:u1|FAdder_4bit:u2|FAdder_1bit:u2 ; FAdder_1bit ; work         ;
+;          |pu:u4|                   ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u4|pu:u4                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u4|pu:u4|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u3|    ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u4|pu:u4|FAdder:u1|FAdder_4bit:u3                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u3| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u3|pu4s:u4|pu:u4|FAdder:u1|FAdder_4bit:u3|FAdder_1bit:u3 ; FAdder_1bit ; work         ;
+;    |Divider:u4|                    ; 47 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4                                                       ; Divider     ; work         ;
+;       |FAdder:v1|                  ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|FAdder:v1                                             ; FAdder      ; work         ;
+;          |FAdder_4bit:u1|          ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|FAdder:v1|FAdder_4bit:u1                              ; FAdder_4bit ; work         ;
+;             |FAdder_1bit:u0|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|FAdder:v1|FAdder_4bit:u1|FAdder_1bit:u0               ; FAdder_1bit ; work         ;
+;             |FAdder_1bit:u1|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|FAdder:v1|FAdder_4bit:u1|FAdder_1bit:u1               ; FAdder_1bit ; work         ;
+;       |FAdder:v3|                  ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|FAdder:v3                                             ; FAdder      ; work         ;
+;          |FAdder_4bit:u0|          ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|FAdder:v3|FAdder_4bit:u0                              ; FAdder_4bit ; work         ;
+;             |FAdder_1bit:u2|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|FAdder:v3|FAdder_4bit:u0|FAdder_1bit:u2               ; FAdder_1bit ; work         ;
+;       |pu4s:u3|                    ; 9 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|pu4s:u3                                               ; pu4s        ; work         ;
+;          |pu:u3|                   ; 3 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|pu4s:u3|pu:u3                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|pu4s:u3|pu:u3|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u1|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|pu4s:u3|pu:u3|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u0| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|pu4s:u3|pu:u3|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u0 ; FAdder_1bit ; work         ;
+;          |pu:u4|                   ; 6 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|pu4s:u3|pu:u4                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|pu4s:u3|pu:u4|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u0|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|pu4s:u3|pu:u4|FAdder:u1|FAdder_4bit:u0                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|pu4s:u3|pu:u4|FAdder:u1|FAdder_4bit:u0|FAdder_1bit:u2 ; FAdder_1bit ; work         ;
+;                |FAdder_4bit:u1|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|pu4s:u3|pu:u4|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u1| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|pu4s:u3|pu:u4|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u1 ; FAdder_1bit ; work         ;
+;       |pu4s:u4|                    ; 23 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|pu4s:u4                                               ; pu4s        ; work         ;
+;          |pu:u1|                   ; 5 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|pu4s:u4|pu:u1                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|pu4s:u4|pu:u1|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u1|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|pu4s:u4|pu:u1|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|pu4s:u4|pu:u1|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u2 ; FAdder_1bit ; work         ;
+;          |pu:u2|                   ; 9 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|pu4s:u4|pu:u2                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|pu4s:u4|pu:u2|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u1|    ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|pu4s:u4|pu:u2|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|pu4s:u4|pu:u2|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u2 ; FAdder_1bit ; work         ;
+;                   |FAdder_1bit:u3| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|pu4s:u4|pu:u2|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u3 ; FAdder_1bit ; work         ;
+;          |pu:u3|                   ; 7 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|pu4s:u4|pu:u3                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|pu4s:u4|pu:u3|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u0|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|pu4s:u4|pu:u3|FAdder:u1|FAdder_4bit:u0                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u2| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|pu4s:u4|pu:u3|FAdder:u1|FAdder_4bit:u0|FAdder_1bit:u2 ; FAdder_1bit ; work         ;
+;                |FAdder_4bit:u1|    ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|pu4s:u4|pu:u3|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u0| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|pu4s:u4|pu:u3|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u0 ; FAdder_1bit ; work         ;
+;                   |FAdder_1bit:u1| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|pu4s:u4|pu:u3|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u1 ; FAdder_1bit ; work         ;
+;                |FAdder_4bit:u2|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|pu4s:u4|pu:u3|FAdder:u1|FAdder_4bit:u2                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u0| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|pu4s:u4|pu:u3|FAdder:u1|FAdder_4bit:u2|FAdder_1bit:u0 ; FAdder_1bit ; work         ;
+;          |pu:u4|                   ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|pu4s:u4|pu:u4                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|pu4s:u4|pu:u4|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u3|    ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|pu4s:u4|pu:u4|FAdder:u1|FAdder_4bit:u3                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u3| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u4|pu4s:u4|pu:u4|FAdder:u1|FAdder_4bit:u3|FAdder_1bit:u3 ; FAdder_1bit ; work         ;
+;    |Divider:u5|                    ; 18 (6)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u5                                                       ; Divider     ; work         ;
+;       |FAdder:v1|                  ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u5|FAdder:v1                                             ; FAdder      ; work         ;
+;          |FAdder_4bit:u0|          ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u5|FAdder:v1|FAdder_4bit:u0                              ; FAdder_4bit ; work         ;
+;             |FAdder_1bit:u2|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u5|FAdder:v1|FAdder_4bit:u0|FAdder_1bit:u2               ; FAdder_1bit ; work         ;
+;             |FAdder_1bit:u3|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u5|FAdder:v1|FAdder_4bit:u0|FAdder_1bit:u3               ; FAdder_1bit ; work         ;
+;       |pu4s:u4|                    ; 10 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u5|pu4s:u4                                               ; pu4s        ; work         ;
+;          |pu:u1|                   ; 2 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u5|pu4s:u4|pu:u1                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u5|pu4s:u4|pu:u1|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u1|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u5|pu4s:u4|pu:u1|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u0| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u5|pu4s:u4|pu:u1|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u0 ; FAdder_1bit ; work         ;
+;          |pu:u2|                   ; 4 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u5|pu4s:u4|pu:u2                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u5|pu4s:u4|pu:u2|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u1|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u5|pu4s:u4|pu:u2|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u1| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u5|pu4s:u4|pu:u2|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u1 ; FAdder_1bit ; work         ;
+;          |pu:u3|                   ; 3 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u5|pu4s:u4|pu:u3                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u5|pu4s:u4|pu:u3|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u1|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u5|pu4s:u4|pu:u3|FAdder:u1|FAdder_4bit:u1                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u1| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u5|pu4s:u4|pu:u3|FAdder:u1|FAdder_4bit:u1|FAdder_1bit:u1 ; FAdder_1bit ; work         ;
+;          |pu:u4|                   ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u5|pu4s:u4|pu:u4                                         ; pu          ; work         ;
+;             |FAdder:u1|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u5|pu4s:u4|pu:u4|FAdder:u1                               ; FAdder      ; work         ;
+;                |FAdder_4bit:u3|    ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u5|pu4s:u4|pu:u4|FAdder:u1|FAdder_4bit:u3                ; FAdder_4bit ; work         ;
+;                   |FAdder_1bit:u3| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|Divider:u5|pu4s:u4|pu:u4|FAdder:u1|FAdder_4bit:u3|FAdder_1bit:u3 ; FAdder_1bit ; work         ;
+;    |FAdder:v1|                     ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|FAdder:v1                                                        ; FAdder      ; work         ;
+;       |FAdder_4bit:u1|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|FAdder:v1|FAdder_4bit:u1                                         ; FAdder_4bit ; work         ;
+;          |FAdder_1bit:u1|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|FAdder:v1|FAdder_4bit:u1|FAdder_1bit:u1                          ; FAdder_1bit ; work         ;
+;       |FAdder_4bit:u2|             ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|FAdder:v1|FAdder_4bit:u2                                         ; FAdder_4bit ; work         ;
+;          |FAdder_1bit:u0|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|FAdder:v1|FAdder_4bit:u2|FAdder_1bit:u0                          ; FAdder_1bit ; work         ;
+;          |FAdder_1bit:u2|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |bcdconv|FAdder:v1|FAdder_4bit:u2|FAdder_1bit:u2                          ; FAdder_1bit ; work         ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -217,28 +515,180 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 4     ;
+; Total registers                              ; 0     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 4     ;
+; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 4     ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divider:u5"                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; b[15..4] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[3]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; b[2]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[1]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; b[0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; r[15..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; q        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divider:u4"                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; b[15..4] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[3]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; b[2]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[1]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; b[0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; r[15..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divider:u3"                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; b[15..4] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[3]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; b[2]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[1]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; b[0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; r[15..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divider:u2"                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; b[15..4] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[3]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; b[2]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[1]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; b[0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; r[15..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divider:u1|FAdder:v4"                                                               ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; a    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; ci   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; co   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divider:u1|FAdder:v3"                                                               ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; a    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; ci   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; co   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "Divider:u1|pu4s:u1|pu:u1|FAdder:u1" ;
++------+-------+----------+--------------------------------------+
+; Port ; Type  ; Severity ; Details                              ;
++------+-------+----------+--------------------------------------+
+; ci   ; Input ; Info     ; Stuck at VCC                         ;
++------+-------+----------+--------------------------------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "Divider:u1|pu4s:u1" ;
++------+-------+----------+----------------------+
+; Port ; Type  ; Severity ; Details              ;
++------+-------+----------+----------------------+
+; a    ; Input ; Info     ; Stuck at GND         ;
++------+-------+----------+----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divider:u1|FAdder:v2"                                                               ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; a    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; ci   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; co   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divider:u1|FAdder:v1"                                                               ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; a    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; ci   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; co   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Divider:u1"                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; b[15..4] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[3]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; b[2]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[1]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; b[0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; r[15..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FAdder:v1"                                                                          ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; a    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; ci   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; co   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
-+-------------------+---------------------------------+
-; Type              ; Count                           ;
-+-------------------+---------------------------------+
-; arriav_ff         ; 4                               ;
-;     ENA CLR       ; 4                               ;
-; boundary_port     ; 11                              ;
-;                   ;                                 ;
-; Max LUT depth     ; 0.00                            ;
-; Average LUT depth ; 0.00                            ;
-+-------------------+---------------------------------+
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 349                         ;
+;     extend            ; 3                           ;
+;         7 data inputs ; 3                           ;
+;     normal            ; 346                         ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 12                          ;
+;         3 data inputs ; 67                          ;
+;         4 data inputs ; 59                          ;
+;         5 data inputs ; 102                         ;
+;         6 data inputs ; 104                         ;
+; boundary_port         ; 37                          ;
+;                       ;                             ;
+; Max LUT depth         ; 58.00                       ;
+; Average LUT depth     ; 55.68                       ;
++-----------------------+-----------------------------+
 
 
 +-------------------------------+
@@ -246,7 +696,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:21     ;
 +----------------+--------------+
 
 
@@ -256,27 +706,45 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Mon Jun  1 08:18:14 2026
+    Info: Processing started: Sun Jun 21 18:46:44 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off bcdconv -c bcdconv
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file bcdconv.vhd
-    Info (12022): Found design unit 1: bcdconv-behavior File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/BCD converter/bcdconv.vhd Line: 16
-    Info (12023): Found entity 1: bcdconv File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/BCD converter/bcdconv.vhd Line: 8
+    Info (12022): Found design unit 1: bcdconv-behavior File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/BCD converter/bcdconv.vhd Line: 15
+    Info (12023): Found entity 1: bcdconv File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/BCD converter/bcdconv.vhd Line: 7
 Info (12127): Elaborating entity "bcdconv" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at bcdconv.vhd(21): signal "clr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/BCD converter/bcdconv.vhd Line: 21
-Warning (10492): VHDL Process Statement warning at bcdconv.vhd(23): signal "ld" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/BCD converter/bcdconv.vhd Line: 23
+Warning (12125): Using design file fadder.vhd, which is not specified as a design file for the current project, but contains definitions for 6 design units and 3 entities in project
+    Info (12022): Found design unit 1: FAdder_1bit-behavior File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/BCD converter/fadder.vhd Line: 14
+    Info (12022): Found design unit 2: FAdder_4bit-behavior File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/BCD converter/fadder.vhd Line: 37
+    Info (12022): Found design unit 3: FAdder-behavior File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/BCD converter/fadder.vhd Line: 74
+    Info (12023): Found entity 1: FAdder_1bit File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/BCD converter/fadder.vhd Line: 7
+    Info (12023): Found entity 2: FAdder_4bit File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/BCD converter/fadder.vhd Line: 28
+    Info (12023): Found entity 3: FAdder File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/BCD converter/fadder.vhd Line: 65
+Info (12128): Elaborating entity "FAdder" for hierarchy "FAdder:v1" File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/BCD converter/bcdconv.vhd Line: 40
+Info (12128): Elaborating entity "FAdder_4bit" for hierarchy "FAdder:v1|FAdder_4bit:u0" File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/BCD converter/fadder.vhd Line: 92
+Info (12128): Elaborating entity "FAdder_1bit" for hierarchy "FAdder:v1|FAdder_4bit:u0|FAdder_1bit:u0" File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/BCD converter/fadder.vhd Line: 53
+Warning (12125): Using design file divider.vhd, which is not specified as a design file for the current project, but contains definitions for 6 design units and 3 entities in project
+    Info (12022): Found design unit 1: pu-behavior File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/BCD converter/divider.vhd Line: 17
+    Info (12022): Found design unit 2: pu4s-behavior File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/BCD converter/divider.vhd Line: 61
+    Info (12022): Found design unit 3: Divider-behavior File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/BCD converter/divider.vhd Line: 100
+    Info (12023): Found entity 1: pu File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/BCD converter/divider.vhd Line: 8
+    Info (12023): Found entity 2: pu4s File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/BCD converter/divider.vhd Line: 52
+    Info (12023): Found entity 3: Divider File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/BCD converter/divider.vhd Line: 93
+Info (12128): Elaborating entity "Divider" for hierarchy "Divider:u1" File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/BCD converter/bcdconv.vhd Line: 43
+Info (12128): Elaborating entity "pu4s" for hierarchy "Divider:u1|pu4s:u1" File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/BCD converter/divider.vhd Line: 141
+Info (12128): Elaborating entity "pu" for hierarchy "Divider:u1|pu4s:u1|pu:u1" File: C:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/BCD converter/divider.vhd Line: 79
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 15 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 7 input pins
-    Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 4 logic cells
+Info (21057): Implemented 384 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 16 input pins
+    Info (21059): Implemented 21 output pins
+    Info (21061): Implemented 347 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4852 megabytes
-    Info: Processing ended: Mon Jun  1 08:18:29 2026
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:22
+    Info: Peak virtual memory: 4883 megabytes
+    Info: Processing ended: Sun Jun 21 18:47:30 2026
+    Info: Elapsed time: 00:00:46
+    Info: Total CPU time (on all processors): 00:00:37
 
 

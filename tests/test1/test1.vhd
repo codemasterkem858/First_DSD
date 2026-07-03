@@ -1,0 +1,36 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity test1 is
+	port(
+		d				:  in std_logic_vector(3 downto 0);
+		ctrl			:  in std_logic_vector(1 downto 0);
+		clk, reset	:  in std_logic;
+		q				: out std_logic_vector(3 downto 0)
+	);
+end test1;
+
+architecture arch of test1 is
+	
+	signal r_reg, r_next	: std_logic_vector(3 downto 0);
+	
+	begin
+		process(clk, reset)
+		begin
+			if (reset = '0') then
+				r_reg <= (others => '0');
+			elsif (rising_edge(clk)) then
+				r_reg <= r_next;
+			end if;
+		end process;
+		
+	with ctrl select
+		r_next <= 
+			r_reg								when "00",
+			r_reg(2 downto 0) & d(0)	when "01",
+			d(3) & r_reg(3 downto 1)	when "10",
+			d									when others;
+		
+	q <= r_reg;
+
+end arch;

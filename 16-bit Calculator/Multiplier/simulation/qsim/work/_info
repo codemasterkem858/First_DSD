@@ -1,0 +1,133 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+!s11e vcom 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 dC:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Multiplier/simulation/qsim
+T_opt
+!s110 1781600485
+V<i@kIho250Q=1GR^AifmF1
+04 22 15 work multiplier_vhd_vec_tst multiplier_arch 1
+=1-7cb0c2e14d12-6a3110da-1f4-3198
+R1
+!s12b OEM100
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim +acc
+tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+Emultiplier
+Z3 w1781600470
+Z4 DPx4 ieee 16 vital_primitives 0 22 Y]H?Y_]z4@VoaWAGJ=36m1
+Z5 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 DjRARHG[mMoWnfQ1@E6OI1
+Z6 DPx4 ieee 12 vital_timing 0 22 6STbz=m1W[80IE06h_el^0
+Z7 DPx8 cyclonev 19 cyclonev_components 0 22 a<5aF4D8K=jjT7FHmJc[20
+Z8 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z9 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+Z10 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 IF4KkEKl]c`WfAAM7V0iN1
+!i122 20
+R2
+Z11 8Multiplier.vho
+Z12 FMultiplier.vho
+l0
+L37 1
+Vl1>O>^[;7_:mhnDeRD4df3
+!s100 nXizZUA>bjkjDo=52Q>ID0
+Z13 OL;C;2023.3;77
+32
+Z14 !s110 1781600472
+!i10b 1
+Z15 !s108 1781600472.000000
+Z16 !s90 -work|work|Multiplier.vho|
+Z17 !s107 Multiplier.vho|
+!i113 0
+Z18 o-work work
+Z19 tExplicit 1 CvgOpt 0
+Astructure
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+DEx4 work 10 multiplier 0 22 l1>O>^[;7_:mhnDeRD4df3
+!i122 20
+l1156
+L112 13546
+V@KFbiGYd44m]TOEXFhEaV3
+!s100 kH80^OhB6@;1G=<K=]YaP1
+R13
+32
+R14
+!i10b 1
+R15
+R16
+R17
+!i113 0
+R18
+R19
+Emultiplier_vhd_vec_tst
+Z20 w1781600468
+R8
+R9
+!i122 21
+R2
+Z21 8Waveform.vwf.vht
+Z22 FWaveform.vwf.vht
+l0
+L32 1
+VSS=5P1jF`4JYhg?f];Ch_1
+!s100 9c1A@C?iKTXP4o5Al@Y;f3
+R13
+32
+R14
+!i10b 1
+R15
+Z23 !s90 -work|work|Waveform.vwf.vht|
+Z24 !s107 Waveform.vwf.vht|
+!i113 0
+R18
+R19
+Amultiplier_arch
+R8
+R9
+DEx4 work 22 multiplier_vhd_vec_tst 0 22 SS=5P1jF`4JYhg?f];Ch_1
+!i122 21
+l47
+L34 3456
+Vam]3<3Oj=Y7f]DHVUQ]PZ0
+!s100 6dAz?bTGWIeklzZ=IzD<K3
+R13
+32
+R14
+!i10b 1
+R15
+R23
+R24
+!i113 0
+R18
+R19

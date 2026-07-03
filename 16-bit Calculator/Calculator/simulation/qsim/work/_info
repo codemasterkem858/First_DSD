@@ -1,0 +1,149 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+!s11e vcom 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 dC:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Calculator/simulation/qsim
+T_opt
+!s110 1782104655
+V=?7Q8_dOS1@DNnPc]QZ0C0
+04 22 15 work calculator_vhd_vec_tst calculator_arch 1
+=1-7cb0c2e14d12-6a38c24d-139-2748
+R1
+!s12b OEM100
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim +acc
+tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+Ecalculator
+Z3 w1782104650
+Z4 DPx4 ieee 16 vital_primitives 0 22 Y]H?Y_]z4@VoaWAGJ=36m1
+Z5 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 DjRARHG[mMoWnfQ1@E6OI1
+Z6 DPx4 ieee 12 vital_timing 0 22 6STbz=m1W[80IE06h_el^0
+Z7 DPx8 cyclonev 19 cyclonev_components 0 22 a<5aF4D8K=jjT7FHmJc[20
+Z8 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z9 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+Z10 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 IF4KkEKl]c`WfAAM7V0iN1
+!i122 40
+R2
+Z11 8Calculator.vho
+Z12 FCalculator.vho
+l0
+L37 1
+VFZkeUCoLm2j4PPgTg:11W2
+!s100 d@TkLQ0Dd_]Oa8LMoo<]42
+Z13 OL;C;2023.3;77
+32
+Z14 !s110 1782104652
+!i10b 1
+Z15 !s108 1782104651.000000
+Z16 !s90 -work|work|Calculator.vho|
+Z17 !s107 Calculator.vho|
+!i113 0
+Z18 o-work work
+Z19 tExplicit 1 CvgOpt 0
+Astructure
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+DEx4 work 10 calculator 0 22 FZkeUCoLm2j4PPgTg:11W2
+!i122 40
+l3561
+L168 38828
+VOjGRX3Zb]hc7=Nnk2AXe`3
+!s100 a54zmn1@3K33eL8>D]?O01
+R13
+32
+R14
+!i10b 1
+R15
+R16
+R17
+!i113 0
+R18
+R19
+Ecalculator_vhd_vec_tst
+Z20 w1782104647
+R8
+R9
+!i122 41
+R2
+Z21 8Waveform.vwf.vht
+Z22 FWaveform.vwf.vht
+l0
+L32 1
+V16@aei9ODlinhW97k`fIg0
+!s100 KnHbgI>Mjad_89PD`AY^Q1
+R13
+32
+R14
+!i10b 1
+Z23 !s108 1782104652.000000
+Z24 !s90 -work|work|Waveform.vwf.vht|
+Z25 !s107 Waveform.vwf.vht|
+!i113 0
+R18
+R19
+Acalculator_arch
+R8
+R9
+DEx4 work 22 calculator_vhd_vec_tst 0 22 16@aei9ODlinhW97k`fIg0
+!i122 41
+l67
+L34 289
+V<AN8WOcIhLSU4DC8XB3;d2
+!s100 9OKe9;Xa_ziaJFAc>85VV1
+R13
+32
+R14
+!i10b 1
+R23
+R24
+R25
+!i113 0
+R18
+R19

@@ -1,13 +1,13 @@
-Fitter Status : Successful - Mon Jun  1 08:20:18 2026
+Fitter Status : Successful - Sun Jun 21 18:49:25 2026
 Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : bcdconv
 Top-level Entity Name : bcdconv
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 2 / 32,070 ( < 1 % )
-Total registers : 4
-Total pins : 11 / 457 ( 2 % )
+Logic utilization (in ALMs) : 223 / 32,070 ( < 1 % )
+Total registers : 0
+Total pins : 37 / 457 ( 8 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 4,065,280 ( 0 % )
 Total RAM Blocks : 0 / 397 ( 0 % )

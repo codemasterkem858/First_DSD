@@ -1,0 +1,123 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+!s11e vcom 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 dC:/Users/Kidus/Documents/GitHub/First_DSD/16-bit Calculator/Binary Converter/simulation/qsim
+T_opt
+!s110 1781951198
+VKFfZ;n^_8[J2e_7hndG4O2
+04 19 12 work binconv_vhd_vec_tst binconv_arch 1
+=1-7cb0c2e14d12-6a366ade-c5-1078
+R1
+!s12b OEM100
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim +acc
+tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+Ebinconv
+Z3 w1781951196
+Z4 DPx4 ieee 16 vital_primitives 0 22 Y]H?Y_]z4@VoaWAGJ=36m1
+Z5 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 DjRARHG[mMoWnfQ1@E6OI1
+Z6 DPx4 ieee 12 vital_timing 0 22 6STbz=m1W[80IE06h_el^0
+Z7 DPx8 cyclonev 19 cyclonev_components 0 22 a<5aF4D8K=jjT7FHmJc[20
+Z8 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z9 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+Z10 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 IF4KkEKl]c`WfAAM7V0iN1
+!i122 6
+R2
+Z11 8binconv.vho
+Z12 Fbinconv.vho
+l0
+L37 1
+VV?gSoY;D697[?U8U=9XP50
+!s100 :zG8;]I9`0bE:M7gh9dSS0
+Z13 OL;C;2023.3;77
+32
+Z14 !s110 1781951197
+!i10b 1
+Z15 !s108 1781951197.000000
+Z16 !s90 -work|work|binconv.vho|
+Z17 !s107 binconv.vho|
+!i113 0
+Z18 o-work work
+Z19 tExplicit 1 CvgOpt 0
+Astructure
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+DEx4 work 7 binconv 0 22 V?gSoY;D697[?U8U=9XP50
+!i122 6
+l324
+L89 2653
+VPBk^HbYWJ`I?XQG4jd2`[1
+!s100 mN`S=?S09gjYPJ:SGRN[@3
+R13
+32
+R14
+!i10b 1
+R15
+R16
+R17
+!i113 0
+R18
+R19
+Ebinconv_vhd_vec_tst
+Z20 w1781951195
+R8
+R9
+!i122 7
+R2
+Z21 8Waveform.vwf.vht
+Z22 FWaveform.vwf.vht
+l0
+L32 1
+V5E[^U=ACc]VLh>ZA>1z1@0
+!s100 i@=mBA7;fZ<Bb8c3D1a0n2
+R13
+32
+R14
+!i10b 1
+R15
+Z23 !s90 -work|work|Waveform.vwf.vht|
+Z24 !s107 Waveform.vwf.vht|
+!i113 0
+R18
+R19
+Abinconv_arch
+R8
+R9
+DEx4 work 19 binconv_vhd_vec_tst 0 22 5E[^U=ACc]VLh>ZA>1z1@0
+!i122 7
+l55
+L34 163
+V:m>Km4kMO@`D4k;:NLGiA1
+!s100 LR0Edhc2<b[2FkJhWP7L]3
+R13
+32
+R14
+!i10b 1
+R15
+R23
+R24
+!i113 0
+R18
+R19

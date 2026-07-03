@@ -1,232 +1,7 @@
---------------------------------------------------------
---				1 bit processing block
---------------------------------------------------------
-library ieee;
-use ieee.std_logic_1164.all;
+-- ==========================================================
+--	1. 1 stage 16 bit processing block
+-- ==========================================================
 
-entity Divider is
-	port(
-		a, b	:  in std_logic_vector(15 downto 0);
-		r, q	: out std_logic_vector(15 downto 0);
-		z, o	: out std_logic	-- division by zero and overflow flag
-	);
-end Divider;
-
-architecture behavior of Divider is
-
-	-- Components
-	-- 4 stage Processing block
-	component pu4s is
-		port(
-			a, b		:  in std_logic_vector(15 downto 0);
-			d_bits	:  in std_logic_vector(3  downto 0);	
-			r			: out std_logic_vector(15 downto 0);
-			q			: out std_logic_vector(3  downto 0)
-		);
-	end component;
-	
-	-- 16 bit two-to-one multiplexer
-	component mux2x1_16bit is
-		port(
-			a, b	:  in std_logic_vector(15 downto 0);
-			s		:  in std_logic;
-			m		: out std_logic_vector(15 downto 0)
-		);
-	end component;
-
-		-- 16 bit Full Adder
-	component FAdder_16bit is
-		port(
-			a, b	:  in std_logic_vector(15 downto 0);
-			ci		:  in std_logic;
-			s		: out std_logic_vector(15 downto 0);
-			co		: out std_logic
-		);
-	end component;
-	
-	-- Signals
-	signal r2, r1, r0 		: std_logic_vector(15 downto 0);	-- Partial reminders
-	signal am, bm				: std_logic_vector(15 downto 0);	-- Magnitudes of the operands
-	signal rm, qm				: std_logic_vector(15 downto 0); -- Magnitudes of results
-	signal an, bn, rn, qn	: std_logic_vector(15 downto 0);	-- Negated intermediate values
-	
-	-- Constants
-	constant zeros : std_logic_vector(15 downto 0) := (others => '0');
-	constant Tmin	: std_logic_vector(15 downto 0) := "1000000000000000";
-	constant min1	: std_logic_vector(15 downto 0) := (others => '1');
-	
-	-- Behavior
-	begin
-		v1: FAdder_16bit port map(a => (others => '0'), b => not a, ci => '1', s => an);
-		v2: mux2x1_16bit port map(a => a, b => an, s => a(15), m => am);
-		v3: FAdder_16bit port map(a => (others => '0'), b => not b, ci => '1', s => bn);
-		v4: mux2x1_16bit port map(a => b, b => bn, s => b(15), m => bm);
-		u1: pu4s port map(
-			a 			=> zeros, 
-			b 			=> bm, 
-			d_bits	=> am(15 downto 12), 
-			q 			=> qm(15 downto 12), 
-			r 			=> r2
-		);
-		u2: pu4s port map(
-			a 			=> r2,
-			b 			=> bm,
-			d_bits 	=> am(11 downto  8),
-			q 			=> qm(11 downto  8),
-			r 			=> r1
-		);
-		u3: pu4s port map(
-			a 			=> r1,
-			b 			=> bm,
-			d_bits 	=> am(7  downto  4),
-			q 			=> qm(7  downto  4),
-			r 			=> r0
-		);
-		u4: pu4s port map(
-			a 			=> r0,
-			b 			=> bm,
-			d_bits 	=> am(3 downto 0),
-			q 			=> qm(3 downto 0),
-			r 			=> rm
-		);
-		
-		v5: FAdder_16bit port map (a => (others => '0'), b => not qm, ci => '1', s => qn);
-		v6: mux2x1_16bit port map (a => qm, b => qn, s => a(15) xor b(15), m => q);
-		v7: FAdder_16bit port map (a => (others => '0'), b => not rm, ci => '1', s => rn);
-		v8: mux2x1_16bit port map (a => rm, b => rn, s => a(15), m => r);
-		
-		z <= '1' when (b = zeros) else '0';
-		o <= '1' when ((a = Tmin) and (b = min1)) else '0';
-		
-end behavior;
-
---------------------------------------------------------
---					1 bit full adder
---------------------------------------------------------
-library ieee;
-use ieee.std_logic_1164.all;
-
-entity FAdder is
-	port(
-		a, b, ci	:  in std_logic;
-		s, co		: out	std_logic
-	);
-end FAdder;
-
-architecture behavior of FAdder is
-
-	begin
-		s  <= a xor b xor ci;
-		co <= (a and b) or ((a xor b) and ci);
-
-end behavior;
-
---------------------------------------------------------
---					4 bit full adder
---------------------------------------------------------
-library ieee;
-use ieee.std_logic_1164.all;
-
-entity FAdder_4bit is
-	port(
-		a, b	:  in std_logic_vector(3 downto 0);
-		ci		:  in std_logic;
-		s		: out std_logic_vector(3 downto 0);
-		co		: out std_logic
-	);
-end FAdder_4bit;
-
-architecture behavior of FAdder_4bit is
-
-	-- Components
-	-- 1 bit Full adder
-	component FAdder is
-		port(
-			a, b, ci	:  in std_logic;
-			s, co		: out std_logic
-		);
-	end component;
-	
-	-- Signals
-	signal c : std_logic_vector(2 downto 0);
-	
-	begin
-		u1: FAdder port map (a => a(0), b => b(0), ci =>   ci, s => s(0), co => c(0));
-		u2: FAdder port map (a => a(1), b => b(1), ci => c(0), s => s(1), co => c(1));
-		u3: FAdder port map (a => a(2), b => b(2), ci => c(1), s => s(2), co => c(2));
-		u4: FAdder port map (a => a(3), b => b(3), ci => c(2), s => s(3), co =>   co);
-	
-end behavior;
-
---------------------------------------------------------
---					16 bit Full Adder
---------------------------------------------------------
-library ieee;
-use ieee.std_logic_1164.all;
-
-entity FAdder_16bit is
-	port(
-		a, b	:  in std_logic_vector(15 downto 0);
-		ci		:  in std_logic;
-		s		: out std_logic_vector(15 downto 0);
-		co		: out std_logic
-	);
-end FAdder_16bit;
-
-architecture behavior of FAdder_16bit is
-
-	-- Component
-	-- 4 bit Full Adder
-	component FAdder_4bit is
-		port(
-			a, b	:  in std_logic_vector(3 downto 0);
-			ci		:  in std_logic;
-			s		: out std_logic_vector(3 downto 0);
-			co		: out std_logic
-		);
-	end component;
-	
-	-- Signal
-	signal c : std_logic_vector(2 downto 0);
-	-- Behavior
-	begin
-		u1: FAdder_4bit port map (a => a(3  downto  0), b => b(3  downto  0), ci => ci,   s => s(3  downto  0), co => c(0));
-		u2: FAdder_4bit port map (a => a(7  downto  4), b => b(7  downto  4), ci => c(0), s => s(7  downto  4), co => c(1));
-		u3: FAdder_4bit port map (a => a(11 downto  8), b => b(11 downto  8), ci => c(1), s => s(11 downto  8), co => c(2));
-		u4: FAdder_4bit port map (a => a(15 downto 12), b => b(15 downto 12), ci => c(2), s => s(15 downto 12), co =>   co);
-
-end behavior;
-
-
---------------------------------------------------------
---					16 bit Multiplexer
---------------------------------------------------------
-library ieee;
-use ieee.std_logic_1164.all;
-
-entity mux2x1_16bit is
-	port(
-		a, b	:  in std_logic_vector(15 downto 0);
-		s		:  in std_logic;
-		m		: out std_logic_vector(15 downto 0)
-	);
-end mux2x1_16bit;
-
-architecture behavior of mux2x1_16bit is
-	
-	-- Signals
-	signal s_vec, nots_vec : std_logic_vector(15 downto 0);
-	
-	begin
-		s_vec    <= (others => s);
-		nots_vec <= (others => not s);
-		m <= (a and nots_vec) or (b and s_vec);
-end behavior;
-
-
---------------------------------------------------------
---					16 processing block
---------------------------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;
 
@@ -243,21 +18,12 @@ architecture behavior of pu is
 
 	-- component
 	-- 16 bit Full Adder
-	component FAdder_16bit is
+	component FAdder is
 		port(
 			a, b	:  in std_logic_vector(15 downto 0);
 			ci		:  in std_logic;
 			s		: out std_logic_vector(15 downto 0);
 			co		: out std_logic
-		);
-	end component;
-	
-	-- 16 bit Multiplexer
-	component mux2x1_16bit is
-		port(
-			a, b	:  in std_logic_vector(15 downto 0);
-			s		:  in std_logic;
-			m		: out std_logic_vector(15 downto 0)
 		);
 	end component;
 	
@@ -268,15 +34,18 @@ architecture behavior of pu is
 	-- Behavior
 	begin
 		as <= a(14 downto 0) & d_in;
+		
 		u1: FAdder_16bit port map (a => as, b => not b,  ci => '1', s => ss, co => qs);
-		u2: mux2x1_16bit port map (a => as, b => ss, s  =>  qs, m => r);
+		
+		r <= ss when (qs = '1') else as;
 		q <= qs;
 
 end behavior;
 
---------------------------------------------------------
---					4 stage processing block
---------------------------------------------------------
+-- ==========================================================
+--	2. 4 stage 16 bit processing block
+-- ==========================================================
+
 library ieee;
 use ieee.std_logic_1164.all;
 
@@ -311,4 +80,102 @@ architecture behavior of pu4s is
 		u2: pu port map (a => r2, b => b, d_in => d_bits(2), r => r1, q => q(2));
 		u3: pu port map (a => r1, b => b, d_in => d_bits(1), r => r0, q => q(1));
 		u4: pu port map (a => r0, b => b, d_in => d_bits(0), r => r,  q => q(0));
+end behavior;
+
+
+-- ==========================================================
+--	3. Divider
+-- ==========================================================
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Divider is
+	port(
+		a, b	:  in std_logic_vector(15 downto 0);
+		r, q	: out std_logic_vector(15 downto 0);
+		z, o	: out std_logic	-- division by zero and overflow flag
+	);
+end Divider;
+
+architecture behavior of Divider is
+
+	-- Components
+	-- 4 stage Processing block
+	component pu4s is
+		port(
+			a, b		:  in std_logic_vector(15 downto 0);
+			d_bits	:  in std_logic_vector(3  downto 0);	
+			r			: out std_logic_vector(15 downto 0);
+			q			: out std_logic_vector(3  downto 0)
+		);
+	end component;
+	
+	component FAdder is
+		port(
+			a, b	:  in std_logic_vector(15 downto 0);
+			ci		:  in std_logic;
+			s		: out std_logic_vector(15 downto 0);
+			co		: out std_logic
+		);
+	end component;
+	
+	-- Signals
+	signal r2, r1, r0 		: std_logic_vector(15 downto 0);	-- Partial reminders
+	signal am, bm				: std_logic_vector(15 downto 0);	-- Magnitudes of the operands
+	signal rm, qm				: std_logic_vector(15 downto 0); -- Magnitudes of results
+	signal an, bn, rn, qn	: std_logic_vector(15 downto 0);	-- Negated intermediate values
+	
+	-- Constants
+	constant zeros : std_logic_vector(15 downto 0) := (others => '0');
+	constant Tmin	: std_logic_vector(15 downto 0) := "1000000000000000";
+	constant min1	: std_logic_vector(15 downto 0) := (others => '1');
+	
+	-- Behavior
+	begin
+		v1: FAdder_16bit port map(a => (others => '0'), b => not a, ci => '1', s => an);
+		v2: FAdder_16bit port map(a => (others => '0'), b => not b, ci => '1', s => bn);
+		
+		am <= an when (a(15) = '1') else a;
+		bm <= bn when (b(15) = '1') else b;
+		
+		u1: pu4s port map(
+			a 			=> zeros, 
+			b 			=> bm, 
+			d_bits	=> am(15 downto 12), 
+			q 			=> qm(15 downto 12), 
+			r 			=> r2
+		);
+		u2: pu4s port map(
+			a 			=> r2,
+			b 			=> bm,
+			d_bits 	=> am(11 downto  8),
+			q 			=> qm(11 downto  8),
+			r 			=> r1
+		);
+		u3: pu4s port map(
+			a 			=> r1,
+			b 			=> bm,
+			d_bits 	=> am(7  downto  4),
+			q 			=> qm(7  downto  4),
+			r 			=> r0
+		);
+		u4: pu4s port map(
+			a 			=> r0,
+			b 			=> bm,
+			d_bits 	=> am(3 downto 0),
+			q 			=> qm(3 downto 0),
+			r 			=> rm
+		);
+		
+		v5: FAdder_16bit port map (a => (others => '0'), b => not qm, ci => '1', s => qn);
+		v6: mux2x1_16bit port map (a => qm, b => qn, s => a(15) xor b(15), m => q);
+		v7: FAdder_16bit port map (a => (others => '0'), b => not rm, ci => '1', s => rn);
+		v8: mux2x1_16bit port map (a => rm, b => rn, s => a(15), m => r);
+		
+		q <= qn  when ((a(15) xor b(15)) = '1') else qm;
+		r <= rn  when (a(15) = '1') else rm;
+		z <= '1' when (b = zeros) else '0';
+		o <= '1' when ((a = Tmin) and (b = min1)) else '0';
+		
 end behavior;

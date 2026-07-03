@@ -1,0 +1,135 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+!s11e vcom 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 dC:/Users/Kidus/Documents/GitHub/First_DSD/Charity/simulation/qsim
+T_opt
+!s110 1782127682
+Vi9FO7@b>]:dZiYBOYGA9@2
+04 25 18 work safe_lock_top_vhd_vec_tst safe_lock_top_arch 1
+=1-7cb0c2e14d12-6a391c41-2ac-934
+R1
+!s12b OEM100
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim +acc
+tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+Esafe_lock_top
+Z3 w1782127679
+Z4 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 DjRARHG[mMoWnfQ1@E6OI1
+Z5 DPx8 cyclonev 19 cyclonev_components 0 22 a<5aF4D8K=jjT7FHmJc[20
+Z6 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 IF4KkEKl]c`WfAAM7V0iN1
+Z7 DPx4 ieee 16 vital_primitives 0 22 Y]H?Y_]z4@VoaWAGJ=36m1
+Z8 DPx6 altera 11 dffeas_pack 0 22 mB4IFnUT3:DoZN@NS]Gzg0
+Z9 DPx4 ieee 12 vital_timing 0 22 6STbz=m1W[80IE06h_el^0
+Z10 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z11 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+Z12 DPx6 altera 28 altera_primitives_components 0 22 >1_OP3SHemAi5ZBLF?7g43
+!i122 20
+R2
+Z13 8safe_lock_top.vho
+Z14 Fsafe_lock_top.vho
+l0
+L39 1
+VKIV@KJc=ZK]`7LBJCP`E51
+!s100 @lBNZN]cf[4f`hb6gKWmh3
+Z15 OL;C;2023.3;77
+32
+Z16 !s110 1782127680
+!i10b 1
+Z17 !s108 1782127680.000000
+Z18 !s90 -work|work|safe_lock_top.vho|
+Z19 !s107 safe_lock_top.vho|
+!i113 0
+Z20 o-work work
+Z21 tExplicit 1 CvgOpt 0
+Astructure
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+R11
+R12
+DEx4 work 13 safe_lock_top 0 22 KIV@KJc=ZK]`7LBJCP`E51
+!i122 20
+l301
+L100 2791
+VP8@:LUQo8P:>86_3X3<Ch0
+!s100 JM?01MNQDGDfKHn<OQmbm1
+R15
+32
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 0
+R20
+R21
+Esafe_lock_top_vhd_vec_tst
+Z22 w1782127677
+R10
+R11
+!i122 21
+R2
+Z23 8Waveform.vwf.vht
+Z24 FWaveform.vwf.vht
+l0
+L32 1
+VL>Q=3Md8nV[FGV5L`l9YK0
+!s100 C^h1fXejWljbc;A7z3N`J2
+R15
+32
+Z25 !s110 1782127681
+!i10b 1
+Z26 !s108 1782127681.000000
+Z27 !s90 -work|work|Waveform.vwf.vht|
+Z28 !s107 Waveform.vwf.vht|
+!i113 0
+R20
+R21
+Asafe_lock_top_arch
+R10
+R11
+DEx4 work 25 safe_lock_top_vhd_vec_tst 0 22 L>Q=3Md8nV[FGV5L`l9YK0
+!i122 21
+l55
+L34 140
+VomXPbVBE;bEc=:cfHUh3;0
+!s100 Ia5b887kca`N?T:bikOe61
+R15
+32
+R25
+!i10b 1
+R26
+R27
+R28
+!i113 0
+R20
+R21
